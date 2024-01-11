@@ -15,6 +15,19 @@
 		DCB75DA42B5083330036A076 /* PodoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D992B5083330036A076 /* PodoHeaderView.swift */; };
 		DCB75DA52B5083330036A076 /* PodoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D9A2B5083330036A076 /* PodoHeaderView.xib */; };
 		DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D9C2B5083330036A076 /* RoundedButton.swift */; };
+		DCB75DAA2B5085840036A076 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75DA92B5085840036A076 /* LoginViewController.swift */; };
+		DCB75DAC2B50867C0036A076 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */; };
+		DCB75DF32B508C6D0036A076 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75DF22B508C6D0036A076 /* SignupViewController.swift */; };
+		DCB75DF62B508DE30036A076 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DF52B508DE30036A076 /* FirebaseAnalytics */; };
+		DCB75DF82B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DF72B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion */; };
+		DCB75DFA2B508DE30036A076 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DF92B508DE30036A076 /* FirebaseAnalyticsSwift */; };
+		DCB75DFC2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DFB2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		DCB75DFE2B508DE30036A076 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DFD2B508DE30036A076 /* FirebaseAppCheck */; };
+		DCB75E002B508DE30036A076 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75DFF2B508DE30036A076 /* FirebaseAppDistribution-Beta */; };
+		DCB75E022B508DE30036A076 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E012B508DE30036A076 /* FirebaseAuth */; };
+		DCB75E042B508DE30036A076 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */; };
+		DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E052B508DE30036A076 /* FirebaseCrashlytics */; };
+		DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */; };
 		DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */; };
 		DCFB59CB2B4D711D00DF2F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */; };
 		DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFB59CE2B4D711D00DF2F5D /* Main.storyboard */; };
@@ -54,6 +67,9 @@
 		DCB75D992B5083330036A076 /* PodoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodoHeaderView.swift; sourceTree = "<group>"; };
 		DCB75D9A2B5083330036A076 /* PodoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PodoHeaderView.xib; sourceTree = "<group>"; };
 		DCB75D9C2B5083330036A076 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DCB75DA92B5085840036A076 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCB75DF22B508C6D0036A076 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DCFB59C52B4D711D00DF2F5D /* PoDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +103,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB75E002B508DE30036A076 /* FirebaseAppDistribution-Beta in Frameworks */,
+				DCB75E042B508DE30036A076 /* FirebaseAuthCombine-Community in Frameworks */,
+				DCB75DFA2B508DE30036A076 /* FirebaseAnalyticsSwift in Frameworks */,
+				DCB75DFC2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				DCB75DF62B508DE30036A076 /* FirebaseAnalytics in Frameworks */,
+				DCB75DF82B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				DCB75DFE2B508DE30036A076 /* FirebaseAppCheck in Frameworks */,
+				DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */,
 				E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */,
+				DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */,
+				DCB75E022B508DE30036A076 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +126,6 @@
 				1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */,
 				B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +200,22 @@
 			path = RoundedButton;
 			sourceTree = "<group>";
 		};
+		DCB75DA72B50855D0036A076 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75DF22B508C6D0036A076 /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		DCB75DA82B5085670036A076 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75DA92B5085840036A076 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DCFB59BC2B4D711D00DF2F5D = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +247,7 @@
 				DCFB5A082B4D737500DF2F5D /* Colors.xcassets */,
 				DCFB59D32B4D711E00DF2F5D /* LaunchScreen.storyboard */,
 				DCFB59D62B4D711E00DF2F5D /* Info.plist */,
+				DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */,
 			);
 			path = PoDo;
 			sourceTree = "<group>";
@@ -252,6 +294,8 @@
 		DCFB59DF2B4D71F000DF2F5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DCB75DA82B5085670036A076 /* Login */,
+				DCB75DA72B50855D0036A076 /* Signup */,
 				DCFB5A0A2B4D786E00DF2F5D /* Splash */,
 				DCFB5A012B4D725100DF2F5D /* Onboarding */,
 			);
@@ -292,6 +336,18 @@
 			dependencies = (
 			);
 			name = PoDo;
+			packageProductDependencies = (
+				DCB75DF52B508DE30036A076 /* FirebaseAnalytics */,
+				DCB75DF72B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion */,
+				DCB75DF92B508DE30036A076 /* FirebaseAnalyticsSwift */,
+				DCB75DFB2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				DCB75DFD2B508DE30036A076 /* FirebaseAppCheck */,
+				DCB75DFF2B508DE30036A076 /* FirebaseAppDistribution-Beta */,
+				DCB75E012B508DE30036A076 /* FirebaseAuth */,
+				DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */,
+				DCB75E052B508DE30036A076 /* FirebaseCrashlytics */,
+				DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */,
+			);
 			productName = PoDo;
 			productReference = DCFB59C52B4D711D00DF2F5D /* PoDo.app */;
 			productType = "com.apple.product-type.application";
@@ -320,6 +376,10 @@
 				Base,
 			);
 			mainGroup = DCFB59BC2B4D711D00DF2F5D;
+			packageReferences = (
+				DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = DCFB59C62B4D711D00DF2F5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +400,7 @@
 				DCFB59D22B4D711E00DF2F5D /* Assets.xcassets in Resources */,
 				DCB75DA02B5083330036A076 /* DialogView.xib in Resources */,
 				DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */,
+				DCB75DAC2B50867C0036A076 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB75DAA2B5085840036A076 /* LoginViewController.swift in Sources */,
 				DCFB59F72B4D724400DF2F5D /* String+Extensions.swift in Sources */,
 				DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */,
 				DCFB59F42B4D724400DF2F5D /* UIApplication+Extensions.swift in Sources */,
@@ -413,6 +475,7 @@
 				DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */,
 				DCFB59F82B4D724400DF2F5D /* UIColor+Extensions.swift in Sources */,
 				DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */,
+				DCB75DF32B508C6D0036A076 /* SignupViewController.swift in Sources */,
 				DCFB59FA2B4D724400DF2F5D /* UIFont+Extensions.swift in Sources */,
 				DCFB59CB2B4D711D00DF2F5D /* SceneDelegate.swift in Sources */,
 				DCFB59FC2B4D724400DF2F5D /* UIButton+Extensions.swift in Sources */,
@@ -480,7 +543,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -543,7 +606,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -652,6 +715,78 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+		DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCB75DF52B508DE30036A076 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DCB75DF72B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		DCB75DF92B508DE30036A076 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		DCB75DFB2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		DCB75DFD2B508DE30036A076 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		DCB75DFF2B508DE30036A076 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		DCB75E012B508DE30036A076 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		DCB75E052B508DE30036A076 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCFB59BD2B4D711D00DF2F5D /* Project object */;
 }

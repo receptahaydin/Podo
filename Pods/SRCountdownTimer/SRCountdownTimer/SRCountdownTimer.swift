@@ -24,7 +24,7 @@
 
 import UIKit
 
-@objc public protocol SRCountdownTimerDelegate: class {
+@objc public protocol SRCountdownTimerDelegate: AnyObject {
     @objc optional func timerDidUpdateCounterValue(sender: SRCountdownTimer, newValue: Int)
     @objc optional func timerDidStart(sender: SRCountdownTimer)
     @objc optional func timerDidPause(sender: SRCountdownTimer)
@@ -38,15 +38,13 @@ public class SRCountdownTimer: UIView {
     @IBInspectable public var trailLineColor: UIColor = UIColor.lightGray.withAlphaComponent(0.5)
     
     @IBInspectable public var isLabelHidden: Bool = false
-    @IBInspectable public var labelFont: UIFont?
-    @IBInspectable public var labelTextColor: UIColor?
     @IBInspectable public var timerFinishingText: String?
 
     public weak var delegate: SRCountdownTimerDelegate?
     
     // use minutes and seconds for presentation
-    public var useMinutesAndSecondsRepresentation = false
-    public var moveClockWise = true
+    public var useMinutesAndSecondsRepresentation = true
+    public var moveClockWise = false
 
     private var timer: Timer?
     private var beginingValue: Int = 1
@@ -55,36 +53,11 @@ public class SRCountdownTimer: UIView {
     private var interval: TimeInterval = 1 // Interval which is set by a user
     private let fireInterval: TimeInterval = 0.01 // ~60 FPS
 
-    private lazy var counterLabel: UILabel = {
-        let label = UILabel()
-        self.addSubview(label)
-
-        label.textAlignment = .center
-        label.frame = self.bounds
-        if let font = self.labelFont {
-            label.font = font
-        }
-        if let color = self.labelTextColor {
-            label.textColor = color
-        }
-
-        return label
-    }()
     private var currentCounterValue: Int = 0 {
         didSet {
             if !isLabelHidden {
-                if let text = timerFinishingText, currentCounterValue == 0 {
-                    counterLabel.text = text
-                } else {
-                    if useMinutesAndSecondsRepresentation {
-                        counterLabel.text = getMinutesAndSeconds(remainingSeconds: currentCounterValue)
-                    } else {
-                        counterLabel.text = "\(currentCounterValue)"
-                    }
-                }
+                delegate?.timerDidUpdateCounterValue?(sender: self, newValue: currentCounterValue)
             }
-
-            delegate?.timerDidUpdateCounterValue?(sender: self, newValue: currentCounterValue)
         }
     }
 
@@ -119,6 +92,7 @@ public class SRCountdownTimer: UIView {
         }
     
         context?.setLineWidth(lineWidth)
+        context?.setLineCap(.round)
 
         // Main line
         context?.beginPath()
@@ -207,7 +181,7 @@ public class SRCountdownTimer: UIView {
     /**
      * Calculate value in minutes and seconds and return it as String
      */
-    private func getMinutesAndSeconds(remainingSeconds: Int) -> (String) {
+    public func getMinutesAndSeconds(remainingSeconds: Int) -> (String) {
         let minutes = remainingSeconds / 60
         let seconds = remainingSeconds - minutes * 60
         let secondString = seconds < 10 ? "0" + seconds.description : seconds.description
