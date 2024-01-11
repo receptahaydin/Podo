@@ -41,7 +41,10 @@ class LoginViewController: UIViewController {
             sender.isLoading = true
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
                 sender.isLoading = false
-                //NavCoordinator.shared.requestNavigation(to: HomeViewController(), with: .replace, setRoot: true)
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+                vc?.modalPresentationStyle = .fullScreen
+                self!.present(vc!, animated: true)
             }
         }
     }
