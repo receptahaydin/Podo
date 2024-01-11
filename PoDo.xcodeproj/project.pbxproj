@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D902B5083330036A076 /* DialogView.swift */; };
+		DCB75DA02B5083330036A076 /* DialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D912B5083330036A076 /* DialogView.xib */; };
+		DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D932B5083330036A076 /* LoaderButton.swift */; };
+		DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D952B5083330036A076 /* DesignableUITextField.swift */; };
+		DCB75DA32B5083330036A076 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D972B5083330036A076 /* CardView.swift */; };
+		DCB75DA42B5083330036A076 /* PodoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D992B5083330036A076 /* PodoHeaderView.swift */; };
+		DCB75DA52B5083330036A076 /* PodoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D9A2B5083330036A076 /* PodoHeaderView.xib */; };
+		DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D9C2B5083330036A076 /* RoundedButton.swift */; };
 		DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */; };
 		DCFB59CB2B4D711D00DF2F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */; };
 		DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFB59CE2B4D711D00DF2F5D /* Main.storyboard */; };
@@ -31,9 +39,21 @@
 		DCFB5A062B4D72D200DF2F5D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */; };
 		DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB5A082B4D737500DF2F5D /* Colors.xcassets */; };
 		DCFB5A0C2B4D787C00DF2F5D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB5A0B2B4D787C00DF2F5D /* SplashViewController.swift */; };
+		E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
+		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB75D902B5083330036A076 /* DialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
+		DCB75D912B5083330036A076 /* DialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogView.xib; sourceTree = "<group>"; };
+		DCB75D932B5083330036A076 /* LoaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
+		DCB75D952B5083330036A076 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		DCB75D972B5083330036A076 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DCB75D992B5083330036A076 /* PodoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodoHeaderView.swift; sourceTree = "<group>"; };
+		DCB75D9A2B5083330036A076 /* PodoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PodoHeaderView.xib; sourceTree = "<group>"; };
+		DCB75D9C2B5083330036A076 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		DCFB59C52B4D711D00DF2F5D /* PoDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,17 +87,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51CAE66C417E6FE4701A9063 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */,
+				B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6F735E84E90BA30C2C8B677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB75D8B2B5083330036A076 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D8F2B5083330036A076 /* DialogView */,
+				DCB75D922B5083330036A076 /* LoaderButton */,
+				DCB75D942B5083330036A076 /* DesignableUITextField */,
+				DCB75D962B5083330036A076 /* CardView */,
+				DCB75D982B5083330036A076 /* Header */,
+				DCB75D9B2B5083330036A076 /* RoundedButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DCB75D8F2B5083330036A076 /* DialogView */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D902B5083330036A076 /* DialogView.swift */,
+				DCB75D912B5083330036A076 /* DialogView.xib */,
+			);
+			path = DialogView;
+			sourceTree = "<group>";
+		};
+		DCB75D922B5083330036A076 /* LoaderButton */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D932B5083330036A076 /* LoaderButton.swift */,
+			);
+			path = LoaderButton;
+			sourceTree = "<group>";
+		};
+		DCB75D942B5083330036A076 /* DesignableUITextField */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D952B5083330036A076 /* DesignableUITextField.swift */,
+			);
+			path = DesignableUITextField;
+			sourceTree = "<group>";
+		};
+		DCB75D962B5083330036A076 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D972B5083330036A076 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		DCB75D982B5083330036A076 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D992B5083330036A076 /* PodoHeaderView.swift */,
+				DCB75D9A2B5083330036A076 /* PodoHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		DCB75D9B2B5083330036A076 /* RoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				DCB75D9C2B5083330036A076 /* RoundedButton.swift */,
+			);
+			path = RoundedButton;
+			sourceTree = "<group>";
+		};
 		DCFB59BC2B4D711D00DF2F5D = {
 			isa = PBXGroup;
 			children = (
 				DCFB59C72B4D711D00DF2F5D /* PoDo */,
 				DCFB59C62B4D711D00DF2F5D /* Products */,
+				51CAE66C417E6FE4701A9063 /* Pods */,
+				D6F735E84E90BA30C2C8B677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFB59DF2B4D71F000DF2F5D /* Controllers */,
-				DCFB59E02B4D71F600DF2F5D /* Components */,
+				DCB75D8B2B5083330036A076 /* Components */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -152,13 +256,6 @@
 				DCFB5A012B4D725100DF2F5D /* Onboarding */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		DCFB59E02B4D71F600DF2F5D /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		DCFB5A012B4D725100DF2F5D /* Onboarding */ = {
@@ -184,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCFB59D92B4D711E00DF2F5D /* Build configuration list for PBXNativeTarget "PoDo" */;
 			buildPhases = (
+				320BAD16764EB5C2DBBC4C4C /* [CP] Check Pods Manifest.lock */,
 				DCFB59C12B4D711D00DF2F5D /* Sources */,
 				DCFB59C22B4D711D00DF2F5D /* Frameworks */,
 				DCFB59C32B4D711D00DF2F5D /* Resources */,
+				4CE372260776E63DA186E4AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,14 +334,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB75DA52B5083330036A076 /* PodoHeaderView.xib in Resources */,
 				DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */,
 				DCFB59D52B4D711E00DF2F5D /* LaunchScreen.storyboard in Resources */,
 				DCFB59D22B4D711E00DF2F5D /* Assets.xcassets in Resources */,
+				DCB75DA02B5083330036A076 /* DialogView.xib in Resources */,
 				DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		320BAD16764EB5C2DBBC4C4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CE372260776E63DA186E4AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCFB59C12B4D711D00DF2F5D /* Sources */ = {
@@ -250,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFB59F72B4D724400DF2F5D /* String+Extensions.swift in Sources */,
+				DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */,
 				DCFB59F42B4D724400DF2F5D /* UIApplication+Extensions.swift in Sources */,
+				DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */,
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
@@ -259,11 +404,15 @@
 				DCFB5A062B4D72D200DF2F5D /* OnboardingViewController.swift in Sources */,
 				DCFB59FB2B4D724400DF2F5D /* UICollectionView+Reusable.swift in Sources */,
 				DCFB5A002B4D724400DF2F5D /* UIDevice+Extensions.swift in Sources */,
+				DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */,
 				DCFB59FF2B4D724400DF2F5D /* UITableView+Extensions.swift in Sources */,
+				DCB75DA32B5083330036A076 /* CardView.swift in Sources */,
 				DCFB59F92B4D724400DF2F5D /* UIView+Extension.swift in Sources */,
 				DCFB59F62B4D724400DF2F5D /* Localization.swift in Sources */,
+				DCB75DA42B5083330036A076 /* PodoHeaderView.swift in Sources */,
 				DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */,
 				DCFB59F82B4D724400DF2F5D /* UIColor+Extensions.swift in Sources */,
+				DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */,
 				DCFB59FA2B4D724400DF2F5D /* UIFont+Extensions.swift in Sources */,
 				DCFB59CB2B4D711D00DF2F5D /* SceneDelegate.swift in Sources */,
 				DCFB59FC2B4D724400DF2F5D /* UIButton+Extensions.swift in Sources */,
@@ -415,6 +564,7 @@
 		};
 		DCFB59DA2B4D711E00DF2F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +598,7 @@
 		};
 		DCFB59DB2B4D711E00DF2F5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
