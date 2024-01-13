@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAq-BN-DEA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0A-ki-0kH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -109,7 +109,7 @@
                                                         </constraints>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
                                                                 <imageReference key="value" image="envelope.fill" catalog="system"/>
@@ -133,6 +133,11 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                                                 <real key="value" value="9"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="eye.slash.fill" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="eye.slash.fill" catalog="system"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
@@ -278,7 +283,7 @@
                                                         </constraints>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
                                                                 <imageReference key="value" image="envelope.fill" catalog="system"/>
@@ -301,6 +306,10 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock.fill" catalog="system"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                                                 <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="eye.slash.fill" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
@@ -436,11 +445,12 @@
                             <constraint firstItem="lqt-qo-6gV" firstAttribute="centerX" secondItem="252-zS-T2A" secondAttribute="centerX" id="pUk-gM-XES"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Projects" image="list.bullet.rectangle.fill" catalog="system" id="pLU-54-UQQ"/>
+                    <tabBarItem key="tabBarItem" title="Projects" image="list.bullet.rectangle.fill" catalog="system" id="4BB-KK-vHw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlU-9S-mOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5233" y="619"/>
+            <point key="canvasLocation" x="4421" y="573"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8KA-iG-juv">
@@ -497,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-nV-AdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6177" y="307"/>
+            <point key="canvasLocation" x="5294" y="590"/>
         </scene>
         <!--Home-->
         <scene sceneID="ezB-Ew-a2e">
@@ -595,35 +605,35 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-aX-pgd" userLabel="CardView" customClass="CardView" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="118.99999999999999" width="353" height="130.66666666666663"/>
+                                <rect key="frame" x="20" y="118.99999999999999" width="353" height="150.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-oL-3wg">
-                                        <rect key="frame" x="20" y="32.66666666666665" width="65.333333333333329" height="65.333333333333314"/>
+                                        <rect key="frame" x="20" y="37.66666666666665" width="75.333333333333329" height="75.333333333333314"/>
                                         <color key="backgroundColor" name="CardColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0vu-oL-3wg" secondAttribute="height" multiplier="1:1" id="jVx-7g-Czb"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn UI Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-Nm-FIQ">
-                                        <rect key="frame" x="105.33333333333331" y="32.666666666666657" width="128" height="20.333333333333329"/>
+                                        <rect key="frame" x="115.33333333333334" y="37.666666666666657" width="128" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bte-qs-Gf7">
-                                        <rect key="frame" x="105.33333333333334" y="80" width="83.333333333333343" height="18"/>
+                                        <rect key="frame" x="115.33333333333334" y="95" width="83.333333333333343" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-Yc-MOA">
-                                        <rect key="frame" x="316" y="32.666666666666657" width="27" height="20.333333333333329"/>
+                                        <rect key="frame" x="316" y="37.666666666666657" width="27" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Ng-wUz">
-                                        <rect key="frame" x="266.66666666666669" y="80" width="76.333333333333314" height="18"/>
+                                        <rect key="frame" x="266.66666666666669" y="95" width="76.333333333333314" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -685,7 +695,7 @@
                             <constraint firstItem="0T0-aX-pgd" firstAttribute="top" secondItem="uph-Qx-2Qb" secondAttribute="top" constant="60" id="EKc-Jz-xUV"/>
                             <constraint firstItem="eYP-2B-5G9" firstAttribute="centerY" secondItem="e7H-gS-bEx" secondAttribute="centerY" id="J9R-a7-hXR"/>
                             <constraint firstItem="bol-5A-EFk" firstAttribute="centerX" secondItem="e7H-gS-bEx" secondAttribute="centerX" id="N7p-Lh-OB6"/>
-                            <constraint firstItem="eYP-2B-5G9" firstAttribute="top" secondItem="0T0-aX-pgd" secondAttribute="bottom" constant="60" id="PVj-8K-M4B"/>
+                            <constraint firstItem="eYP-2B-5G9" firstAttribute="top" secondItem="0T0-aX-pgd" secondAttribute="bottom" constant="40" id="PVj-8K-M4B"/>
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="height" secondItem="9HH-z8-9Vk" secondAttribute="height" multiplier="0.5" id="Wxq-FO-Ske"/>
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="centerY" secondItem="9HH-z8-9Vk" secondAttribute="centerY" id="aXz-bp-3x9"/>
                             <constraint firstItem="uph-Qx-2Qb" firstAttribute="trailing" secondItem="eYP-2B-5G9" secondAttribute="trailing" constant="80" id="bvR-ZR-LwG"/>
@@ -707,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNU-aO-YoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5285" y="-765"/>
+            <point key="canvasLocation" x="5141" y="-1082"/>
         </scene>
         <!--Analytics-->
         <scene sceneID="BzC-10-NTr">
@@ -736,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLy-r3-VQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6181" y="-421"/>
+            <point key="canvasLocation" x="5964" y="-875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oMn-Tz-ebN">
@@ -750,14 +760,34 @@
                     </tabBar>
                     <connections>
                         <segue destination="Vlh-O5-GCK" kind="relationship" relationship="viewControllers" id="1ku-IC-77b"/>
-                        <segue destination="5g3-EC-Rtf" kind="relationship" relationship="viewControllers" id="Y8g-Q4-hKh"/>
                         <segue destination="yCF-7s-r6b" kind="relationship" relationship="viewControllers" id="qPV-hK-MR5"/>
-                        <segue destination="HXl-xK-YiJ" kind="relationship" relationship="viewControllers" id="Ojo-Rg-fhC"/>
+                        <segue destination="tiM-JL-v1N" kind="relationship" relationship="viewControllers" id="CAe-Jm-8jb"/>
+                        <segue destination="5g3-EC-Rtf" kind="relationship" relationship="viewControllers" id="yrJ-N1-HhU"/>
+                        <segue destination="HXl-xK-YiJ" kind="relationship" relationship="viewControllers" id="ew5-cV-E2M"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yh-Td-YYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4422" y="-212"/>
+        </scene>
+        <!--New Task-->
+        <scene sceneID="2zz-wa-isG">
+            <objects>
+                <viewController title="New Task" id="tiM-JL-v1N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NDF-NU-NzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z0L-VE-HI1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="plus" id="s4b-yS-cld">
+                        <inset key="imageInsets" minX="0.0" minY="-40" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1x-W8-mCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5570" y="-169"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="ejH-LP-rLL">
@@ -817,6 +847,7 @@
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="envelope.fill" catalog="system" width="128" height="85"/>
+        <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="google" width="512" height="512"/>
         <image name="green" width="1024" height="1024"/>
@@ -824,6 +855,7 @@
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="plus" width="48" height="48"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
         <namedColor name="ButtonColor">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -838,13 +870,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
