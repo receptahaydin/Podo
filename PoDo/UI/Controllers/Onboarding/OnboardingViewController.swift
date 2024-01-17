@@ -79,6 +79,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     //indicator
     @IBAction func pageChanged(_ sender: Any) {
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
+        updateButtonText()
     }
     
     @IBAction func buttonTapped(_ sender: Any) {

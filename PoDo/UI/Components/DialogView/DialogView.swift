@@ -91,8 +91,8 @@ struct CRXDialogButton {
             button.setTitleColor(.red , for: .normal)
             button.setRegularDynamicFont(size: 17)
         } else {
-            button.setTitleColor(.cyan, for: .normal)
-            button.setBoldDynamicFont(size: 17)
+            button.setTitleColor(.tintColor, for: .normal)
+            button.setRegularDynamicFont(size: 17)
         }
         return button
     }

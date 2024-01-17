@@ -21,6 +21,11 @@ class OptionTableViewCell: UITableViewCell {
     }
 
     func configureCell(image: UIImage, title: String) {
+        if title == "Logout" {
+            label.textColor = .PODORed
+            icon.tintColor = .PODORed
+        }
+        
         icon.image = image
         label.text = title
     }

@@ -30,6 +30,7 @@
 		DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */; };
 		DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */; };
 		DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */; };
+		DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */; };
 		DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */; };
 		DCFB59CB2B4D711D00DF2F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */; };
 		DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFB59CE2B4D711D00DF2F5D /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		DCB75DF22B508C6D0036A076 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		DCFB59C52B4D711D00DF2F5D /* PoDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				DCE36BA12B5879AF0057B778 /* SwitchCell */,
 				DCB346792B58736C0056DEAC /* OptionCell */,
 			);
 			path = TableViewCells;
@@ -241,6 +244,14 @@
 				DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		DCE36BA12B5879AF0057B778 /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */,
+			);
+			path = SwitchCell;
 			sourceTree = "<group>";
 		};
 		DCFB59BC2B4D711D00DF2F5D = {
@@ -491,6 +502,7 @@
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
+				DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */,
 				DCFB59FE2B4D724400DF2F5D /* UIViewController+Extensions.swift in Sources */,
 				DCFB59FD2B4D724400DF2F5D /* UIWindow+Extensions.swift in Sources */,
 				DCFB5A062B4D72D200DF2F5D /* OnboardingViewController.swift in Sources */,
