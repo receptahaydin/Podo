@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
+		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
 		DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D902B5083330036A076 /* DialogView.swift */; };
 		DCB75DA02B5083330036A076 /* DialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D912B5083330036A076 /* DialogView.xib */; };
 		DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D932B5083330036A076 /* LoaderButton.swift */; };
@@ -59,6 +61,8 @@
 		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
 		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
+		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		DCB75D902B5083330036A076 /* DialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		DCB75D912B5083330036A076 /* DialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogView.xib; sourceTree = "<group>"; };
 		DCB75D932B5083330036A076 /* LoaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
@@ -137,9 +141,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DCB346782B58735D0056DEAC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DCB346792B58736C0056DEAC /* OptionCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		DCB346792B58736C0056DEAC /* OptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */,
+			);
+			path = OptionCell;
+			sourceTree = "<group>";
+		};
 		DCB75D8B2B5083330036A076 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DCB346782B58735D0056DEAC /* TableViewCells */,
 				DCB75D8F2B5083330036A076 /* DialogView */,
 				DCB75D922B5083330036A076 /* LoaderButton */,
 				DCB75D942B5083330036A076 /* DesignableUITextField */,
@@ -284,6 +305,7 @@
 				DCFB59EC2B4D724400DF2F5D /* UIView+Extension.swift */,
 				DCFB59F12B4D724400DF2F5D /* UIViewController+Extensions.swift */,
 				DCFB59F02B4D724400DF2F5D /* UIWindow+Extensions.swift */,
+				DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -461,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCB75DAA2B5085840036A076 /* LoginViewController.swift in Sources */,
+				DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */,
 				DCFB59F72B4D724400DF2F5D /* String+Extensions.swift in Sources */,
 				DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */,
 				DCFB59F42B4D724400DF2F5D /* UIApplication+Extensions.swift in Sources */,
@@ -476,6 +499,7 @@
 				DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */,
 				DCFB59FF2B4D724400DF2F5D /* UITableView+Extensions.swift in Sources */,
 				DCB75DA32B5083330036A076 /* CardView.swift in Sources */,
+				DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */,
 				DCFB59F92B4D724400DF2F5D /* UIView+Extension.swift in Sources */,
 				DCFB59F62B4D724400DF2F5D /* Localization.swift in Sources */,
 				DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */,
