@@ -28,6 +28,7 @@
 		DCB75E042B508DE30036A076 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */; };
 		DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E052B508DE30036A076 /* FirebaseCrashlytics */; };
 		DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */; };
+		DCC473B92B724BF300940243 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC473B82B724BF300940243 /* CreateTaskViewController.swift */; };
 		DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */; };
 		DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */; };
 		DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		DCB75DA92B5085840036A076 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCB75DF22B508C6D0036A076 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		DCC473B82B724BF300940243 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,6 +232,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		DCC473B72B724BCC00940243 /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				DCC473B82B724BF300940243 /* CreateTaskViewController.swift */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
 		DCD9D8722B5097ED00DA0ED3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +343,7 @@
 		DCFB59DF2B4D71F000DF2F5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DCC473B72B724BCC00940243 /* CreateTask */,
 				DCD9D8752B50A8C600DA0ED3 /* Settings */,
 				DCD9D8722B5097ED00DA0ED3 /* Home */,
 				DCB75DA82B5085670036A076 /* Login */,
@@ -495,6 +506,7 @@
 			files = (
 				DCB75DAA2B5085840036A076 /* LoginViewController.swift in Sources */,
 				DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */,
+				DCC473B92B724BF300940243 /* CreateTaskViewController.swift in Sources */,
 				DCFB59F72B4D724400DF2F5D /* String+Extensions.swift in Sources */,
 				DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */,
 				DCFB59F42B4D724400DF2F5D /* UIApplication+Extensions.swift in Sources */,
