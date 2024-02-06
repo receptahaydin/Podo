@@ -28,6 +28,12 @@ class DesignableUITextField: UITextField {
             updateLeftView()
         }
     }
+    
+    @IBInspectable var rightImage: UIImage? {
+        didSet {
+            updateRightView()
+        }
+    }
 
     @IBInspectable var rightButtonImage: UIImage? {
         didSet {
@@ -38,6 +44,7 @@ class DesignableUITextField: UITextField {
     @IBInspectable var rightPadding: CGFloat = 0 {
         didSet {
             updateRightButton()
+            updateRightView()
         }
     }
 
@@ -64,6 +71,23 @@ class DesignableUITextField: UITextField {
         attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor: color])
     }
 
+    func updateRightView() {
+        if let image = rightImage {
+            rightViewMode = .always
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = image
+            imageView.tintColor = color
+            rightView = imageView
+        } else {
+            rightViewMode = .never
+            rightView = nil
+        }
+
+        // Placeholder text color
+        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor: color])
+    }
+    
     func updateRightButton() {
         if let image = rightButtonImage {
             let button = UIButton(type: .custom)
