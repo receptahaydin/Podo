@@ -11,6 +11,12 @@ class CreateTaskViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var categoryTextField: DesignableUITextField!
+    @IBOutlet weak var sessionStepper: UIStepper!
+    @IBOutlet weak var sessionLabel: UILabel!
+    @IBOutlet weak var longBreakStepper: UIStepper!
+    @IBOutlet weak var longBreakLabel: UILabel!
+    @IBOutlet weak var shortBreakStepper: UIStepper!
+    @IBOutlet weak var shortBreakLabel: UILabel!
     
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
     
@@ -36,6 +42,21 @@ class CreateTaskViewController: UIViewController {
         components.calendar = calendar
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker.minimumDate = minDate
+    }
+    
+    @IBAction func sessionValueChanged(_ sender: UIStepper) {
+        let stepperValue = sessionStepper.value
+        sessionLabel.text = "\(Int(stepperValue))"
+    }
+    
+    @IBAction func longBreakValueChanged(_ sender: UIStepper) {
+        let stepperValue = longBreakStepper.value
+        longBreakLabel.text = "\(Int(stepperValue))"
+    }
+    
+    @IBAction func shortBreakValueChanged(_ sender: UIStepper) {
+        let stepperValue = shortBreakStepper.value
+        shortBreakLabel.text = "\(Int(stepperValue))"
     }
 }
 
