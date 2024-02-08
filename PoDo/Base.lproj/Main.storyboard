@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1aF-x1-C59">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0A-ki-0kH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -133,11 +133,10 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                                                 <real key="value" value="9"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="eye.slash.fill" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="eye.slash.fill" catalog="system"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="eye.slash.fill" catalog="system"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
@@ -901,10 +900,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGv-ov-1NN">
-                                <rect key="frame" x="20" y="164.66666666666666" width="353" height="50"/>
+                                <rect key="frame" x="20" y="164.66666666666666" width="353" height="40"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="FNO-8t-tIJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="FNO-8t-tIJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -916,55 +915,84 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOj-te-Usw">
-                                <rect key="frame" x="20" y="269" width="353" height="50"/>
+                                <rect key="frame" x="20" y="259" width="353" height="40"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CQd-Jb-34f"/>
+                                    <constraint firstAttribute="height" constant="40" id="CQd-Jb-34f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-2W-Xih">
-                                <rect key="frame" x="20" y="239.66666666666666" width="85.666666666666671" height="19.333333333333343"/>
+                                <rect key="frame" x="20" y="229.66666666666666" width="85.666666666666671" height="19.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-WD-gCA">
-                                <rect key="frame" x="20.000000000000007" y="359" width="107.66666666666669" height="20"/>
+                                <rect key="frame" x="20.000000000000007" y="339" width="107.66666666666669" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-gf-JKE">
-                                <rect key="frame" x="165" y="351" width="208" height="36"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-gf-JKE">
+                                <rect key="frame" x="127.66666666666667" y="331" width="245.33333333333331" height="36"/>
                                 <color key="tintColor" name="PODORed"/>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-GY-vi7" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="428.33333333333331" width="353" height="40"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WBl-Ed-G91"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                        <imageReference key="value" image="arrowshape.down.fill" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2C-wg-Pk0">
+                                <rect key="frame" x="20.000000000000007" y="399" width="119.66666666666669" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z0L-VE-HI1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="I2C-wg-Pk0" firstAttribute="top" secondItem="oaN-WD-gCA" secondAttribute="bottom" constant="40" id="2Mg-df-eSg"/>
+                            <constraint firstItem="zdU-GY-vi7" firstAttribute="top" secondItem="I2C-wg-Pk0" secondAttribute="bottom" constant="10" id="2eV-xI-65y"/>
                             <constraint firstItem="oaN-WD-gCA" firstAttribute="top" secondItem="uOj-te-Usw" secondAttribute="bottom" constant="40" id="58b-MB-MZL"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oaN-WD-gCA" secondAttribute="trailing" symbolic="YES" id="CAf-Dz-D6p"/>
                             <constraint firstItem="Ly8-2W-Xih" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="FRU-0V-WPy"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MUF-DK-Vvm" secondAttribute="trailing" symbolic="YES" id="Gml-3p-GvA"/>
                             <constraint firstItem="jf5-gf-JKE" firstAttribute="centerY" secondItem="oaN-WD-gCA" secondAttribute="centerY" id="JRI-7w-Mfs"/>
                             <constraint firstItem="c5d-bl-Nh9" firstAttribute="top" secondItem="Z0L-VE-HI1" secondAttribute="top" constant="10" id="Jns-cL-hh6"/>
-                            <constraint firstItem="jf5-gf-JKE" firstAttribute="leading" secondItem="oaN-WD-gCA" secondAttribute="trailing" constant="37.333333333333314" id="KYg-jn-uJj"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="uOj-te-Usw" secondAttribute="trailing" constant="20" id="MwM-eF-i10"/>
                             <constraint firstItem="uOj-te-Usw" firstAttribute="top" secondItem="Ly8-2W-Xih" secondAttribute="bottom" constant="10" id="Op3-vf-MB7"/>
+                            <constraint firstItem="zdU-GY-vi7" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="UWc-NG-KDX"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="jf5-gf-JKE" secondAttribute="trailing" constant="20" id="VlM-Bn-93b"/>
                             <constraint firstItem="uOj-te-Usw" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="XfH-Si-fud"/>
+                            <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="zdU-GY-vi7" secondAttribute="trailing" constant="20" id="ZWf-90-cnK"/>
                             <constraint firstItem="jf5-gf-JKE" firstAttribute="top" secondItem="uOj-te-Usw" secondAttribute="bottom" constant="32" id="bmO-Ge-wLQ"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="AGv-ov-1NN" secondAttribute="trailing" constant="20" id="dQw-EQ-TVr"/>
+                            <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I2C-wg-Pk0" secondAttribute="trailing" symbolic="YES" id="dmn-aC-0Bb"/>
                             <constraint firstItem="c5d-bl-Nh9" firstAttribute="centerX" secondItem="NDF-NU-NzQ" secondAttribute="centerX" id="eBL-o8-wtg"/>
                             <constraint firstItem="Ly8-2W-Xih" firstAttribute="top" secondItem="AGv-ov-1NN" secondAttribute="bottom" constant="25" id="h1L-47-6Lc"/>
                             <constraint firstItem="MUF-DK-Vvm" firstAttribute="top" secondItem="c5d-bl-Nh9" secondAttribute="bottom" constant="40" id="it7-Bv-GIq"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="top" secondItem="MUF-DK-Vvm" secondAttribute="bottom" constant="10" id="o2l-Gn-KZS"/>
                             <constraint firstItem="oaN-WD-gCA" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="qFk-la-KGw"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ly8-2W-Xih" secondAttribute="trailing" symbolic="YES" id="rUu-5J-pyQ"/>
+                            <constraint firstItem="I2C-wg-Pk0" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="sIy-ob-NZi"/>
                             <constraint firstItem="MUF-DK-Vvm" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="tLF-Ga-X1b"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="tZk-bt-vFT"/>
+                            <constraint firstItem="jf5-gf-JKE" firstAttribute="leading" secondItem="oaN-WD-gCA" secondAttribute="trailing" id="twz-Vb-abr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Task" image="plus.circle.fill" catalog="system" id="s4b-yS-cld">
@@ -975,6 +1003,10 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryTextField" destination="zdU-GY-vi7" id="AtC-c5-peH"/>
+                        <outlet property="datePicker" destination="jf5-gf-JKE" id="lvJ-k6-ER1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1x-W8-mCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1031,11 +1063,15 @@
         <designable name="tbu-dQ-fYF">
             <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
         </designable>
+        <designable name="zdU-GY-vi7">
+            <size key="intrinsicContentSize" width="95" height="34"/>
+        </designable>
     </designables>
     <resources>
         <image name="PLetter" width="493" height="497"/>
         <image name="apple" width="512" height="512"/>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="arrowshape.down.fill" catalog="system" width="123" height="128"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
