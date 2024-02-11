@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
+		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
 		DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D902B5083330036A076 /* DialogView.swift */; };
@@ -116,7 +118,9 @@
 				DCB75DFA2B508DE30036A076 /* FirebaseAnalyticsSwift in Frameworks */,
 				DCB75DFC2B508DE30036A076 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				DCB75DF62B508DE30036A076 /* FirebaseAnalytics in Frameworks */,
+				DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */,
 				DCB75DF82B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */,
 				DCB75DFE2B508DE30036A076 /* FirebaseAppCheck in Frameworks */,
 				DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */,
 				E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */,
@@ -399,6 +403,8 @@
 				DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */,
 				DCB75E052B508DE30036A076 /* FirebaseCrashlytics */,
 				DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */,
+				DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */,
+				DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */,
 			);
 			productName = PoDo;
 			productReference = DCFB59C52B4D711D00DF2F5D /* PoDo.app */;
@@ -792,6 +798,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		DCB75DF52B508DE30036A076 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

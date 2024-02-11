@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CreateTaskViewController: UIViewController {
     
@@ -22,12 +23,15 @@ class CreateTaskViewController: UIViewController {
     
     let pickerView = UIPickerView()
     
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
         categoryTextField.inputView = pickerView
         setDateComponents()
+        writeData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +46,27 @@ class CreateTaskViewController: UIViewController {
         components.calendar = calendar
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker.minimumDate = minDate
+    }
+    
+    func writeData() {
+        let docData: [String: Any] = [
+          "stringExample": "Hello world!",
+          "booleanExample": true,
+          "numberExample": 3.14159265,
+          "dateExample": Timestamp(date: Date()),
+          "arrayExample": [5, true, "hello"],
+          "nullExample": NSNull(),
+          "objectExample": [
+            "a": 5,
+            "b": [
+              "nested": "foo"
+            ]
+          ]
+        ]
+        
+        let newCityRef = db.collection("Task").document()
+
+        newCityRef.setData(docData)
     }
     
     @IBAction func sessionValueChanged(_ sender: UIStepper) {
