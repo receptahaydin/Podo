@@ -14,15 +14,11 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var categoryTextField: DesignableUITextField!
     @IBOutlet weak var sessionStepper: UIStepper!
     @IBOutlet weak var sessionLabel: UILabel!
-    @IBOutlet weak var longBreakStepper: UIStepper!
-    @IBOutlet weak var longBreakLabel: UILabel!
-    @IBOutlet weak var shortBreakStepper: UIStepper!
-    @IBOutlet weak var shortBreakLabel: UILabel!
+    @IBOutlet weak var taskTitle: UITextField!
+    @IBOutlet weak var taskDesc: UITextView!
     
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
-    
     let pickerView = UIPickerView()
-    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -30,8 +26,8 @@ class CreateTaskViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         categoryTextField.inputView = pickerView
+        datePicker.timeZone = TimeZone.autoupdatingCurrent
         setDateComponents()
-        writeData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,46 +43,34 @@ class CreateTaskViewController: UIViewController {
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker.minimumDate = minDate
     }
-    
-    func writeData() {
-        let docData: [String: Any] = [
-          "stringExample": "Hello world!",
-          "booleanExample": true,
-          "numberExample": 3.14159265,
-          "dateExample": Timestamp(date: Date()),
-          "arrayExample": [5, true, "hello"],
-          "nullExample": NSNull(),
-          "objectExample": [
-            "a": 5,
-            "b": [
-              "nested": "foo"
-            ]
-          ]
-        ]
-        
-        let newCityRef = db.collection("Task").document()
 
-        newCityRef.setData(docData)
-    }
-    
     @IBAction func sessionValueChanged(_ sender: UIStepper) {
         let stepperValue = sessionStepper.value
         sessionLabel.text = "\(Int(stepperValue))"
     }
     
-    @IBAction func longBreakValueChanged(_ sender: UIStepper) {
-        let stepperValue = longBreakStepper.value
-        longBreakLabel.text = "\(Int(stepperValue))"
-    }
-    
-    @IBAction func shortBreakValueChanged(_ sender: UIStepper) {
-        let stepperValue = shortBreakStepper.value
-        shortBreakLabel.text = "\(Int(stepperValue))"
+    @IBAction func createTaskAction(_ sender: UIButton) {
+        print(datePicker.date)
+
+        /*let firestoreData: [String: Any] = [
+            "title": taskTitle.text ?? "",
+            "description": taskDesc.text ?? "",
+            "createdDate": datePicker.date,
+            "taskTime": "YourTime",
+            "category": "YourCategory",
+            "status": 0,
+            "sessionCount": 3,
+            "completedSessionCount": 0
+        ]
+        
+        let task = TaskModel(dictionary: firestoreData)
+        let newCityRef = db.collection("Task").document()
+        
+        newCityRef.setData(task.dictionaryRepresentation)*/
     }
 }
 
 extension CreateTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -103,3 +87,4 @@ extension CreateTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource
         categoryTextField.text = categories[row]
     }
 }
+

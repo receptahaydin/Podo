@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC66B9492B7AB570003A4BE8 /* TaskStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66B9482B7AB570003A4BE8 /* TaskStruct.swift */; };
 		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
 		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
@@ -65,6 +66,7 @@
 		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
 		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC66B9482B7AB570003A4BE8 /* TaskStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStruct.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		DCB75D902B5083330036A076 /* DialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 				CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC66B9472B7AB54F003A4BE8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DC66B9482B7AB570003A4BE8 /* TaskStruct.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
@@ -289,6 +299,7 @@
 		DCFB59C72B4D711D00DF2F5D /* PoDo */ = {
 			isa = PBXGroup;
 			children = (
+				DC66B9472B7AB54F003A4BE8 /* Firebase */,
 				DCFB59DC2B4D71C800DF2F5D /* Utils */,
 				DCFB59DD2B4D71D100DF2F5D /* Extensions */,
 				DCFB59DE2B4D71E000DF2F5D /* UI */,
@@ -531,6 +542,7 @@
 				DCB75DA32B5083330036A076 /* CardView.swift in Sources */,
 				DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */,
 				DCFB59F92B4D724400DF2F5D /* UIView+Extension.swift in Sources */,
+				DC66B9492B7AB570003A4BE8 /* TaskStruct.swift in Sources */,
 				DCFB59F62B4D724400DF2F5D /* Localization.swift in Sources */,
 				DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */,
 				DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */,
