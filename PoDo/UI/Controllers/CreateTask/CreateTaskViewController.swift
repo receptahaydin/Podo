@@ -26,7 +26,6 @@ class CreateTaskViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         categoryTextField.inputView = pickerView
-        datePicker.timeZone = TimeZone.autoupdatingCurrent
         setDateComponents()
     }
     
@@ -43,30 +42,45 @@ class CreateTaskViewController: UIViewController {
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker.minimumDate = minDate
     }
-
+    
+    private func getFormattedDate(date: Date? = nil) -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let selectedDate = date ?? datePicker.date
+        
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: selectedDate)
+        components.timeZone = TimeZone(identifier: "UTC")
+        
+        let utcDate = calendar.date(from: components)!
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        
+        return dateFormatter.string(from: utcDate)
+    }
+    
     @IBAction func sessionValueChanged(_ sender: UIStepper) {
         let stepperValue = sessionStepper.value
         sessionLabel.text = "\(Int(stepperValue))"
     }
     
     @IBAction func createTaskAction(_ sender: UIButton) {
-        print(datePicker.date)
-
-        /*let firestoreData: [String: Any] = [
+        
+        let firestoreData: [String: Any] = [
             "title": taskTitle.text ?? "",
             "description": taskDesc.text ?? "",
-            "createdDate": datePicker.date,
-            "taskTime": "YourTime",
-            "category": "YourCategory",
+            "createdDate": getFormattedDate(date: Date()),
+            "taskTime": getFormattedDate(),
+            "category": categoryTextField.text ?? "",
             "status": 0,
-            "sessionCount": 3,
+            "sessionCount": sessionLabel.text ?? "",
             "completedSessionCount": 0
         ]
         
         let task = TaskModel(dictionary: firestoreData)
         let newCityRef = db.collection("Task").document()
         
-        newCityRef.setData(task.dictionaryRepresentation)*/
+        newCityRef.setData(task.dictionaryRepresentation)
     }
 }
 

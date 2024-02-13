@@ -984,7 +984,7 @@
                                 <rect key="frame" x="20" y="249.33333333333337" width="353" height="64"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1095,19 +1095,19 @@
             <size key="intrinsicContentSize" width="17.666666666666668" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+            <size key="intrinsicContentSize" width="143.33333333333334" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+            <size key="intrinsicContentSize" width="143.33333333333334" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="178.33333333333334" height="34"/>
+            <size key="intrinsicContentSize" width="194" height="34"/>
         </designable>
     </designables>
     <resources>
