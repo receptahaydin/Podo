@@ -54,11 +54,21 @@ extension TasksViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 15
     }
 }
 
 extension TasksViewController: UITableViewDelegate {
-
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let floatingButtonY = view.frame.size.height - (tabBarController?.tabBar.frame.size.height ?? 0) - 60 - 20
+        
+        UIView.animate(withDuration: 0.3) {
+            if scrollView.panGestureRecognizer.translation(in: scrollView).y > 0 {
+                self.floatingButton.frame.origin.y = floatingButtonY
+            } else {
+                self.floatingButton.frame.origin.y = self.view.frame.size.height
+            }
+        }
+    }
 }
 
