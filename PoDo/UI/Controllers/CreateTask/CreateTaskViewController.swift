@@ -12,26 +12,53 @@ class CreateTaskViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var categoryTextField: DesignableUITextField!
+    @IBOutlet weak var focusTextField: DesignableUITextField!
+    @IBOutlet weak var longTextField: DesignableUITextField!
+    @IBOutlet weak var shortTextField: DesignableUITextField!
     @IBOutlet weak var sessionStepper: UIStepper!
     @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskDesc: UITextView!
     
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
-    let pickerView = UIPickerView()
+    var focusTime = ["20", "25", "30", "35", "40", "45", "50", "55", "60"]
+    var shortBreakTime = ["5", "10", "15", "20"]
+    var longBreakTime = ["10", "15", "20", "25", "30"]
+    let categoryPickerView = UIPickerView()
+    let focusPickerView = UIPickerView()
+    let shortPickerView = UIPickerView()
+    let longPickerView = UIPickerView()
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        categoryTextField.inputView = pickerView
+        pickerViewSettings()
         setDateComponents()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setDateComponents()
+    }
+    
+    private func pickerViewSettings() {
+        categoryPickerView.delegate = self
+        categoryPickerView.dataSource = self
+        focusPickerView.delegate = self
+        focusPickerView.dataSource = self
+        shortPickerView.delegate = self
+        shortPickerView.dataSource = self
+        longPickerView.delegate = self
+        longPickerView.dataSource = self
+        categoryTextField.inputView = categoryPickerView
+        focusTextField.inputView = focusPickerView
+        shortTextField.inputView = shortPickerView
+        longTextField.inputView = longPickerView
+        
+        categoryPickerView.tag = 1
+        focusPickerView.tag = 2
+        shortPickerView.tag = 3
+        longPickerView.tag = 4
     }
     
     private func setDateComponents() {
@@ -90,15 +117,48 @@ extension CreateTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
+        switch pickerView.tag {
+        case 1:
+            return categories.count
+        case 2:
+            return focusTime.count
+        case 3:
+            return shortBreakTime.count
+        case 4:
+            return longBreakTime.count
+        default:
+            return 1
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categories[row]
+        switch pickerView.tag {
+        case 1:
+            return categories[row]
+        case 2:
+            return focusTime[row]
+        case 3:
+            return shortBreakTime[row]
+        case 4:
+            return longBreakTime[row]
+        default:
+            return "Data not found."
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        categoryTextField.text = categories[row]
+        switch pickerView.tag {
+        case 1:
+            categoryTextField.text = categories[row]
+        case 2:
+            focusTextField.text = focusTime[row]
+        case 3:
+            shortTextField.text = shortBreakTime[row]
+        case 4:
+            longTextField.text = longBreakTime[row]
+        default:
+            return
+        }
     }
 }
 

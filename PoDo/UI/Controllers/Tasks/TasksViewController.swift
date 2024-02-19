@@ -38,6 +38,8 @@ class TasksViewController: UIViewController {
                                       y: floatingButtonY,
                                       width: 60,
                                       height: 60)
+        
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 20, right: 0)
     }
     
     @objc private func didTapFloatingButton() {
@@ -59,16 +61,6 @@ extension TasksViewController: UITableViewDataSource {
 }
 
 extension TasksViewController: UITableViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let floatingButtonY = view.frame.size.height - (tabBarController?.tabBar.frame.size.height ?? 0) - 60 - 20
-        
-        UIView.animate(withDuration: 0.3) {
-            if scrollView.panGestureRecognizer.translation(in: scrollView).y > 0 {
-                self.floatingButton.frame.origin.y = floatingButtonY
-            } else {
-                self.floatingButton.frame.origin.y = self.view.frame.size.height
-            }
-        }
-    }
+
 }
 
