@@ -19,6 +19,8 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskDesc: UITextView!
+    @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
     var focusTime = ["20", "25", "30", "35", "40", "45", "50", "55", "60"]
@@ -32,12 +34,8 @@ class CreateTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.isHidden = true
         pickerViewSettings()
-        setDateComponents()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setDateComponents()
     }
     
@@ -50,6 +48,7 @@ class CreateTaskViewController: UIViewController {
         shortPickerView.dataSource = self
         longPickerView.delegate = self
         longPickerView.dataSource = self
+        
         categoryTextField.inputView = categoryPickerView
         focusTextField.inputView = focusPickerView
         shortTextField.inputView = shortPickerView
@@ -70,44 +69,73 @@ class CreateTaskViewController: UIViewController {
         datePicker.minimumDate = minDate
     }
     
-    private func getFormattedDate(date: Date? = nil) -> String {
+    private func getFormattedDate() -> (date: String, time: String) {
         let calendar = Calendar(identifier: .gregorian)
-        let selectedDate = date ?? datePicker.date
+        let selectedDate = datePicker.date
         
         var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: selectedDate)
         components.timeZone = TimeZone(identifier: "UTC")
         
         let utcDate = calendar.date(from: components)!
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        let dateFormatterDate = DateFormatter()
+        dateFormatterDate.dateFormat = "yyyy-MM-dd"
+        dateFormatterDate.timeZone = TimeZone(identifier: "UTC")
         
-        return dateFormatter.string(from: utcDate)
+        let dateFormatterTime = DateFormatter()
+        dateFormatterTime.dateFormat = "HH:mm"
+        dateFormatterTime.timeZone = TimeZone(identifier: "UTC")
+        
+        let formattedDate = dateFormatterDate.string(from: utcDate)
+        let formattedTime = dateFormatterTime.string(from: utcDate)
+        
+        return (formattedDate, formattedTime)
     }
     
     @IBAction func sessionValueChanged(_ sender: UIStepper) {
         let stepperValue = sessionStepper.value
         sessionLabel.text = "\(Int(stepperValue))"
+        
+        if (Int(stepperValue)) >= 4 {
+            longTextField.isEnabled = true
+            warningLabel.isHidden = true
+        } else {
+            longTextField.isEnabled = false
+            warningLabel.isHidden = false
+        }
     }
     
     @IBAction func createTaskAction(_ sender: UIButton) {
         
+        guard let title = taskTitle.text, !title.isEmpty else {
+            titleLabel.isHidden = false
+            return
+        }
+        
+        let formattedDateTime = getFormattedDate()
+        let formattedDate = formattedDateTime.date
+        let formattedTime = formattedDateTime.time
+        
         let firestoreData: [String: Any] = [
-            "title": taskTitle.text ?? "",
+            "title": taskTitle.text!,
             "description": taskDesc.text ?? "",
-            "createdDate": getFormattedDate(date: Date()),
-            "taskTime": getFormattedDate(),
+            "date": formattedDate,
+            "time": formattedTime,
             "category": categoryTextField.text ?? "",
             "status": 0,
-            "sessionCount": sessionLabel.text ?? "",
-            "completedSessionCount": 0
+            "sessionCount": Int(sessionLabel.text!)!,
+            "completedSessionCount": 0,
+            "sessionDuration": Int(focusTextField.text!)!,
+            "shortBreakDuration": Int(shortTextField.text!)!,
+            "longBreakDuration": Int(longTextField.text ?? "25")!
         ]
         
         let task = TaskModel(dictionary: firestoreData)
         let newCityRef = db.collection("Task").document()
         
         newCityRef.setData(task.dictionaryRepresentation)
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -162,3 +190,10 @@ extension CreateTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
 }
 
+extension CreateTaskViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        titleLabel.isHidden = true
+        return true
+    }
+}

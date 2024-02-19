@@ -27,8 +27,8 @@ struct TaskModel: Codable {
         self.id = dictionary["id"] as? String ?? ""
         self.title = dictionary["title"] as? String ?? ""
         self.description = dictionary["description"] as? String ?? ""
-        self.date = dictionary["createdDate"] as? String ?? ""
-        self.time = dictionary["taskTime"] as? String ?? ""
+        self.date = dictionary["date"] as? String ?? ""
+        self.time = dictionary["time"] as? String ?? ""
         self.category = dictionary["category"] as? String ?? ""
         self.status = dictionary["status"] as? Int ?? 0
         self.sessionCount = dictionary["sessionCount"] as? Int ?? 0
@@ -41,7 +41,6 @@ struct TaskModel: Codable {
     // Custom computed property to convert to Firestore dictionary
     var dictionaryRepresentation: [String: Any] {
         return [
-            "id": id,
             "title": title,
             "description": description,
             "date": date,
