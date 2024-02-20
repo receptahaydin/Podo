@@ -1017,7 +1017,7 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
-                                        <imageReference key="value" image="arrowshape.down.fill" catalog="system" symbolScale="small"/>
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -1078,8 +1078,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Focus Time (min)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psU-Nu-MFg" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="442" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psU-Nu-MFg" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="442" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1088,12 +1088,12 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
-                                        <imageReference key="value" image="arrowshape.down.fill" catalog="system" symbolScale="small"/>
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Long Break (min)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xId-P7-bj3" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="562" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xId-P7-bj3" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="562" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1102,12 +1102,12 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
-                                        <imageReference key="value" image="arrowshape.down.fill" catalog="system" symbolScale="small"/>
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Short Break (min)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzP-r4-IYr" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="502" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzP-r4-IYr" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="502" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1116,11 +1116,11 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
-                                        <imageReference key="value" image="arrowshape.down.fill" catalog="system" symbolScale="small"/>
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a long break, you need a session time of 4 or more." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSq-tp-O3z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a long break, you need a session time of 4 or more." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSq-tp-O3z">
                                 <rect key="frame" x="20" y="599" width="335" height="12"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                 <color key="textColor" name="PODORed"/>
@@ -1132,17 +1132,38 @@
                                 <color key="textColor" name="PODORed"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usX-jg-MFn">
+                                <rect key="frame" x="20" y="447" width="85.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04i-Rt-dQD">
+                                <rect key="frame" x="20" y="507" width="88" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-Xa-rcP">
+                                <rect key="frame" x="20" y="567" width="84" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z0L-VE-HI1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="psU-Nu-MFg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="usX-jg-MFn" secondAttribute="trailing" symbolic="YES" id="1RL-lJ-VaA"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="1eM-Vm-spJ" secondAttribute="trailing" constant="20" id="2Yv-cg-6fT"/>
                             <constraint firstItem="1eM-Vm-spJ" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="2q8-0W-zvb"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="66X-rr-1zG" secondAttribute="trailing" constant="20" id="3QV-3W-THd"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="wPL-D9-GZ7" secondAttribute="trailing" constant="20" id="3mN-q5-3cx"/>
                             <constraint firstItem="ZhL-dw-aV4" firstAttribute="top" secondItem="66X-rr-1zG" secondAttribute="bottom" constant="5" id="9wM-d5-EeX"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oaN-WD-gCA" secondAttribute="trailing" symbolic="YES" id="CAf-Dz-D6p"/>
+                            <constraint firstItem="WzP-r4-IYr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="04i-Rt-dQD" secondAttribute="trailing" symbolic="YES" id="Dha-fK-ZEm"/>
                             <constraint firstItem="oaN-WD-gCA" firstAttribute="top" secondItem="fWw-qk-DG7" secondAttribute="bottom" constant="30" id="FhX-TR-r6J"/>
+                            <constraint firstItem="ybY-Xa-rcP" firstAttribute="centerY" secondItem="xId-P7-bj3" secondAttribute="centerY" id="Grj-YS-mPO"/>
                             <constraint firstItem="zdU-GY-vi7" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.045" id="HOk-4R-jep"/>
                             <constraint firstItem="psU-Nu-MFg" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.045" id="HyN-XA-ZvM"/>
                             <constraint firstItem="jf5-gf-JKE" firstAttribute="centerY" secondItem="oaN-WD-gCA" secondAttribute="centerY" id="JRI-7w-Mfs"/>
@@ -1154,12 +1175,16 @@
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="bottom" secondItem="1eM-Vm-spJ" secondAttribute="bottom" constant="10" id="P8h-x2-Mxm"/>
                             <constraint firstItem="nSq-tp-O3z" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="PyJ-C1-qY1"/>
                             <constraint firstItem="WzP-r4-IYr" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.045" id="Qrl-Mq-ka0"/>
-                            <constraint firstItem="psU-Nu-MFg" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="QuA-Cd-iCi"/>
+                            <constraint firstItem="psU-Nu-MFg" firstAttribute="width" secondItem="NDF-NU-NzQ" secondAttribute="width" multiplier="0.5" id="SZG-u0-r2Y"/>
                             <constraint firstItem="66X-rr-1zG" firstAttribute="top" secondItem="AGv-ov-1NN" secondAttribute="bottom" constant="7" id="TIZ-7v-APw"/>
                             <constraint firstItem="zdU-GY-vi7" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="UWc-NG-KDX"/>
+                            <constraint firstItem="xId-P7-bj3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ybY-Xa-rcP" secondAttribute="trailing" symbolic="YES" id="VZg-8R-aSu"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="jf5-gf-JKE" secondAttribute="trailing" constant="20" id="VlM-Bn-93b"/>
+                            <constraint firstItem="usX-jg-MFn" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="WFJ-iv-sNJ"/>
                             <constraint firstItem="xId-P7-bj3" firstAttribute="top" secondItem="WzP-r4-IYr" secondAttribute="bottom" constant="30" id="Y6F-P5-hiG"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.045" id="Y92-WH-wWD"/>
+                            <constraint firstItem="xId-P7-bj3" firstAttribute="width" secondItem="NDF-NU-NzQ" secondAttribute="width" multiplier="0.5" id="Ydu-de-1Of"/>
+                            <constraint firstItem="WzP-r4-IYr" firstAttribute="width" secondItem="NDF-NU-NzQ" secondAttribute="width" multiplier="0.5" id="YvV-61-k6k"/>
                             <constraint firstItem="ZhL-dw-aV4" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="ZPE-Mg-5Ab"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="zdU-GY-vi7" secondAttribute="trailing" constant="20" id="ZWf-90-cnK"/>
                             <constraint firstItem="UGo-8w-Io1" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="aA4-31-cmQ"/>
@@ -1173,14 +1198,15 @@
                             <constraint firstItem="xId-P7-bj3" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.045" id="fD4-15-N8c"/>
                             <constraint firstItem="66X-rr-1zG" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="gAc-4t-286"/>
                             <constraint firstItem="wPL-D9-GZ7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sMd-9X-6WT" secondAttribute="trailing" constant="8" symbolic="YES" id="gaM-U8-hQH"/>
+                            <constraint firstItem="usX-jg-MFn" firstAttribute="centerY" secondItem="psU-Nu-MFg" secondAttribute="centerY" id="gff-1i-ogT"/>
                             <constraint firstItem="fWw-qk-DG7" firstAttribute="top" secondItem="ZhL-dw-aV4" secondAttribute="bottom" constant="10" id="god-W5-2Hi"/>
-                            <constraint firstItem="WzP-r4-IYr" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="h0I-k1-35e"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UGo-8w-Io1" secondAttribute="trailing" symbolic="YES" id="jWD-2a-Pdo"/>
-                            <constraint firstItem="xId-P7-bj3" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="mVN-kZ-DI2"/>
+                            <constraint firstItem="04i-Rt-dQD" firstAttribute="centerY" secondItem="WzP-r4-IYr" secondAttribute="centerY" id="jxn-dB-a3B"/>
                             <constraint firstItem="UGo-8w-Io1" firstAttribute="top" secondItem="c5d-bl-Nh9" secondAttribute="bottom" constant="20" id="oEH-VX-IKU"/>
-                            <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="psU-Nu-MFg" secondAttribute="trailing" constant="20" id="pvD-hU-FGD"/>
                             <constraint firstAttribute="trailing" secondItem="nSq-tp-O3z" secondAttribute="trailing" constant="20" id="q3z-yj-m3J"/>
                             <constraint firstItem="oaN-WD-gCA" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="qFk-la-KGw"/>
+                            <constraint firstItem="ybY-Xa-rcP" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="qVu-4Q-Zje"/>
+                            <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="psU-Nu-MFg" secondAttribute="trailing" constant="20" id="qYV-33-ZBb"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="xId-P7-bj3" secondAttribute="trailing" constant="20" id="rd2-wR-OBz"/>
                             <constraint firstItem="fWw-qk-DG7" firstAttribute="height" secondItem="NDF-NU-NzQ" secondAttribute="height" multiplier="0.075" id="s2a-tZ-uts"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="tZk-bt-vFT"/>
@@ -1189,6 +1215,7 @@
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="WzP-r4-IYr" secondAttribute="trailing" constant="20" id="uPX-iK-oLl"/>
                             <constraint firstItem="7tI-Aa-jPb" firstAttribute="top" secondItem="zdU-GY-vi7" secondAttribute="bottom" constant="30" id="utc-um-3fg"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7tI-Aa-jPb" secondAttribute="trailing" symbolic="YES" id="v4d-Fc-Z4d"/>
+                            <constraint firstItem="04i-Rt-dQD" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="vWg-9d-DRa"/>
                             <constraint firstItem="nSq-tp-O3z" firstAttribute="top" secondItem="xId-P7-bj3" secondAttribute="bottom" constant="7" id="vmv-cX-vDB"/>
                             <constraint firstItem="WzP-r4-IYr" firstAttribute="top" secondItem="psU-Nu-MFg" secondAttribute="bottom" constant="30" id="xqb-Rv-jsz"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="top" secondItem="UGo-8w-Io1" secondAttribute="bottom" constant="10" id="zKQ-TV-cW6"/>
@@ -1252,36 +1279,36 @@
             <size key="intrinsicContentSize" width="29" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="171" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="169.5" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="167.5" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="194" height="34"/>
+            <size key="intrinsicContentSize" width="178.5" height="34"/>
         </designable>
     </designables>
     <resources>
         <image name="PLetter" width="493" height="497"/>
         <image name="apple" width="512" height="512"/>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
-        <image name="arrowshape.down.fill" catalog="system" width="123" height="128"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>

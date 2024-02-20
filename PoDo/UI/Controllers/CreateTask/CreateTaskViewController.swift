@@ -23,9 +23,9 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
-    var focusTime = ["20", "25", "30", "35", "40", "45", "50", "55", "60"]
-    var shortBreakTime = ["5", "10", "15", "20"]
-    var longBreakTime = ["10", "15", "20", "25", "30"]
+    var focusTime = ["20 min", "25 min", "30 min", "35 min", "40 min", "45 min", "50 min", "55 min", "60 min"]
+    var shortBreakTime = ["5 min", "10 min", "15 min", "20 min"]
+    var longBreakTime = ["10 min", "15 min", "20 min", "25 min", "30 min"]
     let categoryPickerView = UIPickerView()
     let focusPickerView = UIPickerView()
     let shortPickerView = UIPickerView()
