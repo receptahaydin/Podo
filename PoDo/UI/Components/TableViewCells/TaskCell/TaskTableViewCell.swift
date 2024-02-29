@@ -10,6 +10,10 @@ import UIKit
 class TaskTableViewCell: UITableViewCell {
 
     @IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var taskIcon: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,4 +24,9 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    public func configureCell(title: String, date: String, desc: String) {
+        self.titleLabel.text = title
+        self.dateLabel.text = date
+        self.descLabel.text = desc
+    }
 }

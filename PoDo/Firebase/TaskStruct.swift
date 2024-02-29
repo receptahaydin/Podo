@@ -23,8 +23,8 @@ struct TaskModel: Codable {
     var longBreakDuration: Int
     
     // Custom initializer to convert from Firestore dictionary
-    init(dictionary: [String: Any]) {
-        self.id = dictionary["id"] as? String ?? ""
+    init(documentID: String = "", dictionary: [String: Any]) {
+        self.id = documentID
         self.title = dictionary["title"] as? String ?? ""
         self.description = dictionary["description"] as? String ?? ""
         self.date = dictionary["date"] as? String ?? ""

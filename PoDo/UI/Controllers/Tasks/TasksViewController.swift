@@ -39,7 +39,7 @@ class TasksViewController: UIViewController {
                                       width: 60,
                                       height: 60)
         
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 20, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 30, right: 0)
     }
     
     @objc private func didTapFloatingButton() {
@@ -51,8 +51,9 @@ class TasksViewController: UIViewController {
 
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let topCell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
-        return topCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

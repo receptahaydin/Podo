@@ -92,6 +92,16 @@ class CreateTaskViewController: UIViewController {
         return (formattedDate, formattedTime)
     }
     
+    private func extractNumber(from text: String) -> Int? {
+        let filteredCharacters = text.filter { "0123456789".contains($0) }
+        
+        if let number = Int(filteredCharacters) {
+            return number
+        } else {
+            return nil
+        }
+    }
+    
     @IBAction func sessionValueChanged(_ sender: UIStepper) {
         let stepperValue = sessionStepper.value
         sessionLabel.text = "\(Int(stepperValue))"
@@ -125,9 +135,9 @@ class CreateTaskViewController: UIViewController {
             "status": 0,
             "sessionCount": Int(sessionLabel.text!)!,
             "completedSessionCount": 0,
-            "sessionDuration": Int(focusTextField.text!)!,
-            "shortBreakDuration": Int(shortTextField.text!)!,
-            "longBreakDuration": Int(longTextField.text ?? "25")!
+            "sessionDuration": extractNumber(from: focusTextField.text!)!,
+            "shortBreakDuration": extractNumber(from: shortTextField.text!)!,
+            "longBreakDuration": extractNumber(from: longTextField.text!)!
         ]
         
         let task = TaskModel(dictionary: firestoreData)
