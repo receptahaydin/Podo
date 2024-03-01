@@ -41,6 +41,27 @@ class FirestoreManager {
         ])
     }
     
+    func readTaskFromDatabase(completion: @escaping () -> Void) {
+        let tasksCollection = db.collection("Users").document(getCurrentUserID()!).collection("Tasks")
+
+        tasksCollection.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                var tasks: [Task] = []
+                
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let task = Task(data: data)
+                    tasks.append(task)
+                }
+                
+                TaskManager.shared.tasks = tasks
+                completion()
+            }
+        }
+    }
+    
     func getCurrentUserID() -> String? {
         if let user = Auth.auth().currentUser {
             return user.uid

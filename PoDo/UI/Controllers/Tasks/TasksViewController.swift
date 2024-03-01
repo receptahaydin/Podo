@@ -11,6 +11,8 @@ class TasksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let firestoreManager = FirestoreManager()
+    
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         button.backgroundColor = .PODORed
@@ -22,8 +24,21 @@ class TasksViewController: UIViewController {
         return button
     }()
     
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = .podoRed
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        TaskManager.shared.tasks = []
+        showLoadingIndicator()
+        self.firestoreManager.readTaskFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.tableView.reloadData()
+        }
         view.addSubview(floatingButton)
         tableView.register(TaskTableViewCell.self)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
@@ -48,22 +63,40 @@ class TasksViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "createTaskVC")
         self.present(vc, animated: true)
     }
+    
+    private func showLoadingIndicator() {
+        // Loading göstergesi gösterme kodları
+        // Örneğin, UIActivityIndicatorView kullanabilirsiniz.
+        view.addSubview(loadingIndicator)
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        // Loading göstergesini başlat
+        loadingIndicator.startAnimating()
+    }
+    
+    private func hideLoadingIndicator() {
+        // Loading göstergesini kapatma kodları
+        loadingIndicator.stopAnimating()
+                loadingIndicator.removeFromSuperview()
+    }
 }
 
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
-        //let task = TaskManager.shared.tasks[indexPath.row]
+        let task = TaskManager.shared.tasks[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return TaskManager.shared.tasks.count
-        return 0
+        return TaskManager.shared.tasks.count
     }
 }
 
 extension TasksViewController: UITableViewDelegate {
-
+    
 }
 

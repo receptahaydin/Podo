@@ -50,14 +50,13 @@ class SignupViewController: UIViewController {
 
             let user = User(data: userData)
             self.firestoreManager.addUser(user: user)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            sender.isLoading = false
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
-            vc?.modalPresentationStyle = .fullScreen
-            self.present(vc!, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+                vc?.modalPresentationStyle = .fullScreen
+                self.present(vc!, animated: false)
+            }
         }
     }
 }

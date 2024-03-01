@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var email: DesignableUITextField!
     @IBOutlet weak var password: DesignableUITextField!
     
+    let firestoreManager = FirestoreManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,12 +41,12 @@ class LoginViewController: UIViewController {
             }
             
             sender.isLoading = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                sender.isLoading = false
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
                 vc?.modalPresentationStyle = .fullScreen
-                self!.present(vc!, animated: true)
+                self!.present(vc!, animated: false)
             }
         }
     }
