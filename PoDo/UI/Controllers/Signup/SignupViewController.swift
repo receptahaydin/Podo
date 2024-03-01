@@ -36,7 +36,7 @@ class SignupViewController: UIViewController {
                 sender.isLoading = false
                 return
             }
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
                 sender.isLoading = false
                 let sb = UIStoryboard(name: "Main", bundle: nil)

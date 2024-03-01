@@ -17,11 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
-        /*let splashVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "splashVC") as! SplashViewController
-        self.window?.rootViewController = splashVC
-        self.window?.makeKeyAndVisible()*/
-        
         configureKeyboardManager()
         
         return true

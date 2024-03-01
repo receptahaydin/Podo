@@ -68,6 +68,8 @@ extension SettingsViewController: UITableViewDelegate {
             let b1 = CRXDialogButton(title: "Cancel", style: .cancel)  {}
             let b2 = CRXDialogButton(title: "Yes, Logout", style: .destructive) {
                 DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    try? Auth.auth().signOut()
+                    
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     let vc = sb.instantiateViewController(withIdentifier: "loginVC")
                     

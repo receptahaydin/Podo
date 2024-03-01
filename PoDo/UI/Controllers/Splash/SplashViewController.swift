@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import FirebaseFirestore
 
 class SplashViewController: UIViewController {
@@ -14,8 +15,21 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readTaskFromDatabase()
+        checkUserAuthentication()
         
+    }
+    
+    func checkUserAuthentication() {
+        if Auth.auth().currentUser != nil {
+            readTaskFromDatabase()
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "signupVC")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+        }
     }
     
     func readTaskFromDatabase() {
@@ -47,11 +61,3 @@ class SplashViewController: UIViewController {
         }
     }
 }
-
-/*
-DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-    let vc = sb.instantiateViewController(withIdentifier: "onboardingVC")
-    vc.modalPresentationStyle = .fullScreen
-    self.present(vc, animated: false)
-*/

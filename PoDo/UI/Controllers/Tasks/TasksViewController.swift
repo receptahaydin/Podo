@@ -25,6 +25,7 @@ class TasksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(floatingButton)
+        tableView.register(TaskTableViewCell.self)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
     }
     
@@ -52,12 +53,12 @@ class TasksViewController: UIViewController {
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
-        
+        let task = TaskManager.shared.tasks[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return TaskManager.shared.tasks.count
     }
 }
 
