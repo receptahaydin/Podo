@@ -24,9 +24,9 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    public func configureCell(title: String, date: String, desc: String) {
-        self.titleLabel.text = title
-        self.dateLabel.text = date
-        self.descLabel.text = desc
+    public func configureCell(task: Task) {
+        self.titleLabel.text = task.title
+        self.dateLabel.text = task.date
+        self.descLabel.text = task.description
     }
 }

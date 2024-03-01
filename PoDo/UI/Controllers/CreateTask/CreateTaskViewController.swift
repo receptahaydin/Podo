@@ -8,6 +8,10 @@
 import UIKit
 import FirebaseFirestore
 
+protocol CreateTaskDelegate: AnyObject {
+    func didCreateTask()
+}
+
 class CreateTaskViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -22,6 +26,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    weak var delegate: CreateTaskDelegate?
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
     var focusTime = ["20 min", "25 min", "30 min", "35 min", "40 min", "45 min", "50 min", "55 min", "60 min"]
     var shortBreakTime = ["5 min", "10 min", "15 min", "20 min"]
@@ -143,6 +148,8 @@ class CreateTaskViewController: UIViewController {
         
         let task = Task(data: taskData)
         self.firestoreManager.addTask(task: task)
+        
+        delegate?.didCreateTask()
         
         dismiss(animated: true, completion: nil)
     }

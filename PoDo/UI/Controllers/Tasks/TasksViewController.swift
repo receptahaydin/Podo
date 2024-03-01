@@ -60,34 +60,32 @@ class TasksViewController: UIViewController {
     
     @objc private func didTapFloatingButton() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "createTaskVC")
-        self.present(vc, animated: true)
+        let createTaskVC = sb.instantiateViewController(withIdentifier: "createTaskVC") as! CreateTaskViewController
+        createTaskVC.delegate = self
+        self.present(createTaskVC, animated: true)
     }
     
     private func showLoadingIndicator() {
-        // Loading göstergesi gösterme kodları
-        // Örneğin, UIActivityIndicatorView kullanabilirsiniz.
         view.addSubview(loadingIndicator)
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        // Loading göstergesini başlat
         loadingIndicator.startAnimating()
     }
     
     private func hideLoadingIndicator() {
-        // Loading göstergesini kapatma kodları
         loadingIndicator.stopAnimating()
-                loadingIndicator.removeFromSuperview()
+        loadingIndicator.removeFromSuperview()
     }
 }
 
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
         let task = TaskManager.shared.tasks[indexPath.row]
+        cell.configureCell(task: task)
         return cell
     }
     
@@ -100,3 +98,12 @@ extension TasksViewController: UITableViewDelegate {
     
 }
 
+extension TasksViewController: CreateTaskDelegate {
+    func didCreateTask() {
+        showLoadingIndicator()
+        self.firestoreManager.readTaskFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.tableView.reloadData()
+        }
+    }
+}
