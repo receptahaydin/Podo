@@ -13,6 +13,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var email: DesignableUITextField!
     @IBOutlet weak var password: DesignableUITextField!
     
+    let firestoreManager = FirestoreManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,14 +38,27 @@ class SignupViewController: UIViewController {
                 sender.isLoading = false
                 return
             }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                sender.isLoading = false
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
-                vc?.modalPresentationStyle = .fullScreen
-                self.present(vc!, animated: true)
-            }
+                        
+            let userData: [String: Any] = [
+                "country": "",
+                "countryCode": "",
+                "email": email,
+                "name": "recep",
+                "phoneNumber": "",
+                "photo": ""
+            ]
+
+            let user = User(data: userData)
+            self.firestoreManager.addUser(user: user)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            sender.isLoading = false
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+            vc?.modalPresentationStyle = .fullScreen
+            self.present(vc!, animated: true)
         }
     }
 }
+

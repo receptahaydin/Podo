@@ -21,7 +21,12 @@ class SplashViewController: UIViewController {
     
     func checkUserAuthentication() {
         if Auth.auth().currentUser != nil {
-            readTaskFromDatabase()
+            DispatchQueue.main.async {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+                vc?.modalPresentationStyle = .fullScreen
+                self.present(vc!, animated: false)
+            }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -32,7 +37,7 @@ class SplashViewController: UIViewController {
         }
     }
     
-    func readTaskFromDatabase() {
+    /*func readTaskFromDatabase() {
         let tasksCollection = db.collection("Task")
         
         tasksCollection.getDocuments { [weak self] (querySnapshot, error) in
@@ -59,5 +64,5 @@ class SplashViewController: UIViewController {
                 }
             }
         }
-    }
+    }*/
 }

@@ -31,6 +31,7 @@ class CreateTaskViewController: UIViewController {
     let shortPickerView = UIPickerView()
     let longPickerView = UIPickerView()
     let db = Firestore.firestore()
+    let firestoreManager = FirestoreManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +127,7 @@ class CreateTaskViewController: UIViewController {
         let formattedDate = formattedDateTime.date
         let formattedTime = formattedDateTime.time
         
-        let firestoreData: [String: Any] = [
+        let taskData: [String: Any] = [
             "title": taskTitle.text!,
             "description": taskDesc.text ?? "",
             "date": formattedDate,
@@ -140,10 +141,8 @@ class CreateTaskViewController: UIViewController {
             "longBreakDuration": extractNumber(from: longTextField.text!)!
         ]
         
-        let task = TaskModel(dictionary: firestoreData)
-        let newCityRef = db.collection("Task").document()
-        
-        newCityRef.setData(task.dictionaryRepresentation)
+        let task = Task(data: taskData)
+        self.firestoreManager.addTask(task: task)
         
         dismiss(animated: true, completion: nil)
     }

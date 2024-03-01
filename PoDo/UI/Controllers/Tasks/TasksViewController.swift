@@ -53,12 +53,13 @@ class TasksViewController: UIViewController {
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
-        let task = TaskManager.shared.tasks[indexPath.row]
+        //let task = TaskManager.shared.tasks[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TaskManager.shared.tasks.count
+        //return TaskManager.shared.tasks.count
+        return 0
     }
 }
 

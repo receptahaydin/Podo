@@ -8,11 +8,5 @@
 import Foundation
 
 class TaskManager {
-    static let shared = TaskManager()
     
-    var tasks: [TaskModel] = []
-    
-    private init() {
-        // Singleton sınıf olduğu için başka yerden örneğini oluşturmayı engellemek için private initializer
-    }
 }
