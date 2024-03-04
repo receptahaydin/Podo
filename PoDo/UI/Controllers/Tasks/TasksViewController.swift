@@ -32,6 +32,35 @@ class TasksViewController: UIViewController {
         return indicator
     }()
     
+    private let moreActions: UIAlertController = {
+        let alert = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+        
+        alert.addAction(
+            .init(title: "Sort by", style: .default) { _ in
+                print("xxx")
+            }
+        )
+        
+        alert.addAction(
+            .init(title: "View in Calendar", style: .default) { _ in
+                let calendarViewController = CalendarViewController()  // replace with your actual CalendarViewController
+                    let navigationController = UINavigationController(rootViewController: calendarViewController)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    //self.present(navigationController, animated: true, completion: nil)
+            }
+        )
+        
+        alert.actions.forEach { action in
+            action.titleTextColor = .podoRed
+        }
+        
+        return alert
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskManager.shared.tasks = []
@@ -64,6 +93,10 @@ class TasksViewController: UIViewController {
         let createTaskVC = sb.instantiateViewController(withIdentifier: "createTaskVC") as! CreateTaskViewController
         createTaskVC.delegate = self
         self.present(createTaskVC, animated: true)
+    }
+    
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        present(moreActions, animated: true)
     }
     
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
@@ -122,6 +155,16 @@ extension TasksViewController: CreateTaskDelegate {
         self.firestoreManager.readTaskFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             self?.tableView.reloadData()
+        }
+    }
+}
+
+extension UIAlertAction {
+    var titleTextColor: UIColor? {
+        get {
+            return self.value(forKey: "titleTextColor") as? UIColor
+        } set {
+            self.setValue(newValue, forKey: "titleTextColor")
         }
     }
 }
