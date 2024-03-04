@@ -44,7 +44,7 @@ class FirestoreManager {
     func readTaskFromDatabase(completion: @escaping () -> Void) {
         let tasksCollection = db.collection("Users").document(getCurrentUserID()!).collection("Tasks")
 
-        tasksCollection.getDocuments { (querySnapshot, error) in
+        tasksCollection.order(by: "date").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {

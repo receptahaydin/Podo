@@ -85,7 +85,7 @@ class CreateTaskViewController: UIViewController {
         let utcDate = calendar.date(from: components)!
         
         let dateFormatterDate = DateFormatter()
-        dateFormatterDate.dateFormat = "yyyy-MM-dd"
+        dateFormatterDate.dateFormat = "yyyy.MM.dd"
         dateFormatterDate.timeZone = TimeZone(identifier: "UTC")
         
         let dateFormatterTime = DateFormatter()
