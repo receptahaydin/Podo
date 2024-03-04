@@ -850,7 +850,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mMP-8g-eiQ">
-                                <rect key="frame" x="20" y="74" width="335" height="544"/>
+                                <rect key="frame" x="20" y="109" width="335" height="509"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="75" id="iNc-pw-6d8" customClass="TaskTableViewCell" customModule="PoDo" customModuleProvider="target">
@@ -944,21 +944,38 @@
                                     <outlet property="delegate" destination="yCF-7s-r6b" id="pbW-Kz-DXq"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="32V-wT-Y6u">
+                                <rect key="frame" x="20" y="74" width="335" height="31"/>
+                                <segments>
+                                    <segment title="Pending"/>
+                                    <segment title="In Progress"/>
+                                    <segment title="Completed"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="PODORed"/>
+                                <connections>
+                                    <action selector="segmentControlTapped:" destination="yCF-7s-r6b" eventType="valueChanged" id="Yd1-VP-Y7M"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KCU-Vm-muv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mMP-8g-eiQ" firstAttribute="leading" secondItem="KCU-Vm-muv" secondAttribute="leading" constant="20" id="1r7-tm-bsz"/>
-                            <constraint firstItem="mMP-8g-eiQ" firstAttribute="top" secondItem="9E7-Aj-iGK" secondAttribute="bottom" constant="20" id="Bk5-FU-4vr"/>
+                            <constraint firstItem="32V-wT-Y6u" firstAttribute="leading" secondItem="KCU-Vm-muv" secondAttribute="leading" constant="20" id="31u-ot-Aw2"/>
+                            <constraint firstItem="KCU-Vm-muv" firstAttribute="trailing" secondItem="32V-wT-Y6u" secondAttribute="trailing" constant="20" id="9Vs-9J-t2Z"/>
                             <constraint firstItem="KCU-Vm-muv" firstAttribute="trailing" secondItem="mMP-8g-eiQ" secondAttribute="trailing" constant="20" id="Jwg-HT-Qqh"/>
+                            <constraint firstItem="mMP-8g-eiQ" firstAttribute="top" secondItem="32V-wT-Y6u" secondAttribute="bottom" constant="5" id="ZCt-YN-4Fo"/>
                             <constraint firstItem="KCU-Vm-muv" firstAttribute="bottom" secondItem="mMP-8g-eiQ" secondAttribute="bottom" id="a4f-py-NUD"/>
+                            <constraint firstItem="32V-wT-Y6u" firstAttribute="top" secondItem="9E7-Aj-iGK" secondAttribute="bottom" constant="20" id="n1V-Ye-ymG"/>
                             <constraint firstItem="9E7-Aj-iGK" firstAttribute="centerX" secondItem="X8V-d8-r1Y" secondAttribute="centerX" id="np3-hn-qHL"/>
                             <constraint firstItem="9E7-Aj-iGK" firstAttribute="top" secondItem="KCU-Vm-muv" secondAttribute="top" constant="10" id="ox9-yc-eQO"/>
+                            <constraint firstItem="32V-wT-Y6u" firstAttribute="height" secondItem="X8V-d8-r1Y" secondAttribute="height" multiplier="0.045" id="wVT-S8-ZCT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="list.bullet.rectangle.fill" catalog="system" id="0J0-lO-hpw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="segmentControl" destination="32V-wT-Y6u" id="Z9G-yX-seG"/>
                         <outlet property="tableView" destination="mMP-8g-eiQ" id="u4n-Oc-j0W"/>
                     </connections>
                 </viewController>
@@ -1298,31 +1315,31 @@
             <size key="intrinsicContentSize" width="29" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="193.5" height="34"/>
+            <size key="intrinsicContentSize" width="178.5" height="34"/>
         </designable>
     </designables>
     <resources>
@@ -1333,7 +1350,7 @@
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="32" height="32"/>
+        <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="google" width="512" height="512"/>

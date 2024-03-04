@@ -10,6 +10,7 @@ import UIKit
 class TasksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let firestoreManager = FirestoreManager()
     
@@ -37,7 +38,7 @@ class TasksViewController: UIViewController {
         showLoadingIndicator()
         self.firestoreManager.readTaskFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
-            self?.tableView.reloadData()
+            self?.segmentControlTapped(self?.segmentControl ?? UISegmentedControl())
         }
         view.addSubview(floatingButton)
         tableView.register(TaskTableViewCell.self)
@@ -65,6 +66,23 @@ class TasksViewController: UIViewController {
         self.present(createTaskVC, animated: true)
     }
     
+    @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
+        let selectedSegmentIndex = sender.selectedSegmentIndex
+        
+        switch selectedSegmentIndex {
+        case 0:
+            TaskManager.shared.filteredTasks = TaskManager.shared.tasks.filter { $0.status == 0 }
+        case 1:
+            TaskManager.shared.filteredTasks = TaskManager.shared.tasks.filter { $0.status == 1 }
+        case 2:
+            TaskManager.shared.filteredTasks = TaskManager.shared.tasks.filter { $0.status == 2 }
+        default:
+            break
+        }
+        
+        tableView.reloadData()
+    }
+    
     private func showLoadingIndicator() {
         view.addSubview(loadingIndicator)
         NSLayoutConstraint.activate([
@@ -84,13 +102,13 @@ class TasksViewController: UIViewController {
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
-        let task = TaskManager.shared.tasks[indexPath.row]
+        let task = TaskManager.shared.filteredTasks[indexPath.row]
         cell.configureCell(task: task)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TaskManager.shared.tasks.count
+        return TaskManager.shared.filteredTasks.count
     }
 }
 
