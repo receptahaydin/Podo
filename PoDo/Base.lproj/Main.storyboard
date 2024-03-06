@@ -431,14 +431,6 @@
                     <view key="view" contentMode="scaleToFill" id="252-zS-T2A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFo-Rb-myW">
-                                <rect key="frame" x="150" y="316" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zIr-ZI-w1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -1001,13 +993,13 @@
                     <navigationItem key="navigationItem" title="Tasks" id="d6D-Kg-0ZO">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="2bm-Lv-jax">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gby-oT-SaV">
-                                <rect key="frame" x="335.5" y="13" width="23.5" height="18"/>
+                                <rect key="frame" x="332.5" y="10" width="26.5" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="labelColor"/>
-                                    <imageReference key="image" image="ellipsis" catalog="system" variableValue="1"/>
+                                    <imageReference key="image" image="calendar" catalog="system" variableValue="1"/>
                                 </state>
                                 <connections>
                                     <action selector="moreButtonTapped:" destination="yCF-7s-r6b" eventType="touchUpInside" id="mmX-lW-qeF"/>
@@ -1019,6 +1011,7 @@
                     <connections>
                         <outlet property="segmentControl" destination="32V-wT-Y6u" id="Z9G-yX-seG"/>
                         <outlet property="tableView" destination="mMP-8g-eiQ" id="u4n-Oc-j0W"/>
+                        <segue destination="bVr-8J-GpN" kind="show" identifier="tasksToCalendar" id="2lN-tW-11r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLy-r3-VQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1315,34 +1308,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1x-W8-mCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7530" y="-937"/>
+            <point key="canvasLocation" x="8846" y="-425"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="uKK-ea-VGb">
             <objects>
-                <viewController title="Calendar" id="bVr-8J-GpN" customClass="CalendarViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" title="Calendar" hidesBottomBarWhenPushed="YES" id="bVr-8J-GpN" customClass="CalendarViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ES-N2-RR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfC-AS-kbQ">
-                                <rect key="frame" x="150" y="316" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-VS-tFE" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" name="PODORed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" name="PODORed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titlePlaceholderColor">
+                                        <color key="value" systemColor="systemGray2Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" name="PODORed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="0.33333334329999997" green="0.66666668650000005" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" name="PODORed"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bVr-8J-GpN" id="baX-RD-Xlr"/>
+                                    <outlet property="delegate" destination="bVr-8J-GpN" id="BXB-g6-gnt"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-VX-pWP">
+                                <rect key="frame" x="20" y="364" width="335" height="303"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="75" id="gC6-sd-ACe" customClass="TaskTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="335" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gC6-sd-ACe" id="4X2-J6-w2f">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bVr-8J-GpN" id="TA9-VG-wbZ"/>
+                                    <outlet property="delegate" destination="bVr-8J-GpN" id="gqN-Rz-kCH"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fvu-s5-1C2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XfC-AS-kbQ" firstAttribute="centerY" secondItem="2ES-N2-RR5" secondAttribute="centerY" id="Gff-Tt-cdK"/>
-                            <constraint firstItem="XfC-AS-kbQ" firstAttribute="centerX" secondItem="2ES-N2-RR5" secondAttribute="centerX" id="Y1m-zb-gze"/>
+                            <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="gRc-VX-pWP" secondAttribute="trailing" constant="20" id="6UE-er-vYY"/>
+                            <constraint firstItem="Fvu-s5-1C2" firstAttribute="bottom" secondItem="gRc-VX-pWP" secondAttribute="bottom" id="BAJ-io-wtP"/>
+                            <constraint firstItem="HLp-VS-tFE" firstAttribute="height" secondItem="2ES-N2-RR5" secondAttribute="height" multiplier="0.45" id="JpE-IG-KRW"/>
+                            <constraint firstItem="HLp-VS-tFE" firstAttribute="top" secondItem="Fvu-s5-1C2" secondAttribute="top" id="bK8-uU-WUR"/>
+                            <constraint firstItem="gRc-VX-pWP" firstAttribute="top" secondItem="HLp-VS-tFE" secondAttribute="bottom" id="dEj-Gw-sIS"/>
+                            <constraint firstItem="gRc-VX-pWP" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" constant="20" id="jti-4K-ilY"/>
+                            <constraint firstItem="HLp-VS-tFE" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" id="kCT-xW-Sju"/>
+                            <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="HLp-VS-tFE" secondAttribute="trailing" id="zEd-ri-2ev"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jaG-4y-p7Q"/>
+                    <connections>
+                        <outlet property="calendar" destination="HLp-VS-tFE" id="ce1-eh-x6B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBc-lI-aJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8335" y="-937"/>
+            <point key="canvasLocation" x="7289" y="-412"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="dPc-iu-74f">
@@ -1354,7 +1409,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yCF-7s-r6b" kind="relationship" relationship="rootViewController" id="K62-Zj-SaS"/>
+                        <segue destination="yCF-7s-r6b" kind="relationship" relationship="rootViewController" id="hxp-AT-28w"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAS-T0-OrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1428,11 +1483,13 @@
             <size key="intrinsicContentSize" width="193.5" height="34"/>
         </designable>
     </designables>
+    <color key="tintColor" name="PODORed"/>
     <resources>
         <image name="PLetter" width="493" height="497"/>
         <image name="apple" width="512" height="512"/>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="blue" width="1024" height="1024"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
@@ -1465,6 +1522,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -32,38 +32,10 @@ class TasksViewController: UIViewController {
         return indicator
     }()
     
-    private let moreActions: UIAlertController = {
-        let alert = UIAlertController(
-            title: nil,
-            message: nil,
-            preferredStyle: .actionSheet
-        )
-        
-        alert.addAction(
-            .init(title: "Sort by", style: .default) { _ in
-                print("xxx")
-            }
-        )
-        
-        alert.addAction(
-            .init(title: "View in Calendar", style: .default) { _ in
-                let calendarViewController = CalendarViewController()  // replace with your actual CalendarViewController
-                    let navigationController = UINavigationController(rootViewController: calendarViewController)
-                    navigationController.modalPresentationStyle = .fullScreen
-                    //self.present(navigationController, animated: true, completion: nil)
-            }
-        )
-        
-        alert.actions.forEach { action in
-            action.titleTextColor = .podoRed
-        }
-        
-        return alert
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskManager.shared.tasks = []
+        TaskManager.shared.filteredTasks = []
         showLoadingIndicator()
         self.firestoreManager.readTaskFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
@@ -96,13 +68,17 @@ class TasksViewController: UIViewController {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        present(moreActions, animated: true)
+        self.performSegue(withIdentifier: "tasksToCalendar", sender: nil)
     }
     
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
         let selectedSegmentIndex = sender.selectedSegmentIndex
-        
-        switch selectedSegmentIndex {
+        filterTasks(for: selectedSegmentIndex)
+        tableView.reloadData()
+    }
+    
+    private func filterTasks(for status: Int) {
+        switch status {
         case 0:
             TaskManager.shared.filteredTasks = TaskManager.shared.tasks.filter { $0.status == 0 }
         case 1:
@@ -112,8 +88,6 @@ class TasksViewController: UIViewController {
         default:
             break
         }
-        
-        tableView.reloadData()
     }
     
     private func showLoadingIndicator() {
@@ -154,17 +128,10 @@ extension TasksViewController: CreateTaskDelegate {
         showLoadingIndicator()
         self.firestoreManager.readTaskFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
+            if let selectedSegmentIndex = self?.segmentControl.selectedSegmentIndex {
+                self?.filterTasks(for: selectedSegmentIndex)
+            }
             self?.tableView.reloadData()
-        }
-    }
-}
-
-extension UIAlertAction {
-    var titleTextColor: UIColor? {
-        get {
-            return self.value(forKey: "titleTextColor") as? UIColor
-        } set {
-            self.setValue(newValue, forKey: "titleTextColor")
         }
     }
 }

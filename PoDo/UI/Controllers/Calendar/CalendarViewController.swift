@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FSCalendar
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController, FSCalendarDelegate {
 
+    @IBOutlet weak var calendar: FSCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
