@@ -32,6 +32,31 @@ class TasksViewController: UIViewController {
         return indicator
     }()
     
+    private let moreActions: UIAlertController = {
+        let alert = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+        
+        let editAction = UIAlertAction(title: "Edit", style: .default) { _ in
+            print("xxx")
+        }
+        editAction.setValue(UIColor.podoRed, forKey: "titleTextColor")
+        alert.addAction(editAction)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .default) { _ in
+            print("yyy")
+        }
+        deleteAction.setValue(UIColor.podoRed, forKey: "titleTextColor")
+        alert.addAction(deleteAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+        
+        return alert
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskManager.shared.tasks = []
@@ -67,8 +92,12 @@ class TasksViewController: UIViewController {
         self.present(createTaskVC, animated: true)
     }
     
-    @IBAction func moreButtonTapped(_ sender: UIButton) {
+    @IBAction func calendarButtonTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "tasksToCalendar", sender: nil)
+    }
+    
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        present(moreActions, animated: true)
     }
     
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {

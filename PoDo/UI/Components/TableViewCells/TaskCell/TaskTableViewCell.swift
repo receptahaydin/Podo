@@ -8,7 +8,7 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var taskIcon: UIImageView!
@@ -17,13 +17,13 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        moreButton.transform = CGAffineTransformMakeRotation(CGFloat(Double.pi / 2)) 
+        moreButton.transform = CGAffineTransformMakeRotation(CGFloat(Double.pi / 2))
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
     public func configureCell(task: Task) {
         self.titleLabel.text = task.title
         self.dateLabel.text = task.date
