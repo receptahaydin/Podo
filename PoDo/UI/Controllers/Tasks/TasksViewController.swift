@@ -13,6 +13,7 @@ class TasksViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let firestoreManager = FirestoreManager()
+    var selectedTask: Task?
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -32,7 +33,7 @@ class TasksViewController: UIViewController {
         return indicator
     }()
     
-    private let moreActions: UIAlertController = {
+    private lazy var moreActions: UIAlertController = {
         let alert = UIAlertController(
             title: nil,
             message: nil,
@@ -46,12 +47,51 @@ class TasksViewController: UIViewController {
         alert.addAction(editAction)
         
         let deleteAction = UIAlertAction(title: "Delete", style: .default) { _ in
-            print("yyy")
+            self.presentDeleteConfirmationAlert()
         }
         deleteAction.setValue(UIColor.podoRed, forKey: "titleTextColor")
         alert.addAction(deleteAction)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+        
+        return alert
+    }()
+    
+    private lazy var deleteAction: UIAlertController = {
+        let alert = UIAlertController(
+            title: nil,
+            message: "Are you sure you want to delete this task?",
+            preferredStyle: .alert
+        )
+        
+        let yesAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            guard let taskToDelete = self.selectedTask else {
+                return
+            }
+            
+            self.firestoreManager.deleteTask(taskID: taskToDelete.id) { error in
+                if let error = error {
+                    print("Error deleting task: \(error.localizedDescription)")
+                } else {
+                    if let indexInFiltered = TaskManager.shared.filteredTasks.firstIndex(where: { $0.id == taskToDelete.id }) {
+                        TaskManager.shared.filteredTasks.remove(at: indexInFiltered)
+                    }
+                    
+                    if let indexInTasks = TaskManager.shared.tasks.firstIndex(where: { $0.id == taskToDelete.id }) {
+                        TaskManager.shared.tasks.remove(at: indexInTasks)
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
+        alert.addAction(yesAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            
+        }
         alert.addAction(cancelAction)
         
         return alert
@@ -97,13 +137,21 @@ class TasksViewController: UIViewController {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        present(moreActions, animated: true)
+        if let cell = sender.superview?.superview as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell) {
+            selectedTask = TaskManager.shared.filteredTasks[indexPath.row]
+            present(moreActions, animated: true)
+        }
     }
     
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
         let selectedSegmentIndex = sender.selectedSegmentIndex
         filterTasks(for: selectedSegmentIndex)
         tableView.reloadData()
+    }
+    
+    private func presentDeleteConfirmationAlert() {
+        present(deleteAction, animated: true)
     }
     
     private func filterTasks(for status: Int) {

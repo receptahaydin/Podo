@@ -26,6 +26,7 @@ struct User {
 }
 
 struct Task {
+    var id: String
     var title: String
     var description: String
     var date: String
@@ -39,6 +40,7 @@ struct Task {
     var longBreakDuration: Int
 
     init(data: [String: Any]) {
+        self.id = ""
         title = data["title"] as? String ?? ""
         description = data["description"] as? String ?? ""
         date = data["date"] as? String ?? ""

@@ -52,13 +52,28 @@ class FirestoreManager {
                 
                 for document in querySnapshot!.documents {
                     let data = document.data()
-                    let task = Task(data: data)
+                    var task = Task(data: data)
+                    task.id = document.documentID
                     tasks.append(task)
                 }
                 
                 TaskManager.shared.tasks = tasks
                 completion()
             }
+        }
+    }
+    
+    func deleteTask(taskID: String, completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
+
+        taskDocumentRef.delete { error in
+            if let error = error {
+                print("Error deleting task: \(error.localizedDescription)")
+            } else {
+                print("Task deleted successfully.")
+            }
+
+            completion(error)
         }
     }
     
