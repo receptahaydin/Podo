@@ -10,7 +10,13 @@ import UIKit
 typealias UIButtonTargetClosure = (UIButton) -> Void
 
 extension UIButton {
+    
     func action(closure: @escaping UIButtonTargetClosure) {
         addAction(UIAction(handler: {_ in closure(self) }), for: .touchUpInside)
+    }
+    
+    func applyCornerRadius(_ radius: CGFloat) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
     }
 }

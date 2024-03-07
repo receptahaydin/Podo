@@ -13,11 +13,41 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
+    var toggleButton = UIBarButtonItem()
+    var isWeeklyMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.select(Date(), scrollToDate: true)
         showTasks(for: Date())
+        setupNavigationBar()
         tableView.register(TaskTableViewCell.self)
+    }
+    
+    func setupNavigationBar() {
+        toggleButton = UIBarButtonItem(
+            title: "Week",
+            style: .plain,
+            target: self,
+            action: #selector(toggleMode)
+        )
+        navigationItem.rightBarButtonItem = toggleButton
+    }
+    
+    @objc func toggleMode() {
+        isWeeklyMode.toggle()
+        updateCalendarMode()
+    }
+    
+    func updateCalendarMode() {
+        if isWeeklyMode {
+            calendar.scope = .week
+            toggleButton.title = "Month"
+        } else {
+            calendar.scope = .month
+            toggleButton.title = "Week"
+        }
+        showTasks(for: calendar.selectedDate ?? Date())
     }
     
     func showTasks(for date: Date) {
