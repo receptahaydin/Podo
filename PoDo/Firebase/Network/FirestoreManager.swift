@@ -77,6 +77,20 @@ class FirestoreManager {
         }
     }
     
+    func updateTask(taskID: String, updatedData: [String: Any], completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
+
+        taskDocumentRef.updateData(updatedData) { error in
+            if let error = error {
+                print("Error updating task: \(error.localizedDescription)")
+            } else {
+                print("Task updated successfully.")
+            }
+
+            completion(error)
+        }
+    }
+    
     func getCurrentUserID() -> String? {
         if let user = Auth.auth().currentUser {
             return user.uid

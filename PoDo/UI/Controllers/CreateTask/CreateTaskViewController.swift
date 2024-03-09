@@ -29,6 +29,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     weak var delegate: CreateTaskDelegate?
+    private var isUpdateMode: Bool = false
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
     var focusTime = ["20 min", "25 min", "30 min", "35 min", "40 min", "45 min", "50 min", "55 min", "60 min"]
     var shortBreakTime = ["5 min", "10 min", "15 min", "20 min"]
@@ -49,6 +50,7 @@ class CreateTaskViewController: UIViewController {
         sessionStepper.addTarget(self, action: #selector(updateSessionLabel), for: .valueChanged)
         
         if let task = selectedTask {
+            isUpdateMode = true
             viewTitle.text = "Update Task"
             button.setTitle("Update Task", for: .normal)
             taskTitle.text = task.title
@@ -120,7 +122,7 @@ class CreateTaskViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
         dateFormatter.timeZone = TimeZone.current
-
+        
         if let date = dateFormatter.date(from: "\(task.date) \(task.time)") {
             datePicker.date = date
         }
@@ -150,7 +152,6 @@ class CreateTaskViewController: UIViewController {
     }
     
     @IBAction func createTaskAction(_ sender: UIButton) {
-        
         guard let title = taskTitle.text, !title.isEmpty else {
             titleLabel.isHidden = false
             return
@@ -174,10 +175,19 @@ class CreateTaskViewController: UIViewController {
             "longBreakDuration": extractNumber(from: longTextField.text!)!
         ]
         
-        let task = Task(data: taskData)
-        self.firestoreManager.addTask(task: task)
-        
-        delegate?.didCreateTask()
+        if isUpdateMode {
+            self.firestoreManager.updateTask(taskID: selectedTask!.id, updatedData: taskData) { error in
+                if let error = error {
+                    print("Error updating task: \(error.localizedDescription)")
+                } else {
+                    self.delegate?.didCreateTask()
+                }
+            }
+        } else {
+            let task = Task(data: taskData)
+            self.firestoreManager.addTask(task: task)
+            delegate?.didCreateTask()
+        }
         
         dismiss(animated: true, completion: nil)
     }
