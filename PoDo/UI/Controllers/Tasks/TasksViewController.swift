@@ -41,7 +41,7 @@ class TasksViewController: UIViewController {
         )
         
         let editAction = UIAlertAction(title: "Edit", style: .default) { _ in
-            print("xxx")
+            self.editTask()
         }
         editAction.setValue(UIColor.podoRed, forKey: "titleTextColor")
         alert.addAction(editAction)
@@ -111,6 +111,13 @@ class TasksViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let selectedSegmentIndex = self.segmentControl.selectedSegmentIndex
+        self.filterTasks(for: selectedSegmentIndex)
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -152,6 +159,14 @@ class TasksViewController: UIViewController {
     
     private func presentDeleteConfirmationAlert() {
         present(deleteAction, animated: true)
+    }
+    
+    private func editTask() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let createTaskVC = sb.instantiateViewController(withIdentifier: "createTaskVC") as! CreateTaskViewController
+        createTaskVC.delegate = self
+        createTaskVC.selectedTask = selectedTask
+        self.present(createTaskVC, animated: true)
     }
     
     private func filterTasks(for status: Int) {

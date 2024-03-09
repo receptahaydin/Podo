@@ -47,6 +47,7 @@ class CalendarViewController: UIViewController {
             calendar.scope = .month
             toggleButton.title = "Week"
         }
+        print(calendar.frame.height)
         showTasks(for: calendar.selectedDate ?? Date())
     }
     

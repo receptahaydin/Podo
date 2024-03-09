@@ -14,6 +14,7 @@ protocol CreateTaskDelegate: AnyObject {
 
 class CreateTaskViewController: UIViewController {
     
+    @IBOutlet weak var viewTitle: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var categoryTextField: DesignableUITextField!
     @IBOutlet weak var focusTextField: DesignableUITextField!
@@ -25,6 +26,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var taskDesc: UITextView!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     weak var delegate: CreateTaskDelegate?
     var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
@@ -37,12 +39,28 @@ class CreateTaskViewController: UIViewController {
     let longPickerView = UIPickerView()
     let db = Firestore.firestore()
     let firestoreManager = FirestoreManager()
+    var selectedTask: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.isHidden = true
         pickerViewSettings()
         setDateComponents()
+        sessionStepper.addTarget(self, action: #selector(updateSessionLabel), for: .valueChanged)
+        
+        if let task = selectedTask {
+            viewTitle.text = "Update Task"
+            button.setTitle("Update Task", for: .normal)
+            taskTitle.text = task.title
+            taskDesc.text = task.description
+            setDatePickerForTask(task)
+            categoryTextField.text = task.category
+            sessionStepper.value = Double(task.sessionCount)
+            updateSessionLabel()
+            focusTextField.text = "\(task.sessionDuration) min"
+            shortTextField.text = "\(task.shortBreakDuration) min"
+            longTextField.text = "\(task.longBreakDuration) min"
+        }
     }
     
     private func pickerViewSettings() {
@@ -98,6 +116,16 @@ class CreateTaskViewController: UIViewController {
         return (formattedDate, formattedTime)
     }
     
+    private func setDatePickerForTask(_ task: Task) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
+        dateFormatter.timeZone = TimeZone.current
+
+        if let date = dateFormatter.date(from: "\(task.date) \(task.time)") {
+            datePicker.date = date
+        }
+    }
+    
     private func extractNumber(from text: String) -> Int? {
         let filteredCharacters = text.filter { "0123456789".contains($0) }
         
@@ -108,7 +136,7 @@ class CreateTaskViewController: UIViewController {
         }
     }
     
-    @IBAction func sessionValueChanged(_ sender: UIStepper) {
+    @objc private func updateSessionLabel() {
         let stepperValue = sessionStepper.value
         sessionLabel.text = "\(Int(stepperValue))"
         
