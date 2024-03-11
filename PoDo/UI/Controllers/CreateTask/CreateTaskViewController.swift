@@ -30,7 +30,7 @@ class CreateTaskViewController: UIViewController {
     
     weak var delegate: CreateTaskDelegate?
     private var isUpdateMode: Bool = false
-    var categories = ["Working", "Reading", "Coding", "Researching", "Training", "Meeting"]
+    var categories = ["Working", "Training", "Reading", "Studying", "Coding", "Researching", "Other"]
     var focusTime = ["20 min", "25 min", "30 min", "35 min", "40 min", "45 min", "50 min", "55 min", "60 min"]
     var shortBreakTime = ["5 min", "10 min", "15 min", "20 min"]
     var longBreakTime = ["10 min", "15 min", "20 min", "25 min", "30 min"]

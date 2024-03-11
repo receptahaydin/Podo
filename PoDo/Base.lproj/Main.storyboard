@@ -427,20 +427,133 @@
         <!--Analytics-->
         <scene sceneID="crv-Ba-kFp">
             <objects>
-                <viewController id="5g3-EC-Rtf" sceneMemberID="viewController">
+                <viewController id="5g3-EC-Rtf" customClass="AnalyticsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="252-zS-T2A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-Hp-stN" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5Un-KH-fAY"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-Ig-cu6">
+                                <rect key="frame" x="20" y="84" width="335" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POL-1E-2fc" customClass="CardView" customModule="PoDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Podo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-aD-BRa">
+                                                <rect key="frame" x="10" y="10" width="82.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEe-EE-fSX">
+                                                <rect key="frame" x="10" y="40.5" width="29" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PODORed"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="CardColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YEe-EE-fSX" secondAttribute="trailing" constant="20" symbolic="YES" id="6wG-ju-LZl"/>
+                                            <constraint firstItem="YEe-EE-fSX" firstAttribute="top" secondItem="bH0-aD-BRa" secondAttribute="bottom" constant="10" id="CqP-xo-VnN"/>
+                                            <constraint firstItem="YEe-EE-fSX" firstAttribute="leading" secondItem="POL-1E-2fc" secondAttribute="leading" constant="10" id="cYf-ko-EwL"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bH0-aD-BRa" secondAttribute="trailing" constant="20" symbolic="YES" id="d5d-H7-7IB"/>
+                                            <constraint firstItem="bH0-aD-BRa" firstAttribute="leading" secondItem="POL-1E-2fc" secondAttribute="leading" constant="10" id="j7f-Pd-Qec"/>
+                                            <constraint firstItem="bH0-aD-BRa" firstAttribute="top" secondItem="POL-1E-2fc" secondAttribute="top" constant="10" id="yFk-T9-aAK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="CardColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-UL-agX" customClass="CardView" customModule="PoDo" customModuleProvider="target">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Focus Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTe-jy-07S">
+                                                <rect key="frame" x="10" y="10" width="132.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3h 30m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3e-dB-WqL">
+                                                <rect key="frame" x="10" y="40.5" width="60.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PODORed"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="CardColor"/>
+                                        <constraints>
+                                            <constraint firstItem="u3e-dB-WqL" firstAttribute="leading" secondItem="ObU-UL-agX" secondAttribute="leading" constant="10" id="Wnf-7y-rD8"/>
+                                            <constraint firstItem="WTe-jy-07S" firstAttribute="top" secondItem="ObU-UL-agX" secondAttribute="top" constant="10" id="XcV-Gm-qgl"/>
+                                            <constraint firstItem="u3e-dB-WqL" firstAttribute="top" secondItem="WTe-jy-07S" secondAttribute="bottom" constant="10" id="bNs-UD-Zxs"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u3e-dB-WqL" secondAttribute="trailing" constant="20" symbolic="YES" id="dA7-b3-pZm"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WTe-jy-07S" secondAttribute="trailing" constant="20" symbolic="YES" id="kgF-1O-MQ1"/>
+                                            <constraint firstItem="WTe-jy-07S" firstAttribute="leading" secondItem="ObU-UL-agX" secondAttribute="leading" constant="10" id="sb5-DN-km8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="CardColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zIr-ZI-w1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7AD-Ig-cu6" firstAttribute="height" secondItem="252-zS-T2A" secondAttribute="height" multiplier="0.104948" id="5an-14-4Ip"/>
+                            <constraint firstItem="7AD-Ig-cu6" firstAttribute="top" secondItem="zIr-ZI-w1a" secondAttribute="top" constant="20" id="8Mh-wW-SBs"/>
+                            <constraint firstItem="LI2-Hp-stN" firstAttribute="centerX" secondItem="252-zS-T2A" secondAttribute="centerX" id="KRt-53-fJI"/>
+                            <constraint firstItem="LI2-Hp-stN" firstAttribute="leading" secondItem="zIr-ZI-w1a" secondAttribute="leading" id="cD2-fe-jac"/>
+                            <constraint firstItem="7AD-Ig-cu6" firstAttribute="leading" secondItem="zIr-ZI-w1a" secondAttribute="leading" constant="20" id="f4r-5K-23J"/>
+                            <constraint firstItem="LI2-Hp-stN" firstAttribute="centerY" secondItem="252-zS-T2A" secondAttribute="centerY" id="hBn-Ue-xL1"/>
+                            <constraint firstItem="zIr-ZI-w1a" firstAttribute="trailing" secondItem="LI2-Hp-stN" secondAttribute="trailing" id="hyR-7k-1me"/>
+                            <constraint firstItem="zIr-ZI-w1a" firstAttribute="trailing" secondItem="7AD-Ig-cu6" secondAttribute="trailing" constant="20" id="xVl-5F-Uhz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Analytics" image="chart.bar.xaxis" catalog="system" id="4BB-KK-vHw"/>
-                    <navigationItem key="navigationItem" id="ohu-uF-jtC"/>
+                    <navigationItem key="navigationItem" title="Analytics" id="ohu-uF-jtC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pieChart" destination="LI2-Hp-stN" id="IpX-t0-8qv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlU-9S-mOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6358" y="286"/>
+            <point key="canvasLocation" x="6357.6000000000004" y="285.60719640179911"/>
         </scene>
         <!--Analytics-->
         <scene sceneID="0ZO-ge-AqD">
@@ -1081,7 +1194,7 @@
                                 <rect key="frame" x="127.5" y="256.5" width="227.5" height="36"/>
                                 <color key="tintColor" name="PODORed"/>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select your category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-GY-vi7" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Working" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-GY-vi7" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="322.5" width="335" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1546,7 +1659,7 @@
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="69" height="34"/>
+            <size key="intrinsicContentSize" width="84" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
             <size key="intrinsicContentSize" width="145" height="34"/>
@@ -1555,16 +1668,16 @@
             <size key="intrinsicContentSize" width="145" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="78" height="34"/>
+            <size key="intrinsicContentSize" width="93" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
             <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="76" height="34"/>
+            <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="178.5" height="34"/>
+            <size key="intrinsicContentSize" width="103" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" name="PODORed"/>

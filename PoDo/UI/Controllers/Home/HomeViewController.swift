@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupTimer() {
-        timer.lineWidth = 20.0
+        timer.lineWidth = 15.0
         timer.lineColor = UIColor.lightGray.withAlphaComponent(0.5)
         timer.trailLineColor = UIColor.init(hexString: "55AA67")
         timer.isLabelHidden = false

@@ -1,20 +1,30 @@
 PODS:
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
   - FSCalendar (2.8.4)
   - SRCountdownTimer (1.3)
+  - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
+  - Charts
   - FSCalendar
   - SRCountdownTimer
 
 SPEC REPOS:
   trunk:
+    - Charts
     - FSCalendar
     - SRCountdownTimer
+    - SwiftAlgorithms
 
 SPEC CHECKSUMS:
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   SRCountdownTimer: b7f833a51cd33003d55df17667b71d26ee17357f
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 666cbca1101f1271015f8e8f0a999a8086cf5ca5
+PODFILE CHECKSUM: d2008b08784531cb6d5f0682a90e7e5d4a798a0e
 
 COCOAPODS: 1.14.3
