@@ -203,6 +203,14 @@ extension TasksViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
         let task = TaskManager.shared.filteredTasks[indexPath.row]
         cell.configureCell(task: task)
+        
+        switch segmentControl.selectedSegmentIndex {
+        case 2:
+            cell.togglePlayButton(hidden: true)
+        default:
+            cell.togglePlayButton(hidden: false)
+        }
+        
         return cell
     }
     

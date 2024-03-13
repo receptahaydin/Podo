@@ -38,6 +38,7 @@
 		DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */; };
 		DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */; };
 		DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */; };
+		DCEFD9422BA1D2A7003F775B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */; };
 		DCF3E8DC2B7FCE7400BE2053 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */; };
 		DCF3E8DF2B7FF85400BE2053 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF3E8DE2B7FF85400BE2053 /* TaskTableViewCell.swift */; };
 		DCF6560B2B9095CA005E7B15 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6560A2B9095CA005E7B15 /* TaskManager.swift */; };
@@ -91,6 +92,7 @@
 		DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		DCF3E8DE2B7FF85400BE2053 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		DCF6560A2B9095CA005E7B15 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				DCEFD9402BA1D28F003F775B /* CalendarCell */,
 				DCF3E8DD2B7FF83A00BE2053 /* TaskCell */,
 				DCE36BA12B5879AF0057B778 /* SwitchCell */,
 				DCB346792B58736C0056DEAC /* OptionCell */,
@@ -306,6 +309,14 @@
 				DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */,
 			);
 			path = SwitchCell;
+			sourceTree = "<group>";
+		};
+		DCEFD9402BA1D28F003F775B /* CalendarCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */,
+			);
+			path = CalendarCell;
 			sourceTree = "<group>";
 		};
 		DCF3E8DA2B7FCE5700BE2053 /* Tasks */ = {
@@ -598,6 +609,7 @@
 				DCFB5A002B4D724400DF2F5D /* UIDevice+Extensions.swift in Sources */,
 				DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */,
 				DCF3E8DC2B7FCE7400BE2053 /* TasksViewController.swift in Sources */,
+				DCEFD9422BA1D2A7003F775B /* CalendarTableViewCell.swift in Sources */,
 				DCFB59FF2B4D724400DF2F5D /* UITableView+Extensions.swift in Sources */,
 				DCB75DA32B5083330036A076 /* CardView.swift in Sources */,
 				DCF3E8DF2B7FF85400BE2053 /* TaskTableViewCell.swift in Sources */,

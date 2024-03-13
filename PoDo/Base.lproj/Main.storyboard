@@ -1120,6 +1120,7 @@
                                             <outlet property="dateLabel" destination="NoA-GZ-Z5t" id="rnv-pl-IfV"/>
                                             <outlet property="descLabel" destination="Hj1-2b-cZy" id="evt-dE-aVx"/>
                                             <outlet property="moreButton" destination="w3g-fA-6s6" id="Pqz-4o-Efk"/>
+                                            <outlet property="playButton" destination="SBP-RE-5nw" id="FCP-8J-LEz"/>
                                             <outlet property="taskIcon" destination="dwn-qv-Zfq" id="Jrc-tH-lRr"/>
                                             <outlet property="titleLabel" destination="Y6O-bv-mC2" id="WLc-7Z-99A"/>
                                         </connections>
@@ -1516,92 +1517,72 @@
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-VX-pWP">
-                                <rect key="frame" x="20" y="364" width="335" height="303"/>
+                                <rect key="frame" x="0.0" y="364" width="375" height="303"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="75" id="Qwp-ko-cbT" customClass="TaskTableViewCell" customModule="PoDo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCell" rowHeight="75" id="Qwp-ko-cbT" customClass="CalendarTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qwp-ko-cbT" id="FcF-lE-kal">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="5Od-7K-oCd">
-                                                    <rect key="frame" x="5" y="10" width="50.5" height="55"/>
+                                                    <rect key="frame" x="25" y="10" width="56.5" height="55"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="5Od-7K-oCd" secondAttribute="height" multiplier="1:1" id="BLV-fz-CVi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEF-Vi-cbA">
-                                                    <rect key="frame" x="65.5" y="10" width="77" height="21"/>
+                                                    <rect key="frame" x="91.5" y="10" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-X7-x1l">
-                                                    <rect key="frame" x="65.5" y="38.5" width="179.5" height="26.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-X7-x1l">
+                                                    <rect key="frame" x="91.5" y="38.5" width="193.5" height="26.5"/>
                                                     <string key="text">Algorithm analysis is the process of evaluating the performance of an algorithm, usually in terms of its time and space complexity.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-Tw-vIL">
-                                                    <rect key="frame" x="253" y="11" width="23.5" height="53"/>
-                                                    <color key="tintColor" systemColor="labelColor"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal">
-                                                        <color key="titleColor" systemColor="labelColor"/>
-                                                        <imageReference key="image" image="ellipsis" catalog="system" variableValue="1"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="moreButtonTapped:" destination="Qwp-ko-cbT" eventType="touchUpInside" id="2fp-iN-Aal"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21.06.2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRw-j9-78N">
-                                                    <rect key="frame" x="184" y="17.5" width="59" height="13.5"/>
+                                                    <rect key="frame" x="290" y="11" width="59" height="53"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-ET-6mm" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
-                                                    <rect key="frame" x="291.5" y="19" width="37.5" height="37.5"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-9e-8ww">
+                                                    <rect key="frame" x="322.5" y="27" width="22.5" height="21.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="SaO-ET-6mm" secondAttribute="height" multiplier="1:1" id="Hkh-Cx-tGh"/>
+                                                        <constraint firstAttribute="width" secondItem="9o6-9e-8ww" secondAttribute="height" multiplier="1:1" id="48A-s9-47y"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="play.fill" catalog="system"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundedButton" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eyx-Tw-vIL" firstAttribute="top" secondItem="FcF-lE-kal" secondAttribute="topMargin" id="0xl-e6-l7y"/>
-                                                <constraint firstItem="MRw-j9-78N" firstAttribute="bottom" secondItem="EEF-Vi-cbA" secondAttribute="bottom" id="1t5-Xi-bcy"/>
                                                 <constraint firstItem="EEF-Vi-cbA" firstAttribute="top" secondItem="5Od-7K-oCd" secondAttribute="top" id="6GR-es-obg"/>
-                                                <constraint firstItem="SaO-ET-6mm" firstAttribute="leading" secondItem="eyx-Tw-vIL" secondAttribute="trailing" constant="15" id="6O4-dG-Mv6"/>
-                                                <constraint firstItem="MRw-j9-78N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EEF-Vi-cbA" secondAttribute="trailing" constant="8" symbolic="YES" id="87E-Bc-Ejz"/>
-                                                <constraint firstItem="5Od-7K-oCd" firstAttribute="leading" secondItem="FcF-lE-kal" secondAttribute="leading" constant="5" id="Cjo-hv-by4"/>
-                                                <constraint firstItem="SaO-ET-6mm" firstAttribute="height" secondItem="FcF-lE-kal" secondAttribute="height" multiplier="0.5" id="HXz-rg-WGT"/>
+                                                <constraint firstItem="9o6-9e-8ww" firstAttribute="centerY" secondItem="FcF-lE-kal" secondAttribute="centerY" id="9DB-nd-jXQ"/>
+                                                <constraint firstItem="9o6-9e-8ww" firstAttribute="height" secondItem="FcF-lE-kal" secondAttribute="height" multiplier="0.3" id="Cen-ED-mRj"/>
+                                                <constraint firstItem="5Od-7K-oCd" firstAttribute="leading" secondItem="FcF-lE-kal" secondAttribute="leading" constant="25" id="Cjo-hv-by4"/>
+                                                <constraint firstItem="MRw-j9-78N" firstAttribute="top" secondItem="FcF-lE-kal" secondAttribute="topMargin" id="ICT-7J-gZg"/>
                                                 <constraint firstItem="WpB-X7-x1l" firstAttribute="leading" secondItem="5Od-7K-oCd" secondAttribute="trailing" constant="10" id="IfD-s1-9jL"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="SaO-ET-6mm" secondAttribute="trailing" constant="-10" id="Oha-Yz-zRt"/>
-                                                <constraint firstItem="eyx-Tw-vIL" firstAttribute="leading" secondItem="MRw-j9-78N" secondAttribute="trailing" constant="10" id="UVg-5o-GM5"/>
-                                                <constraint firstItem="eyx-Tw-vIL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WpB-X7-x1l" secondAttribute="trailing" constant="8" symbolic="YES" id="aqG-w3-UUR"/>
+                                                <constraint firstItem="MRw-j9-78N" firstAttribute="centerY" secondItem="FcF-lE-kal" secondAttribute="centerY" id="Old-eW-OrG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MRw-j9-78N" secondAttribute="trailing" constant="10" id="cS0-mz-UXt"/>
+                                                <constraint firstItem="MRw-j9-78N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EEF-Vi-cbA" secondAttribute="trailing" constant="8" symbolic="YES" id="fh3-Um-dJW"/>
                                                 <constraint firstItem="5Od-7K-oCd" firstAttribute="top" secondItem="FcF-lE-kal" secondAttribute="top" constant="10" id="jej-iR-ROo"/>
                                                 <constraint firstItem="5Od-7K-oCd" firstAttribute="width" secondItem="FcF-lE-kal" secondAttribute="width" multiplier="0.15" id="kcD-j6-hiC"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eyx-Tw-vIL" secondAttribute="bottom" id="oHf-IS-5xa"/>
+                                                <constraint firstAttribute="trailing" secondItem="9o6-9e-8ww" secondAttribute="trailing" constant="30" id="rGl-0U-um1"/>
                                                 <constraint firstAttribute="bottom" secondItem="5Od-7K-oCd" secondAttribute="bottom" constant="10" id="rM2-7a-Rze"/>
                                                 <constraint firstItem="EEF-Vi-cbA" firstAttribute="leading" secondItem="5Od-7K-oCd" secondAttribute="trailing" constant="10" id="s08-lm-vVN"/>
-                                                <constraint firstItem="SaO-ET-6mm" firstAttribute="centerY" secondItem="FcF-lE-kal" secondAttribute="centerY" id="uir-L9-X4q"/>
+                                                <constraint firstItem="MRw-j9-78N" firstAttribute="leading" secondItem="WpB-X7-x1l" secondAttribute="trailing" constant="5" id="sa2-rb-6QE"/>
                                                 <constraint firstItem="WpB-X7-x1l" firstAttribute="bottom" secondItem="5Od-7K-oCd" secondAttribute="bottom" id="xLy-P5-Rlg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MRw-j9-78N" secondAttribute="bottom" id="xNL-By-PR8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkIcon" destination="9o6-9e-8ww" id="HOb-vp-Qdk"/>
                                             <outlet property="dateLabel" destination="MRw-j9-78N" id="zl8-7r-c3f"/>
                                             <outlet property="descLabel" destination="WpB-X7-x1l" id="oMX-t1-AQb"/>
-                                            <outlet property="moreButton" destination="eyx-Tw-vIL" id="NET-73-U6b"/>
                                             <outlet property="taskIcon" destination="5Od-7K-oCd" id="KiY-C2-qj8"/>
                                             <outlet property="titleLabel" destination="EEF-Vi-cbA" id="s5V-Dw-ZH4"/>
                                         </connections>
@@ -1616,12 +1597,12 @@
                         <viewLayoutGuide key="safeArea" id="Fvu-s5-1C2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="gRc-VX-pWP" secondAttribute="trailing" constant="20" id="6UE-er-vYY"/>
+                            <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="gRc-VX-pWP" secondAttribute="trailing" id="6UE-er-vYY"/>
                             <constraint firstItem="Fvu-s5-1C2" firstAttribute="bottom" secondItem="gRc-VX-pWP" secondAttribute="bottom" id="BAJ-io-wtP"/>
                             <constraint firstItem="HLp-VS-tFE" firstAttribute="height" secondItem="2ES-N2-RR5" secondAttribute="height" multiplier="0.45" id="JpE-IG-KRW"/>
                             <constraint firstItem="HLp-VS-tFE" firstAttribute="top" secondItem="Fvu-s5-1C2" secondAttribute="top" id="bK8-uU-WUR"/>
                             <constraint firstItem="gRc-VX-pWP" firstAttribute="top" secondItem="HLp-VS-tFE" secondAttribute="bottom" id="dEj-Gw-sIS"/>
-                            <constraint firstItem="gRc-VX-pWP" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" constant="20" id="jti-4K-ilY"/>
+                            <constraint firstItem="gRc-VX-pWP" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" id="jti-4K-ilY"/>
                             <constraint firstItem="HLp-VS-tFE" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" id="kCT-xW-Sju"/>
                             <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="HLp-VS-tFE" secondAttribute="trailing" id="zEd-ri-2ev"/>
                         </constraints>
@@ -1634,7 +1615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBc-lI-aJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7289" y="-412"/>
+            <point key="canvasLocation" x="7288.8000000000002" y="-412.44377811094455"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="dPc-iu-74f">
@@ -1698,9 +1679,6 @@
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
-        <designable name="SaO-ET-6mm">
-            <size key="intrinsicContentSize" width="15" height="22"/>
-        </designable>
         <designable name="WzP-r4-IYr">
             <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
@@ -1731,6 +1709,7 @@
         <image name="blue" width="1024" height="1024"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="envelope.fill" catalog="system" width="128" height="85"/>
