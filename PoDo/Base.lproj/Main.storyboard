@@ -1540,15 +1540,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-X7-x1l">
-                                                    <rect key="frame" x="91.5" y="38.5" width="193.5" height="26.5"/>
+                                                    <rect key="frame" x="91.5" y="38.5" width="218" height="26.5"/>
                                                     <string key="text">Algorithm analysis is the process of evaluating the performance of an algorithm, usually in terms of its time and space complexity.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21.06.2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRw-j9-78N">
-                                                    <rect key="frame" x="290" y="11" width="59" height="53"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:56" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRw-j9-78N">
+                                                    <rect key="frame" x="314.5" y="11" width="34.5" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1581,9 +1581,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkIcon" destination="9o6-9e-8ww" id="HOb-vp-Qdk"/>
-                                            <outlet property="dateLabel" destination="MRw-j9-78N" id="zl8-7r-c3f"/>
                                             <outlet property="descLabel" destination="WpB-X7-x1l" id="oMX-t1-AQb"/>
                                             <outlet property="taskIcon" destination="5Od-7K-oCd" id="KiY-C2-qj8"/>
+                                            <outlet property="timeLabel" destination="MRw-j9-78N" id="wkN-8L-Lxn"/>
                                             <outlet property="titleLabel" destination="EEF-Vi-cbA" id="s5V-Dw-ZH4"/>
                                         </connections>
                                     </tableViewCell>
