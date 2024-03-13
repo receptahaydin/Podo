@@ -11,6 +11,7 @@ import Charts
 class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var pieChart: PieChartView!
+    @IBOutlet weak var barChart: BarChartView!
     
     let firestoreManager = FirestoreManager()
     private var selectedSliceIndex: Int?
@@ -30,13 +31,16 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
         self.firestoreManager.readTaskFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             self?.setupPieChart()
+            self?.setupBarChart()
         }
         pieChart.delegate = self
+        barChart.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupPieChart()
+        setupBarChart()
     }
     
     private func setupPieChart() {
@@ -70,6 +74,17 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
         dataSet.valueFormatter = DefaultValueFormatter(formatter: formatter)
         pieChart.holeColor = .systemBackground
         pieChart.highlightPerTapEnabled = true
+    }
+    
+    private func setupBarChart() {
+        var entries = [BarChartDataEntry]()
+        for x in 0..<5 {
+            entries.append(BarChartDataEntry(x: Double(x), y: Double(x)))
+        }
+        let set = BarChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.pastel()
+        let data = BarChartData(dataSet: set)
+        barChart.data = data
     }
     
     private func showLoadingIndicator() {
