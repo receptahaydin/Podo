@@ -24,9 +24,9 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskDesc: UITextView!
-    @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var longBreakLabel: UILabel!
     
     weak var delegate: CreateTaskDelegate?
     private var isUpdateMode: Bool = false
@@ -47,6 +47,7 @@ class CreateTaskViewController: UIViewController {
         titleLabel.isHidden = true
         pickerViewSettings()
         setDateComponents()
+        updateSessionLabel()
         sessionStepper.addTarget(self, action: #selector(updateSessionLabel), for: .valueChanged)
         
         if let task = selectedTask {
@@ -143,11 +144,11 @@ class CreateTaskViewController: UIViewController {
         sessionLabel.text = "\(Int(stepperValue))"
         
         if (Int(stepperValue)) >= 4 {
-            longTextField.isEnabled = true
-            warningLabel.isHidden = true
+            longTextField.isHidden = false
+            longBreakLabel.isHidden = false
         } else {
-            longTextField.isEnabled = false
-            warningLabel.isHidden = false
+            longTextField.isHidden = true
+            longBreakLabel.isHidden = true
         }
     }
     
