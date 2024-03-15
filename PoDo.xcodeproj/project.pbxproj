@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C251F2BA48243004C0FF1 /* TabBarController.swift */; };
 		DC1B1B242B92115F00C7E21B /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */; };
 		DC251EB52B95E3A4003E163E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC251EB42B95E3A4003E163E /* CalendarViewController.swift */; };
 		DC450C742BA474C40002A824 /* CompletedTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC450C732BA474C40002A824 /* CompletedTaskCell.swift */; };
@@ -74,6 +75,7 @@
 		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
 		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0C251F2BA48243004C0FF1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		DC251EB42B95E3A4003E163E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		DC450C732BA474C40002A824 /* CompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskCell.swift; sourceTree = "<group>"; };
@@ -167,6 +169,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC0C251E2BA4821A004C0FF1 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DC0C251F2BA48243004C0FF1 /* TabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		DC251EB32B95E385003E163E /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		DCB75D8B2B5083330036A076 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DC0C251E2BA4821A004C0FF1 /* Tabbar */,
 				DCB346782B58735D0056DEAC /* TableViewCells */,
 				DCB75D8F2B5083330036A076 /* DialogView */,
 				DCB75D922B5083330036A076 /* LoaderButton */,
@@ -603,6 +614,7 @@
 				DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */,
 				DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */,
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
+				DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
 				DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */,
