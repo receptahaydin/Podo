@@ -107,7 +107,6 @@ class TasksViewController: UIViewController {
             self?.segmentControlTapped(self?.segmentControl ?? UISegmentedControl())
         }
         view.addSubview(floatingButton)
-        tableView.register(TaskTableViewCell.self)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
     }
     
@@ -148,6 +147,14 @@ class TasksViewController: UIViewController {
            let indexPath = tableView.indexPath(for: cell) {
             selectedTask = TaskManager.shared.filteredTasks[indexPath.row]
             present(moreActions, animated: true)
+        }
+    }
+    
+    @IBAction func trashButtonTapped(_ sender: UIButton) {
+        if let cell = sender.superview?.superview as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell) {
+            selectedTask = TaskManager.shared.filteredTasks[indexPath.row]
+            presentDeleteConfirmationAlert()
         }
     }
     
@@ -200,18 +207,17 @@ class TasksViewController: UIViewController {
 
 extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
         let task = TaskManager.shared.filteredTasks[indexPath.row]
-        cell.configureCell(task: task)
         
-        switch segmentControl.selectedSegmentIndex {
-        case 2:
-            cell.togglePlayButton(hidden: true)
-        default:
-            cell.togglePlayButton(hidden: false)
+        if task.status == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "completedTaskCell", for: indexPath) as! CompletedTaskCell
+            cell.configureCell(task: task)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "uncompletedTaskCell", for: indexPath) as! UncompletedTaskCell
+            cell.configureCell(task: task)
+            return cell
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

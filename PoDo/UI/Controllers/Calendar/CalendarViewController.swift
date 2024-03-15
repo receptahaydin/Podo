@@ -21,7 +21,6 @@ class CalendarViewController: UIViewController {
         calendar.select(Date(), scrollToDate: true)
         showTasks(for: Date())
         setupNavigationBar()
-        tableView.register(TaskTableViewCell.self)
     }
     
     func setupNavigationBar() {

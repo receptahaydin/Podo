@@ -1037,7 +1037,7 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="75" id="iNc-pw-6d8" customClass="TaskTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="uncompletedTaskCell" rowHeight="75" id="iNc-pw-6d8" customClass="UncompletedTaskCell" customModule="PoDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNc-pw-6d8" id="dZt-Fz-lsv">
@@ -1123,6 +1123,75 @@
                                             <outlet property="playButton" destination="SBP-RE-5nw" id="FCP-8J-LEz"/>
                                             <outlet property="taskIcon" destination="dwn-qv-Zfq" id="Jrc-tH-lRr"/>
                                             <outlet property="titleLabel" destination="Y6O-bv-mC2" id="WLc-7Z-99A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedTaskCell" rowHeight="75" id="hKF-zt-Imz" customClass="CompletedTaskCell" customModule="PoDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="125" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKF-zt-Imz" id="fXm-wK-Rxr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-Ur-GuB">
+                                                    <rect key="frame" x="25" y="10" width="56.5" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="RY9-Ur-GuB" secondAttribute="height" multiplier="1:1" id="Sct-L4-fFE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-Yi-ch6">
+                                                    <rect key="frame" x="91.5" y="10" width="77" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwA-Uq-6Dc">
+                                                    <rect key="frame" x="91.5" y="38.5" width="225.5" height="26.5"/>
+                                                    <string key="text">Algorithm analysis is the process of evaluating the performance of an algorithm, usually in terms of its time and space complexity.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Con-VS-qTT">
+                                                    <rect key="frame" x="325" y="11" width="24" height="53"/>
+                                                    <color key="tintColor" name="PODORed"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                        <imageReference key="image" image="trash.fill" catalog="system" variableValue="1"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="trashButtonTapped:" destination="yCF-7s-r6b" eventType="touchUpInside" id="dqj-iM-POR"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21.06.2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxS-Jo-vsg">
+                                                    <rect key="frame" x="256" y="17.5" width="59" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RY9-Ur-GuB" firstAttribute="width" secondItem="fXm-wK-Rxr" secondAttribute="width" multiplier="0.15" id="0NK-Eq-NY0"/>
+                                                <constraint firstItem="Con-VS-qTT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KwA-Uq-6Dc" secondAttribute="trailing" constant="8" symbolic="YES" id="5P1-r7-sZQ"/>
+                                                <constraint firstItem="Con-VS-qTT" firstAttribute="leading" secondItem="vxS-Jo-vsg" secondAttribute="trailing" constant="10" id="7Bh-6P-4wh"/>
+                                                <constraint firstItem="RY9-Ur-GuB" firstAttribute="top" secondItem="fXm-wK-Rxr" secondAttribute="top" constant="10" id="9BC-5c-dnX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Con-VS-qTT" secondAttribute="trailing" constant="10" id="GOh-uy-oxv"/>
+                                                <constraint firstItem="KwA-Uq-6Dc" firstAttribute="bottom" secondItem="RY9-Ur-GuB" secondAttribute="bottom" id="ILF-rp-mqg"/>
+                                                <constraint firstItem="vxS-Jo-vsg" firstAttribute="bottom" secondItem="ydx-Yi-ch6" secondAttribute="bottom" id="JVU-hx-wb1"/>
+                                                <constraint firstItem="ydx-Yi-ch6" firstAttribute="top" secondItem="RY9-Ur-GuB" secondAttribute="top" id="Kuo-JS-xvy"/>
+                                                <constraint firstItem="Con-VS-qTT" firstAttribute="top" secondItem="fXm-wK-Rxr" secondAttribute="topMargin" id="L6A-1Z-Rdm"/>
+                                                <constraint firstItem="ydx-Yi-ch6" firstAttribute="leading" secondItem="RY9-Ur-GuB" secondAttribute="trailing" constant="10" id="Vp3-kh-36B"/>
+                                                <constraint firstItem="vxS-Jo-vsg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ydx-Yi-ch6" secondAttribute="trailing" constant="8" symbolic="YES" id="ZbN-3J-doh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Con-VS-qTT" secondAttribute="bottom" id="dcU-dy-Smk"/>
+                                                <constraint firstItem="KwA-Uq-6Dc" firstAttribute="leading" secondItem="RY9-Ur-GuB" secondAttribute="trailing" constant="10" id="eOt-DL-wUJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="RY9-Ur-GuB" secondAttribute="bottom" constant="10" id="juz-B1-bzm"/>
+                                                <constraint firstItem="RY9-Ur-GuB" firstAttribute="leading" secondItem="fXm-wK-Rxr" secondAttribute="leading" constant="25" id="yg0-zC-drp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="vxS-Jo-vsg" id="fRM-YC-am8"/>
+                                            <outlet property="descLabel" destination="KwA-Uq-6Dc" id="GBj-q9-gfg"/>
+                                            <outlet property="titleLabel" destination="ydx-Yi-ch6" id="pWg-27-cxj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1724,6 +1793,7 @@
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="playpause.fill" catalog="system" width="128" height="69"/>
         <image name="profile" width="1536" height="1536"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="ButtonColor">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

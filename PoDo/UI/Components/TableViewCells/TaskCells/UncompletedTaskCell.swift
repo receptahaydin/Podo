@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+class UncompletedTaskCell: UITableViewCell {
     
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
@@ -29,18 +29,5 @@ class TaskTableViewCell: UITableViewCell {
         self.titleLabel.text = task.title
         self.dateLabel.text = task.date
         self.descLabel.text = task.description
-    }
-}
-
-extension TaskTableViewCell {
-    func togglePlayButton(hidden: Bool) {
-        playButton.isHidden = hidden
-        
-        if hidden == true {
-            moreButton.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                moreButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            ])
-        }
     }
 }
