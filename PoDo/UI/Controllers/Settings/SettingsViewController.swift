@@ -12,6 +12,40 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var logoutAction: UIAlertController = {
+        let alert = UIAlertController(
+            title: "Logout",
+            message: "Are you sure you want to log out?",
+            preferredStyle: .alert
+        )
+        
+        let yesAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                try? Auth.auth().signOut()
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "loginVC")
+                
+                if let sceneDelegate = UIApplication.shared.connectedScenes
+                    .first(where: { $0.delegate is SceneDelegate })?.delegate as? SceneDelegate,
+                   let window = sceneDelegate.window {
+                    
+                    UIView.transition(with: window, duration: 0.5, options: .transitionCurlUp, animations: {
+                        window.rootViewController = vc
+                    }, completion: nil)
+                }
+            }
+        }
+        alert.addAction(yesAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            
+        }
+        alert.addAction(cancelAction)
+        
+        return alert
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -65,25 +99,7 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 6 {
-            let b1 = CRXDialogButton(title: "Cancel", style: .cancel)  {}
-            let b2 = CRXDialogButton(title: "Yes, Logout", style: .destructive) {
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    try? Auth.auth().signOut()
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = sb.instantiateViewController(withIdentifier: "loginVC")
-                    
-                    if let sceneDelegate = UIApplication.shared.connectedScenes
-                        .first(where: { $0.delegate is SceneDelegate })?.delegate as? SceneDelegate,
-                       let window = sceneDelegate.window {
-                        
-                        UIView.transition(with: window, duration: 0.5, options: .transitionCurlUp, animations: {
-                            window.rootViewController = vc
-                        }, completion: nil)
-                    }
-                }
-            }
-            DialogView(title: "Logout", message: "Are you sure you want to log out?", buttons: [b1, b2]).show()
+            present(logoutAction, animated: true)
         }
     }
 }

@@ -33,8 +33,13 @@ class SignupViewController: UIViewController {
         sender.isLoading = true
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                let b1 = CRXDialogButton(title: "OK", style: .default)  { print("YES") }
-                DialogView(title: "Error", message: error.localizedDescription, buttons: [b1]).show()
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in }
+                alertController.addAction(okAction)
+                
+                self.present(alertController, animated: true)
+                
                 sender.isLoading = false
                 return
             }

@@ -17,8 +17,6 @@
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
-		DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D902B5083330036A076 /* DialogView.swift */; };
-		DCB75DA02B5083330036A076 /* DialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D912B5083330036A076 /* DialogView.xib */; };
 		DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D932B5083330036A076 /* LoaderButton.swift */; };
 		DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D952B5083330036A076 /* DesignableUITextField.swift */; };
 		DCB75DA32B5083330036A076 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D972B5083330036A076 /* CardView.swift */; };
@@ -83,8 +81,6 @@
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
-		DCB75D902B5083330036A076 /* DialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
-		DCB75D912B5083330036A076 /* DialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogView.xib; sourceTree = "<group>"; };
 		DCB75D932B5083330036A076 /* LoaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		DCB75D952B5083330036A076 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		DCB75D972B5083330036A076 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -226,22 +222,12 @@
 			children = (
 				DC0C251E2BA4821A004C0FF1 /* Tabbar */,
 				DCB346782B58735D0056DEAC /* TableViewCells */,
-				DCB75D8F2B5083330036A076 /* DialogView */,
 				DCB75D922B5083330036A076 /* LoaderButton */,
 				DCB75D942B5083330036A076 /* DesignableUITextField */,
 				DCB75D962B5083330036A076 /* CardView */,
 				DCB75D9B2B5083330036A076 /* RoundedButton */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		DCB75D8F2B5083330036A076 /* DialogView */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75D902B5083330036A076 /* DialogView.swift */,
-				DCB75D912B5083330036A076 /* DialogView.xib */,
-			);
-			path = DialogView;
 			sourceTree = "<group>";
 		};
 		DCB75D922B5083330036A076 /* LoaderButton */ = {
@@ -549,7 +535,6 @@
 				DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */,
 				DCFB59D52B4D711E00DF2F5D /* LaunchScreen.storyboard in Resources */,
 				DCFB59D22B4D711E00DF2F5D /* Assets.xcassets in Resources */,
-				DCB75DA02B5083330036A076 /* DialogView.xib in Resources */,
 				DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */,
 				DCB75DAC2B50867C0036A076 /* GoogleService-Info.plist in Resources */,
 			);
@@ -639,7 +624,6 @@
 				DC1B1B242B92115F00C7E21B /* FirestoreManager.swift in Sources */,
 				DCF6560B2B9095CA005E7B15 /* TaskManager.swift in Sources */,
 				DCFB59F82B4D724400DF2F5D /* UIColor+Extensions.swift in Sources */,
-				DCB75D9F2B5083330036A076 /* DialogView.swift in Sources */,
 				DCB75DF32B508C6D0036A076 /* SignupViewController.swift in Sources */,
 				DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */,
 				DCFB59FA2B4D724400DF2F5D /* UIFont+Extensions.swift in Sources */,

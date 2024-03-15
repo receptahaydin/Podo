@@ -34,8 +34,13 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             guard let strongSelf = self else { return }
             if let error = error {
-                let b1 = CRXDialogButton(title: "OK", style: .default)  { print("YES") }
-                DialogView(title: "Error", message: error.localizedDescription, buttons: [b1]).show()
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in }
+                alertController.addAction(okAction)
+                
+                strongSelf.present(alertController, animated: true, completion: nil)
+                
                 sender.isLoading = false
                 return
             }
