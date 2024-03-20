@@ -17,7 +17,7 @@ class ProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         profileImage.cornerRadius = profileImage.frame.height / 2
-        profileImage.image = imageManager.loadProfileImageFromDevice()
+        profileImage.image = imageManager.loadProfileImageFromDevice(userID: FirestoreManager().getCurrentUserID()!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         profileImage.addGestureRecognizer(tapGesture)

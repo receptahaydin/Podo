@@ -672,7 +672,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-Sv-JUh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-Sv-JUh">
                                                     <rect key="frame" x="112.5" y="30" width="150" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Vgt-Sv-JUh" secondAttribute="height" multiplier="1:1" id="nOD-DI-YcG"/>
@@ -804,7 +804,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-nV-AdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5585" y="1006"/>
+            <point key="canvasLocation" x="5584.8000000000002" y="1005.2473763118442"/>
         </scene>
         <!--Timer-->
         <scene sceneID="JnO-mN-kn2">
@@ -1793,6 +1793,7 @@
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="profile" width="512" height="512"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="ButtonColor">

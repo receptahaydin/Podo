@@ -66,7 +66,7 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage,
            let profileCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ProfileTableViewCell {
-            imageManager.saveProfileImageToDevice(image)
+            imageManager.saveProfileImageToDevice(image, userID: FirestoreManager().getCurrentUserID()!)
             profileCell.profileImage.image = image
         }
         picker.dismiss(animated: true)
