@@ -12,6 +12,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let imageManager = ImageManager()
+    
     private lazy var logoutAction: UIAlertController = {
         let alert = UIAlertController(
             title: "Logout",
@@ -48,14 +50,15 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleProfileImageTap), name: Notification.Name("ProfileImageTapped"), object: nil)
     }
     
-    @objc func profileImageButtonTapped(_ sender: UIButton) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
+    @objc func handleProfileImageTap() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
     }
 }
 
@@ -63,7 +66,8 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage,
            let profileCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ProfileTableViewCell {
-            profileCell.imageButton.setImage(image, for: .normal)
+            imageManager.saveProfileImageToDevice(image)
+            profileCell.profileImage.image = image
         }
         picker.dismiss(animated: true)
     }
@@ -77,7 +81,6 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let profileCell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileTableViewCell
-            profileCell.imageButton.addTarget(self, action: #selector(profileImageButtonTapped(_:)), for: .touchUpInside)
             return profileCell
         } else if indexPath.row == 1 {
             let optionCell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath) as! OptionTableViewCell

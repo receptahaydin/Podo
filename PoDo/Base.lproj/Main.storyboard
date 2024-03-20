@@ -661,38 +661,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recep Taha Aydın" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-F5-U7D">
-                                                    <rect key="frame" x="99.5" y="201" width="176" height="26.5"/>
+                                                    <rect key="frame" x="99.5" y="190" width="176" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="receptahaaydin@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20I-sL-5H3">
-                                                    <rect key="frame" x="92.5" y="237.5" width="190" height="18"/>
+                                                    <rect key="frame" x="92.5" y="226.5" width="190" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW0-J2-Rdk">
-                                                    <rect key="frame" x="112.5" y="41" width="150" height="150"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-Sv-JUh">
+                                                    <rect key="frame" x="112.5" y="30" width="150" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="FW0-J2-Rdk" secondAttribute="height" multiplier="1:1" id="Ra2-SL-Lsg"/>
+                                                        <constraint firstAttribute="width" secondItem="Vgt-Sv-JUh" secondAttribute="height" multiplier="1:1" id="nOD-DI-YcG"/>
                                                     </constraints>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="profile"/>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Vgt-Sv-JUh" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="8ke-0q-iiA"/>
                                                 <constraint firstItem="20I-sL-5H3" firstAttribute="top" secondItem="ECF-F5-U7D" secondAttribute="bottom" constant="10" id="EXk-j4-7J1"/>
-                                                <constraint firstItem="FW0-J2-Rdk" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="LsP-Ke-ESl"/>
+                                                <constraint firstItem="Vgt-Sv-JUh" firstAttribute="top" secondItem="5Vq-9j-En8" secondAttribute="top" constant="30" id="Q1c-OP-JEE"/>
                                                 <constraint firstItem="ECF-F5-U7D" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="RzP-Wl-AHG"/>
-                                                <constraint firstItem="FW0-J2-Rdk" firstAttribute="width" secondItem="5Vq-9j-En8" secondAttribute="width" multiplier="0.4" id="YHt-CD-iIS"/>
-                                                <constraint firstItem="ECF-F5-U7D" firstAttribute="top" secondItem="FW0-J2-Rdk" secondAttribute="bottom" constant="10" id="aii-Lb-OuG"/>
+                                                <constraint firstItem="Vgt-Sv-JUh" firstAttribute="width" secondItem="5Vq-9j-En8" secondAttribute="width" multiplier="0.4" id="YR2-Ts-qgN"/>
+                                                <constraint firstItem="ECF-F5-U7D" firstAttribute="top" secondItem="Vgt-Sv-JUh" secondAttribute="bottom" constant="10" id="hZP-jr-eiN"/>
                                                 <constraint firstItem="20I-sL-5H3" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="v9n-zd-rlS"/>
-                                                <constraint firstItem="FW0-J2-Rdk" firstAttribute="top" secondItem="5Vq-9j-En8" secondAttribute="topMargin" constant="30" id="xhz-4x-ocM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageButton" destination="FW0-J2-Rdk" id="B9e-op-LAx"/>
+                                            <outlet property="profileImage" destination="Vgt-Sv-JUh" id="eca-sB-yLn"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="optionCell" rowHeight="60" id="wpd-Hr-3V1" userLabel="OptionCell" customClass="OptionTableViewCell" customModule="PoDo" customModuleProvider="target">
@@ -1785,17 +1783,16 @@
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="32" height="32"/>
+        <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="google" width="512" height="512"/>
         <image name="green" width="1024" height="1024"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
-        <image name="lock.fill" catalog="system" width="32" height="32"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="profile" width="512" height="512"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="ButtonColor">

@@ -14,6 +14,7 @@
 		DC66B9492B7AB570003A4BE8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66B9482B7AB570003A4BE8 /* Model.swift */; };
 		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
 		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
+		DCA49A9A2BAB7484003D5FEB /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA49A992BAB7484003D5FEB /* ImageManager.swift */; };
 		DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */; };
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
@@ -79,6 +80,7 @@
 		DC251EB42B95E3A4003E163E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		DC450C732BA474C40002A824 /* CompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskCell.swift; sourceTree = "<group>"; };
 		DC66B9482B7AB570003A4BE8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DCA49A992BAB7484003D5FEB /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 				DCF656092B9095BC005E7B15 /* Network */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DCA49A982BAB7478003D5FEB /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				DCA49A992BAB7484003D5FEB /* ImageManager.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		DCA51AA32BAB062100E2F8BB /* ProfileCell */ = {
@@ -376,6 +386,7 @@
 		DCFB59C72B4D711D00DF2F5D /* PoDo */ = {
 			isa = PBXGroup;
 			children = (
+				DCA49A982BAB7478003D5FEB /* Image */,
 				DC66B9472B7AB54F003A4BE8 /* Firebase */,
 				DCFB59DC2B4D71C800DF2F5D /* Utils */,
 				DCFB59DD2B4D71D100DF2F5D /* Extensions */,
@@ -631,6 +642,7 @@
 				DCFB59F92B4D724400DF2F5D /* UIView+Extension.swift in Sources */,
 				DC66B9492B7AB570003A4BE8 /* Model.swift in Sources */,
 				DCFB59F62B4D724400DF2F5D /* Localization.swift in Sources */,
+				DCA49A9A2BAB7484003D5FEB /* ImageManager.swift in Sources */,
 				DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */,
 				DCFB59C92B4D711D00DF2F5D /* AppDelegate.swift in Sources */,
 				DC1B1B242B92115F00C7E21B /* FirestoreManager.swift in Sources */,

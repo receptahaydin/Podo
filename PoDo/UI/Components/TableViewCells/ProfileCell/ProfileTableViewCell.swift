@@ -8,15 +8,23 @@
 import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var imageButton: UIButton!
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    let imageManager = ImageManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageButton.cornerRadius = imageButton.frame.height / 2
+        
+        profileImage.cornerRadius = profileImage.frame.height / 2
+        profileImage.image = imageManager.loadProfileImageFromDevice()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        profileImage.addGestureRecognizer(tapGesture)
+        profileImage.isUserInteractionEnabled = true
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @objc func imageViewTapped() {
+        NotificationCenter.default.post(name: Notification.Name("ProfileImageTapped"), object: nil)
     }
 }
