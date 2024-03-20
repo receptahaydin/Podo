@@ -653,7 +653,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topCell" rowHeight="290" id="DK8-vb-Pqh" userLabel="TopCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" rowHeight="290" id="DK8-vb-Pqh" userLabel="TopCell" customClass="ProfileTableViewCell" customModule="PoDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="290"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK8-vb-Pqh" id="5Vq-9j-En8">
@@ -691,6 +691,9 @@
                                                 <constraint firstItem="FW0-J2-Rdk" firstAttribute="top" secondItem="5Vq-9j-En8" secondAttribute="topMargin" constant="30" id="xhz-4x-ocM"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageButton" destination="FW0-J2-Rdk" id="B9e-op-LAx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="optionCell" rowHeight="60" id="wpd-Hr-3V1" userLabel="OptionCell" customClass="OptionTableViewCell" customModule="PoDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="340" width="375" height="60"/>
@@ -1743,31 +1746,31 @@
             <size key="intrinsicContentSize" width="20" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="103" height="34"/>
+            <size key="intrinsicContentSize" width="88" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" name="PODORed"/>
@@ -1782,17 +1785,17 @@
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="128" height="85"/>
+        <image name="envelope.fill" catalog="system" width="32" height="32"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="google" width="512" height="512"/>
         <image name="green" width="1024" height="1024"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
-        <image name="lock.fill" catalog="system" width="125" height="128"/>
+        <image name="lock.fill" catalog="system" width="32" height="32"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="profile" width="1536" height="1536"/>
+        <image name="profile" width="512" height="512"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="ButtonColor">

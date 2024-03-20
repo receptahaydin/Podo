@@ -14,6 +14,7 @@
 		DC66B9492B7AB570003A4BE8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66B9482B7AB570003A4BE8 /* Model.swift */; };
 		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
 		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
+		DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */; };
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
@@ -78,6 +79,7 @@
 		DC251EB42B95E3A4003E163E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		DC450C732BA474C40002A824 /* CompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskCell.swift; sourceTree = "<group>"; };
 		DC66B9482B7AB570003A4BE8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		DCA51AA32BAB062100E2F8BB /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
 		DCAF4B422B9F031700FA979F /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				DCA51AA32BAB062100E2F8BB /* ProfileCell */,
 				DCEFD9402BA1D28F003F775B /* CalendarCell */,
 				DCF3E8DD2B7FF83A00BE2053 /* TaskCells */,
 				DCE36BA12B5879AF0057B778 /* SwitchCell */,
@@ -599,6 +610,7 @@
 				DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */,
 				DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */,
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
+				DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */,
 				DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
