@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var timer: SRCountdownTimer!
     @IBOutlet weak var bigButton: RoundedButton!
+    @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel! {
         didSet {
             timerLabel.font = timerLabel.font.monospacedDigitFont
@@ -67,6 +68,10 @@ class HomeViewController: UIViewController {
             bigButton.backgroundColor = greenColor
             bigButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
+    }
+    
+    @IBAction func soundButtonAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "homeToSound", sender: nil)
     }
 }
 

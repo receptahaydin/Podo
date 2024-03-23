@@ -168,7 +168,7 @@ class CreateTaskViewController: UIViewController {
             "date": formattedDate,
             "time": formattedTime,
             "category": categoryTextField.text ?? "",
-            "status": 0,
+            "status": selectedTask?.status ?? 0,
             "sessionCount": Int(sessionLabel.text!)!,
             "completedSessionCount": 0,
             "sessionDuration": extractNumber(from: focusTextField.text!)!,

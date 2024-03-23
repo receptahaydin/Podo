@@ -834,39 +834,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYP-2B-5G9" customClass="SRCountdownTimer" customModule="SRCountdownTimer">
                                 <rect key="frame" x="80" y="226" width="215" height="215"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wV5-2N-rWg">
-                                        <rect key="frame" x="49" y="59.5" width="117.5" height="96"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-WH-gad">
-                                                <rect key="frame" x="5" y="0.0" width="107" height="48"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 of 4 sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgP-nu-qiS">
-                                                <rect key="frame" x="0.0" y="48" width="117.5" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-WH-gad">
+                                        <rect key="frame" x="47.5" y="80.5" width="120" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eYP-2B-5G9" secondAttribute="height" multiplier="1:1" id="AxC-Jc-yED"/>
-                                    <constraint firstItem="wV5-2N-rWg" firstAttribute="centerY" secondItem="eYP-2B-5G9" secondAttribute="centerY" id="g66-3I-sEj"/>
-                                    <constraint firstItem="wV5-2N-rWg" firstAttribute="centerX" secondItem="eYP-2B-5G9" secondAttribute="centerX" id="ozn-D4-zBq"/>
+                                    <constraint firstItem="uqg-WH-gad" firstAttribute="centerY" secondItem="eYP-2B-5G9" secondAttribute="centerY" id="cpM-S6-dXO"/>
+                                    <constraint firstItem="uqg-WH-gad" firstAttribute="centerX" secondItem="eYP-2B-5G9" secondAttribute="centerX" id="ed0-ol-v2k"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay focus for 25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bol-5A-EFk">
-                                <rect key="frame" x="97.5" y="461" width="180" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-z8-9Vk" userLabel="BigButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="150" y="509" width="75" height="75"/>
+                                <rect key="frame" x="150" y="471" width="75" height="75"/>
                                 <color key="backgroundColor" name="PODORed"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9HH-z8-9Vk" secondAttribute="height" multiplier="1:1" id="h9n-dY-Moh"/>
@@ -887,7 +870,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-KI-FCw" userLabel="RefreshButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="82.5" y="528" width="37.5" height="37.5"/>
+                                <rect key="frame" x="82.5" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BoE-KI-FCw" secondAttribute="height" multiplier="1:1" id="dvj-KV-fPG"/>
@@ -903,7 +886,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-D4-Pgr" userLabel="StopButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="255" y="528" width="37.5" height="37.5"/>
+                                <rect key="frame" x="255" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HpR-D4-Pgr" secondAttribute="height" multiplier="1:1" id="gLb-9q-YNf"/>
@@ -990,6 +973,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqD-hA-5vD">
+                                <rect key="frame" x="149.5" y="586" width="76.5" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" No sound" image="music.note" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="soundButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="XbU-N9-k8a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uph-Qx-2Qb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -997,34 +992,85 @@
                             <constraint firstItem="BoE-KI-FCw" firstAttribute="centerY" secondItem="9HH-z8-9Vk" secondAttribute="centerY" id="844-wz-5Ps"/>
                             <constraint firstItem="9HH-z8-9Vk" firstAttribute="width" secondItem="e7H-gS-bEx" secondAttribute="width" multiplier="0.2" id="8z1-em-LFa"/>
                             <constraint firstItem="eYP-2B-5G9" firstAttribute="leading" secondItem="uph-Qx-2Qb" secondAttribute="leading" constant="80" id="Aqe-XJ-Ogp"/>
-                            <constraint firstItem="bol-5A-EFk" firstAttribute="top" secondItem="eYP-2B-5G9" secondAttribute="bottom" constant="20" id="BFG-pr-Vei"/>
                             <constraint firstItem="0T0-aX-pgd" firstAttribute="leading" secondItem="uph-Qx-2Qb" secondAttribute="leading" constant="20" id="DLH-nd-5iq"/>
                             <constraint firstItem="uph-Qx-2Qb" firstAttribute="trailing" secondItem="0T0-aX-pgd" secondAttribute="trailing" constant="20" id="Dib-Pv-bXU"/>
                             <constraint firstItem="0T0-aX-pgd" firstAttribute="top" secondItem="uph-Qx-2Qb" secondAttribute="top" constant="45" id="EKc-Jz-xUV"/>
                             <constraint firstItem="eYP-2B-5G9" firstAttribute="centerY" secondItem="e7H-gS-bEx" secondAttribute="centerY" id="J9R-a7-hXR"/>
-                            <constraint firstItem="bol-5A-EFk" firstAttribute="centerX" secondItem="e7H-gS-bEx" secondAttribute="centerX" id="N7p-Lh-OB6"/>
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="height" secondItem="9HH-z8-9Vk" secondAttribute="height" multiplier="0.5" id="Wxq-FO-Ske"/>
+                            <constraint firstItem="hqD-hA-5vD" firstAttribute="top" secondItem="9HH-z8-9Vk" secondAttribute="bottom" constant="40" id="Zqv-xI-t3B"/>
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="centerY" secondItem="9HH-z8-9Vk" secondAttribute="centerY" id="aXz-bp-3x9"/>
                             <constraint firstItem="uph-Qx-2Qb" firstAttribute="trailing" secondItem="eYP-2B-5G9" secondAttribute="trailing" constant="80" id="bvR-ZR-LwG"/>
+                            <constraint firstItem="9HH-z8-9Vk" firstAttribute="top" secondItem="eYP-2B-5G9" secondAttribute="bottom" constant="30" id="fRG-86-LzH"/>
+                            <constraint firstItem="hqD-hA-5vD" firstAttribute="centerX" secondItem="e7H-gS-bEx" secondAttribute="centerX" id="iQp-eX-NI7"/>
                             <constraint firstItem="9HH-z8-9Vk" firstAttribute="centerX" secondItem="e7H-gS-bEx" secondAttribute="centerX" id="iuP-BX-BrW"/>
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="leading" secondItem="9HH-z8-9Vk" secondAttribute="trailing" constant="30" id="qJ6-l4-We9"/>
                             <constraint firstItem="BoE-KI-FCw" firstAttribute="height" secondItem="9HH-z8-9Vk" secondAttribute="height" multiplier="0.5" id="r63-Pt-y0e"/>
                             <constraint firstItem="9HH-z8-9Vk" firstAttribute="leading" secondItem="BoE-KI-FCw" secondAttribute="trailing" constant="30" id="rRF-Ed-q8X"/>
                             <constraint firstItem="0T0-aX-pgd" firstAttribute="height" secondItem="e7H-gS-bEx" secondAttribute="height" multiplier="0.12" id="uc2-KX-YX2"/>
-                            <constraint firstItem="9HH-z8-9Vk" firstAttribute="top" secondItem="bol-5A-EFk" secondAttribute="bottom" constant="30" id="zbn-Tj-wrT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="stopwatch" catalog="system" id="p10-0A-L7E"/>
                     <navigationItem key="navigationItem" title="Pomodoro Timer" id="MLF-zt-kya"/>
                     <connections>
                         <outlet property="bigButton" destination="9HH-z8-9Vk" id="SLS-Cm-2c1"/>
+                        <outlet property="soundButton" destination="hqD-hA-5vD" id="hv0-Se-fIE"/>
                         <outlet property="timer" destination="eYP-2B-5G9" id="Rvf-in-9DP"/>
                         <outlet property="timerLabel" destination="uqg-WH-gad" id="PKV-qe-B2g"/>
+                        <segue destination="9TF-IB-pEQ" kind="show" identifier="homeToSound" id="k1p-j6-f5A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNU-aO-YoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6359" y="-1132"/>
+        </scene>
+        <!--Sound-->
+        <scene sceneID="hDC-cJ-N4t">
+            <objects>
+                <viewController title="Sound" id="9TF-IB-pEQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWB-kc-rP7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="srF-gS-xeD">
+                                <rect key="frame" x="20" y="84" width="335" height="73.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST8-E7-QLX">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-vq-sn3">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aB4-TS-RnF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aB4-TS-RnF" firstAttribute="trailing" secondItem="srF-gS-xeD" secondAttribute="trailing" constant="20" id="AQM-tB-j5G"/>
+                            <constraint firstItem="srF-gS-xeD" firstAttribute="leading" secondItem="aB4-TS-RnF" secondAttribute="leading" constant="20" id="BAC-pW-oDg"/>
+                            <constraint firstItem="srF-gS-xeD" firstAttribute="top" secondItem="aB4-TS-RnF" secondAttribute="top" constant="20" id="D3k-fr-SZ3"/>
+                            <constraint firstItem="srF-gS-xeD" firstAttribute="height" secondItem="aWB-kc-rP7" secondAttribute="height" multiplier="0.11" id="Dgu-rW-iQy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zzb-Cm-q0j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5U-sW-5tB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7288.8000000000002" y="-1131.1844077961021"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="BzC-10-NTr">
@@ -1791,6 +1837,7 @@
         <image name="green" width="1024" height="1024"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="profile" width="512" height="512"/>
@@ -1801,6 +1848,9 @@
         </namedColor>
         <namedColor name="CardColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MusicColor">
+            <color red="0.74794107589374137" green="0.75534643308080807" blue="0.75534643308080807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="PODORed">
             <color red="0.9137254901960784" green="0.23529411764705882" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1816,9 +1866,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
