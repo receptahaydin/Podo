@@ -13,7 +13,5 @@ class TaskManager {
     var tasks: [Task] = []
     var filteredTasks: [Task] = []
     
-    private init() {
-        // Singleton sınıf olduğu için başka yerden örneğini oluşturmayı engellemek için private initializer
-    }
+    private init() {}
 }

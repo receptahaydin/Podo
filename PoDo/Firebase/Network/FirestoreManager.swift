@@ -20,7 +20,6 @@ class FirestoreManager {
             "email": user.email,
             "name": user.name,
             "phoneNumber": user.phoneNumber,
-            "photo": user.photo,
             "userId": getCurrentUserID()!
         ])
     }

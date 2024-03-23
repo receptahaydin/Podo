@@ -13,7 +13,6 @@ struct User {
     var email: String
     var name: String
     var phoneNumber: String
-    var photo: String
 
     init(data: [String: Any]) {
         country = data["country"] as? String ?? ""
@@ -21,7 +20,6 @@ struct User {
         email = data["email"] as? String ?? ""
         name = data["name"] as? String ?? ""
         phoneNumber = data["phoneNumber"] as? String ?? ""
-        photo = data["photo"] as? String ?? ""
     }
 }
 

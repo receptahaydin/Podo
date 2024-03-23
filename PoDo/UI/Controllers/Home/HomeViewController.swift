@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     
     let greenColor = UIColor.init(hexString: "55AA67")
     let img = ImageManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTimer()

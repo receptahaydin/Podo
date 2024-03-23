@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC021A792BAF0080000250E6 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC021A782BAF0080000250E6 /* SoundsViewController.swift */; };
+		DC021A7E2BAF072D000250E6 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC021A7B2BAF072D000250E6 /* rain.mp3 */; };
+		DC021A7F2BAF072D000250E6 /* nature.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC021A7C2BAF072D000250E6 /* nature.mp3 */; };
+		DC021A802BAF072D000250E6 /* fireplace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC021A7D2BAF072D000250E6 /* fireplace.mp3 */; };
+		DC021A822BAF097D000250E6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC021A812BAF097D000250E6 /* SoundManager.swift */; };
 		DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C251F2BA48243004C0FF1 /* TabBarController.swift */; };
 		DC1B1B242B92115F00C7E21B /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */; };
 		DC251EB52B95E3A4003E163E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC251EB42B95E3A4003E163E /* CalendarViewController.swift */; };
@@ -75,6 +80,11 @@
 		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
 		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC021A782BAF0080000250E6 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		DC021A7B2BAF072D000250E6 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
+		DC021A7C2BAF072D000250E6 /* nature.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nature.mp3; sourceTree = "<group>"; };
+		DC021A7D2BAF072D000250E6 /* fireplace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fireplace.mp3; sourceTree = "<group>"; };
+		DC021A812BAF097D000250E6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		DC0C251F2BA48243004C0FF1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		DC251EB42B95E3A4003E163E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +177,33 @@
 				CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC021A772BAF0064000250E6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DC021A782BAF0080000250E6 /* SoundsViewController.swift */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DC021A7A2BAF072D000250E6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				DC021A832BAF0987000250E6 /* Sounds */,
+				DC021A812BAF097D000250E6 /* SoundManager.swift */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		DC021A832BAF0987000250E6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DC021A7B2BAF072D000250E6 /* rain.mp3 */,
+				DC021A7C2BAF072D000250E6 /* nature.mp3 */,
+				DC021A7D2BAF072D000250E6 /* fireplace.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		DC0C251E2BA4821A004C0FF1 /* Tabbar */ = {
@@ -386,6 +423,7 @@
 		DCFB59C72B4D711D00DF2F5D /* PoDo */ = {
 			isa = PBXGroup;
 			children = (
+				DC021A7A2BAF072D000250E6 /* Sound */,
 				DCA49A982BAB7478003D5FEB /* Image */,
 				DC66B9472B7AB54F003A4BE8 /* Firebase */,
 				DCFB59DC2B4D71C800DF2F5D /* Utils */,
@@ -446,6 +484,7 @@
 		DCFB59DF2B4D71F000DF2F5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC021A772BAF0064000250E6 /* Sounds */,
 				DCAF4B422B9F031700FA979F /* Analytics */,
 				DC251EB32B95E385003E163E /* Calendar */,
 				DCF3E8DA2B7FCE5700BE2053 /* Tasks */,
@@ -556,8 +595,11 @@
 			files = (
 				DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */,
 				DCFB59D52B4D711E00DF2F5D /* LaunchScreen.storyboard in Resources */,
+				DC021A7E2BAF072D000250E6 /* rain.mp3 in Resources */,
+				DC021A7F2BAF072D000250E6 /* nature.mp3 in Resources */,
 				DCFB59D22B4D711E00DF2F5D /* Assets.xcassets in Resources */,
 				DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */,
+				DC021A802BAF072D000250E6 /* fireplace.mp3 in Resources */,
 				DCB75DAC2B50867C0036A076 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +655,7 @@
 			files = (
 				DC450C742BA474C40002A824 /* CompletedTaskCell.swift in Sources */,
 				DCB75DAA2B5085840036A076 /* LoginViewController.swift in Sources */,
+				DC021A792BAF0080000250E6 /* SoundsViewController.swift in Sources */,
 				DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */,
 				DCC473B92B724BF300940243 /* CreateTaskViewController.swift in Sources */,
 				DCFB59F72B4D724400DF2F5D /* String+Extensions.swift in Sources */,
@@ -623,6 +666,7 @@
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
 				DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */,
 				DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */,
+				DC021A822BAF097D000250E6 /* SoundManager.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
 				DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */,

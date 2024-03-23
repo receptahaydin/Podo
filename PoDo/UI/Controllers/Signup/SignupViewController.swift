@@ -50,7 +50,6 @@ class SignupViewController: UIViewController {
                 "email": email,
                 "name": "recep",
                 "phoneNumber": "",
-                "photo": ""
             ]
 
             let user = User(data: userData)
