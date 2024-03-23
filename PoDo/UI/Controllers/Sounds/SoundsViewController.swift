@@ -13,9 +13,22 @@ class SoundsViewController: UIViewController {
     @IBOutlet weak var fireplaceButton: UIButton!
     @IBOutlet weak var rainButton: UIButton!
     @IBOutlet weak var natureButton: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCardColors()
+    }
+    
+    private func setCardColors() {
+        if SoundManager.shared.soundType == 0 {
+            fireplaceButton.backgroundColor = .podoRed
+        } else if SoundManager.shared.soundType == 1 {
+            rainButton.backgroundColor = .podoRed
+        } else if SoundManager.shared.soundType == 2 {
+            natureButton.backgroundColor = .podoRed
+        } else {
+            noSoundButton.backgroundColor = .podoRed
+        }
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {

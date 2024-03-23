@@ -27,6 +27,20 @@ class HomeViewController: UIViewController {
         setupTimer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if SoundManager.shared.soundType == 0 {
+            soundButton.setTitle(" Fireplace", for: .normal)
+        } else if SoundManager.shared.soundType == 1 {
+            soundButton.setTitle(" Rain", for: .normal)
+        } else if SoundManager.shared.soundType == 2 {
+            soundButton.setTitle(" Nature", for: .normal)
+        } else {
+            soundButton.setTitle(" No sound", for: .normal)
+        }
+    }
+    
     private func setupTimer() {
         timer.lineWidth = 15.0
         timer.lineColor = UIColor.lightGray.withAlphaComponent(0.5)
@@ -78,12 +92,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: SRCountdownTimerDelegate {
     func timerDidUpdateCounterValue(sender: SRCountdownTimer, newValue: Int) {
-           if timer.useMinutesAndSecondsRepresentation {
-               timerLabel.text = timer.getMinutesAndSeconds(remainingSeconds: newValue)
-           } else {
-               timerLabel.text = "\(newValue)"
-           }
-       }
+        if timer.useMinutesAndSecondsRepresentation {
+            timerLabel.text = timer.getMinutesAndSeconds(remainingSeconds: newValue)
+        } else {
+            timerLabel.text = "\(newValue)"
+        }
+    }
 }
 
 extension UIFont {
