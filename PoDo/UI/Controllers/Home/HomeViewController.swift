@@ -36,6 +36,14 @@ class HomeViewController: UIViewController {
             soundButton.setTitle(" Rain", for: .normal)
         } else if SoundManager.shared.soundType == 2 {
             soundButton.setTitle(" Nature", for: .normal)
+        } else if SoundManager.shared.soundType == 3 {
+            soundButton.setTitle(" Clock", for: .normal)
+        } else if SoundManager.shared.soundType == 4 {
+            soundButton.setTitle(" Jazz", for: .normal)
+        } else if SoundManager.shared.soundType == 5 {
+            soundButton.setTitle(" Piano", for: .normal)
+        } else if SoundManager.shared.soundType == 6 {
+            soundButton.setTitle(" Relax", for: .normal)
         } else {
             soundButton.setTitle(" No sound", for: .normal)
         }

@@ -90,6 +90,27 @@ class FirestoreManager {
         }
     }
     
+    func getUserInfo(completion: @escaping (String?, String?) -> Void) {
+        if let currentUser = Auth.auth().currentUser {
+            let userDocumentRef = db.collection("Users").document(currentUser.uid)
+            
+            userDocumentRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let data = document.data()
+                    let name = data?["name"] as? String
+                    let email = data?["email"] as? String
+                    completion(name, email)
+                } else {
+                    print("User document does not exist")
+                    completion(nil, nil)
+                }
+            }
+        } else {
+            print("No user logged in")
+            completion(nil, nil)
+        }
+    }
+    
     func getCurrentUserID() -> String? {
         if let user = Auth.auth().currentUser {
             return user.uid

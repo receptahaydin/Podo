@@ -35,6 +35,14 @@ class SoundManager {
                 soundType = 1
             } else if name == "nature" {
                 soundType = 2
+            } else if name == "clock" {
+                soundType = 3
+            } else if name == "jazz" {
+                soundType = 4
+            } else if name == "piano" {
+                soundType = 5
+            } else if name == "relax" {
+                soundType = 6
             }
         } catch {
             print("\(error.localizedDescription)")

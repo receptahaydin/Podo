@@ -679,14 +679,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recep Taha Aydın" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-F5-U7D">
-                                                    <rect key="frame" x="99.5" y="190" width="176" height="26.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-F5-U7D">
+                                                    <rect key="frame" x="187.5" y="190" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="receptahaaydin@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20I-sL-5H3">
-                                                    <rect key="frame" x="92.5" y="226.5" width="190" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20I-sL-5H3">
+                                                    <rect key="frame" x="187.5" y="200" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1134,26 +1134,120 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vVw-HN-b7S">
+                                <rect key="frame" x="20" y="250.5" width="335" height="73.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM7-Dm-zf3" userLabel="Rain">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Clock" image="clock.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="9TF-IB-pEQ" eventType="touchUpInside" id="GP5-oV-FHs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-Ea-x3L">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Jazz" image="music.quarternote.3" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="9TF-IB-pEQ" eventType="touchUpInside" id="NXE-Ys-8R4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rgo-Y1-wwR">
+                                <rect key="frame" x="20" y="334" width="335" height="73.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBg-Ce-0OJ" userLabel="Rain">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Piano" image="pianokeys.inverse" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="9TF-IB-pEQ" eventType="touchUpInside" id="XQV-Uk-cGr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi6-mi-smr">
+                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="73.5"/>
+                                        <color key="backgroundColor" name="MusicColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Relax" image="guitars.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="9TF-IB-pEQ" eventType="touchUpInside" id="TW2-N6-As8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aB4-TS-RnF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aB4-TS-RnF" firstAttribute="trailing" secondItem="rgo-Y1-wwR" secondAttribute="trailing" constant="20" id="18e-Bj-QbL"/>
+                            <constraint firstItem="vVw-HN-b7S" firstAttribute="leading" secondItem="aB4-TS-RnF" secondAttribute="leading" constant="20" id="1EN-1g-7q2"/>
                             <constraint firstItem="8pN-8l-o0u" firstAttribute="leading" secondItem="aB4-TS-RnF" secondAttribute="leading" constant="20" id="1gV-ng-bfT"/>
+                            <constraint firstItem="rgo-Y1-wwR" firstAttribute="top" secondItem="vVw-HN-b7S" secondAttribute="bottom" constant="10" id="31m-Ka-18c"/>
                             <constraint firstItem="8pN-8l-o0u" firstAttribute="top" secondItem="srF-gS-xeD" secondAttribute="bottom" constant="10" id="5hz-Wz-7Zw"/>
                             <constraint firstItem="aB4-TS-RnF" firstAttribute="trailing" secondItem="srF-gS-xeD" secondAttribute="trailing" constant="20" id="AQM-tB-j5G"/>
                             <constraint firstItem="srF-gS-xeD" firstAttribute="leading" secondItem="aB4-TS-RnF" secondAttribute="leading" constant="20" id="BAC-pW-oDg"/>
                             <constraint firstItem="srF-gS-xeD" firstAttribute="top" secondItem="aB4-TS-RnF" secondAttribute="top" constant="20" id="D3k-fr-SZ3"/>
                             <constraint firstItem="srF-gS-xeD" firstAttribute="height" secondItem="aWB-kc-rP7" secondAttribute="height" multiplier="0.11" id="Dgu-rW-iQy"/>
+                            <constraint firstItem="vVw-HN-b7S" firstAttribute="height" secondItem="aWB-kc-rP7" secondAttribute="height" multiplier="0.11" id="U7p-2d-Eft"/>
                             <constraint firstItem="aB4-TS-RnF" firstAttribute="trailing" secondItem="8pN-8l-o0u" secondAttribute="trailing" constant="20" id="b45-lV-wa9"/>
+                            <constraint firstItem="vVw-HN-b7S" firstAttribute="top" secondItem="8pN-8l-o0u" secondAttribute="bottom" constant="10" id="bz7-gd-1f3"/>
+                            <constraint firstItem="rgo-Y1-wwR" firstAttribute="leading" secondItem="aB4-TS-RnF" secondAttribute="leading" constant="20" id="gUG-PD-1vj"/>
                             <constraint firstItem="8pN-8l-o0u" firstAttribute="height" secondItem="aWB-kc-rP7" secondAttribute="height" multiplier="0.11" id="icw-jD-yM3"/>
+                            <constraint firstItem="aB4-TS-RnF" firstAttribute="trailing" secondItem="vVw-HN-b7S" secondAttribute="trailing" constant="20" id="nU1-Yt-miv"/>
+                            <constraint firstItem="rgo-Y1-wwR" firstAttribute="height" secondItem="aWB-kc-rP7" secondAttribute="height" multiplier="0.11" id="sNd-2p-p8T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zzb-Cm-q0j"/>
                     <connections>
+                        <outlet property="clockButton" destination="IM7-Dm-zf3" id="7dI-TG-fPi"/>
                         <outlet property="fireplaceButton" destination="8ph-vq-sn3" id="wNf-6x-AbN"/>
+                        <outlet property="jazzButton" destination="Poj-Ea-x3L" id="hQI-ga-HhT"/>
                         <outlet property="natureButton" destination="OXW-FB-EEw" id="ed0-wJ-3qr"/>
                         <outlet property="noSoundButton" destination="ST8-E7-QLX" id="KeA-8o-YGB"/>
+                        <outlet property="pianoButton" destination="GBg-Ce-0OJ" id="1AS-cJ-lid"/>
                         <outlet property="rainButton" destination="Zsm-L1-hYj" id="MeJ-4U-aiJ"/>
+                        <outlet property="relaxButton" destination="Fi6-mi-smr" id="Ahc-pK-H2z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5U-sW-5tB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1919,6 +2013,7 @@
         <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.rain.fill" catalog="system" width="126" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="envelope.fill" catalog="system" width="32" height="32"/>
@@ -1928,11 +2023,14 @@
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="google" width="512" height="512"/>
         <image name="green" width="1024" height="1024"/>
+        <image name="guitars.fill" catalog="system" width="128" height="104"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="lock.fill" catalog="system" width="32" height="32"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
+        <image name="music.quarternote.3" catalog="system" width="128" height="102"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="profile" width="512" height="512"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>

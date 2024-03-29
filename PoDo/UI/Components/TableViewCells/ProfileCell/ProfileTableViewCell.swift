@@ -24,7 +24,6 @@ class ProfileTableViewCell: UITableViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
-
     }
     
     @objc func imageViewTapped() {

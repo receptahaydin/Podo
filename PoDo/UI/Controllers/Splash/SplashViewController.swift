@@ -16,7 +16,6 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkUserAuthentication()
-        
     }
     
     func checkUserAuthentication() {
