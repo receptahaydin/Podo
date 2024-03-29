@@ -15,6 +15,11 @@
 		DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C251F2BA48243004C0FF1 /* TabBarController.swift */; };
 		DC1B1B242B92115F00C7E21B /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */; };
 		DC251EB52B95E3A4003E163E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC251EB42B95E3A4003E163E /* CalendarViewController.swift */; };
+		DC30AE2D2BB6F20400AD83F1 /* jazz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE292BB6F20400AD83F1 /* jazz.mp3 */; };
+		DC30AE2E2BB6F20400AD83F1 /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE2A2BB6F20400AD83F1 /* relax.mp3 */; };
+		DC30AE2F2BB6F20400AD83F1 /* clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE2B2BB6F20400AD83F1 /* clock.mp3 */; };
+		DC30AE302BB6F20400AD83F1 /* piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */; };
+		DC30AE322BB6F21300AD83F1 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE312BB6F21300AD83F1 /* timer.mp3 */; };
 		DC450C742BA474C40002A824 /* CompletedTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC450C732BA474C40002A824 /* CompletedTaskCell.swift */; };
 		DC66B9492B7AB570003A4BE8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66B9482B7AB570003A4BE8 /* Model.swift */; };
 		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
@@ -88,6 +93,11 @@
 		DC0C251F2BA48243004C0FF1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		DC251EB42B95E3A4003E163E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DC30AE292BB6F20400AD83F1 /* jazz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jazz.mp3; sourceTree = "<group>"; };
+		DC30AE2A2BB6F20400AD83F1 /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
+		DC30AE2B2BB6F20400AD83F1 /* clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock.mp3; sourceTree = "<group>"; };
+		DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano.mp3; sourceTree = "<group>"; };
+		DC30AE312BB6F21300AD83F1 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
 		DC450C732BA474C40002A824 /* CompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskCell.swift; sourceTree = "<group>"; };
 		DC66B9482B7AB570003A4BE8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DCA49A992BAB7484003D5FEB /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -201,6 +211,11 @@
 			children = (
 				DC021A7B2BAF072D000250E6 /* rain.mp3 */,
 				DC021A7C2BAF072D000250E6 /* nature.mp3 */,
+				DC30AE2B2BB6F20400AD83F1 /* clock.mp3 */,
+				DC30AE312BB6F21300AD83F1 /* timer.mp3 */,
+				DC30AE292BB6F20400AD83F1 /* jazz.mp3 */,
+				DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */,
+				DC30AE2A2BB6F20400AD83F1 /* relax.mp3 */,
 				DC021A7D2BAF072D000250E6 /* fireplace.mp3 */,
 			);
 			path = Sounds;
@@ -594,9 +609,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */,
+				DC30AE2F2BB6F20400AD83F1 /* clock.mp3 in Resources */,
+				DC30AE302BB6F20400AD83F1 /* piano.mp3 in Resources */,
 				DCFB59D52B4D711E00DF2F5D /* LaunchScreen.storyboard in Resources */,
+				DC30AE2D2BB6F20400AD83F1 /* jazz.mp3 in Resources */,
+				DC30AE2E2BB6F20400AD83F1 /* relax.mp3 in Resources */,
 				DC021A7E2BAF072D000250E6 /* rain.mp3 in Resources */,
 				DC021A7F2BAF072D000250E6 /* nature.mp3 in Resources */,
+				DC30AE322BB6F21300AD83F1 /* timer.mp3 in Resources */,
 				DCFB59D22B4D711E00DF2F5D /* Assets.xcassets in Resources */,
 				DCFB59D02B4D711D00DF2F5D /* Main.storyboard in Resources */,
 				DC021A802BAF072D000250E6 /* fireplace.mp3 in Resources */,

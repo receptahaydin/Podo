@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class SignupViewController: UIViewController {
     
+    @IBOutlet weak var name: DesignableUITextField!
     @IBOutlet weak var email: DesignableUITextField!
     @IBOutlet weak var password: DesignableUITextField!
     
@@ -27,8 +28,20 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: LoaderButton) {
+        let name = name.text!
         let email = email.text!
         let password = password.text!
+        
+        guard !name.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your name.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in }
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true)
+            
+            return
+        }
         
         sender.isLoading = true
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -43,15 +56,15 @@ class SignupViewController: UIViewController {
                 sender.isLoading = false
                 return
             }
-                        
+            
             let userData: [String: Any] = [
                 "country": "",
                 "countryCode": "",
                 "email": email,
-                "name": "recep",
+                "name": name,
                 "phoneNumber": "",
             ]
-
+            
             let user = User(data: userData)
             self.firestoreManager.addUser(user: user)
             

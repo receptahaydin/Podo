@@ -10,6 +10,8 @@ import UIKit
 class ProfileTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
     
     let imageManager = ImageManager()
     
@@ -22,6 +24,7 @@ class ProfileTableViewCell: UITableViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
+
     }
     
     @objc func imageViewTapped() {
