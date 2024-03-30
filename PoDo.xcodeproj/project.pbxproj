@@ -212,14 +212,6 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		DC0C251E2BA4821A004C0FF1 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				DC0C251F2BA48243004C0FF1 /* TabBarController.swift */,
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
 		DC66B9472B7AB54F003A4BE8 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,93 +229,29 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		DCA51AA32BAB062100E2F8BB /* ProfileCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */,
-			);
-			path = ProfileCell;
-			sourceTree = "<group>";
-		};
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				DCA51AA32BAB062100E2F8BB /* ProfileCell */,
-				DCEFD9402BA1D28F003F775B /* CalendarCell */,
+				DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */,
+				DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */,
+				DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */,
+				DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */,
 				DCF3E8DD2B7FF83A00BE2053 /* TaskCells */,
-				DCE36BA12B5879AF0057B778 /* SwitchCell */,
-				DCB346792B58736C0056DEAC /* OptionCell */,
 			);
 			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		DCB346792B58736C0056DEAC /* OptionCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */,
-			);
-			path = OptionCell;
 			sourceTree = "<group>";
 		};
 		DCB75D8B2B5083330036A076 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DC0C251E2BA4821A004C0FF1 /* Tabbar */,
+				DC0C251F2BA48243004C0FF1 /* TabBarController.swift */,
+				DCB75D932B5083330036A076 /* LoaderButton.swift */,
+				DCB75D972B5083330036A076 /* CardView.swift */,
+				DCB75D952B5083330036A076 /* DesignableUITextField.swift */,
+				DCB75D9C2B5083330036A076 /* RoundedButton.swift */,
 				DCB346782B58735D0056DEAC /* TableViewCells */,
-				DCB75D922B5083330036A076 /* LoaderButton */,
-				DCB75D942B5083330036A076 /* DesignableUITextField */,
-				DCB75D962B5083330036A076 /* CardView */,
-				DCB75D9B2B5083330036A076 /* RoundedButton */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		DCB75D922B5083330036A076 /* LoaderButton */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75D932B5083330036A076 /* LoaderButton.swift */,
-			);
-			path = LoaderButton;
-			sourceTree = "<group>";
-		};
-		DCB75D942B5083330036A076 /* DesignableUITextField */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75D952B5083330036A076 /* DesignableUITextField.swift */,
-			);
-			path = DesignableUITextField;
-			sourceTree = "<group>";
-		};
-		DCB75D962B5083330036A076 /* CardView */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75D972B5083330036A076 /* CardView.swift */,
-			);
-			path = CardView;
-			sourceTree = "<group>";
-		};
-		DCB75D9B2B5083330036A076 /* RoundedButton */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75D9C2B5083330036A076 /* RoundedButton.swift */,
-			);
-			path = RoundedButton;
-			sourceTree = "<group>";
-		};
-		DCE36BA12B5879AF0057B778 /* SwitchCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */,
-			);
-			path = SwitchCell;
-			sourceTree = "<group>";
-		};
-		DCEFD9402BA1D28F003F775B /* CalendarCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */,
-			);
-			path = CalendarCell;
 			sourceTree = "<group>";
 		};
 		DCF3E8DD2B7FF83A00BE2053 /* TaskCells */ = {
