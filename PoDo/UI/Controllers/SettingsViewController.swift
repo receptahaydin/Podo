@@ -87,20 +87,16 @@ extension SettingsViewController: UITableViewDataSource {
             optionCell.configureCell(image: UIImage(systemName: "person.fill")!, title: "Edit Profile")
             return optionCell
         } else if indexPath.row == 2 {
-            let optionCell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath) as! OptionTableViewCell
-            optionCell.configureCell(image: UIImage(systemName: "star.fill")!, title: "Pomo Settings")
+            let optionCell = tableView.dequeueReusableCell(withIdentifier: "switchCell", for: indexPath) as! SwitchTableViewCell
+            optionCell.configureCell(image: UIImage(systemName: "eye.fill")!, title: "Dark Theme")
             return optionCell
         } else if indexPath.row == 3 {
             let optionCell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath) as! OptionTableViewCell
-            optionCell.configureCell(image: UIImage(systemName: "bell.fill")!, title: "Notifications")
+            optionCell.configureCell(image: UIImage(systemName: "network")!, title: "Language")
             return optionCell
         } else if indexPath.row == 4 {
             let optionCell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath) as! OptionTableViewCell
-            optionCell.configureCell(image: UIImage(systemName: "info.circle.fill")!, title: "Help")
-            return optionCell
-        } else if indexPath.row == 5 {
-            let optionCell = tableView.dequeueReusableCell(withIdentifier: "switchCell", for: indexPath) as! SwitchTableViewCell
-            optionCell.configureCell(image: UIImage(systemName: "eye.fill")!, title: "Dark Theme")
+            optionCell.configureCell(image: UIImage(systemName: "gearshape.fill")!, title: "Podo Settings")
             return optionCell
         } else {
             let optionCell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath) as! OptionTableViewCell
@@ -110,7 +106,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
 }
 
@@ -124,7 +120,9 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 6 {
+        if indexPath.row == 4 {
+            self.performSegue(withIdentifier: "toPodoSettings", sender: nil)
+        } else if indexPath.row == 5 {
             present(logoutAction, animated: true)
         }
     }

@@ -626,6 +626,129 @@
             </objects>
             <point key="canvasLocation" x="6357.6000000000004" y="524.43778110944527"/>
         </scene>
+        <!--Podo Settings-->
+        <scene sceneID="olD-Sf-1wa">
+            <objects>
+                <viewController id="4Ik-gt-dag" customClass="PodoSettingsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SOb-Sr-ZWS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Sessions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v14-Z7-enj">
+                                <rect key="frame" x="20" y="94" width="137" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-rW-r8V">
+                                <rect key="frame" x="261" y="88" width="94" height="32"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rl-SI-Ly3">
+                                <rect key="frame" x="162" y="94" width="7.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-QO-IM1" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="150" width="187.5" height="30"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-E1-7HJ" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="270" width="187.5" height="30"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Ka-me4" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="210" width="187.5" height="30"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                        <imageReference key="value" image="chevron.down" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAI-UG-jBy">
+                                <rect key="frame" x="20" y="155" width="85.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltF-OM-Acg">
+                                <rect key="frame" x="20" y="215" width="88" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8i-cT-AoU">
+                                <rect key="frame" x="20" y="275" width="84" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dKy-79-vlp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ehf-QO-IM1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KAI-UG-jBy" secondAttribute="trailing" constant="8" symbolic="YES" id="0xY-t9-1Sb"/>
+                            <constraint firstItem="bsS-Ka-me4" firstAttribute="height" secondItem="SOb-Sr-ZWS" secondAttribute="height" multiplier="0.045" id="6nc-Q5-jym"/>
+                            <constraint firstItem="BrN-E1-7HJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="g8i-cT-AoU" secondAttribute="trailing" constant="8" symbolic="YES" id="FMf-4C-td8"/>
+                            <constraint firstItem="ehf-QO-IM1" firstAttribute="height" secondItem="SOb-Sr-ZWS" secondAttribute="height" multiplier="0.045" id="GVb-bT-cyh"/>
+                            <constraint firstItem="ltF-OM-Acg" firstAttribute="leading" secondItem="dKy-79-vlp" secondAttribute="leading" constant="20" id="HBR-d4-5Bq"/>
+                            <constraint firstItem="1Rl-SI-Ly3" firstAttribute="centerY" secondItem="v14-Z7-enj" secondAttribute="centerY" id="HHe-Q2-lo0"/>
+                            <constraint firstItem="ehf-QO-IM1" firstAttribute="top" secondItem="rNa-rW-r8V" secondAttribute="bottom" constant="30" id="JMk-sj-xXk"/>
+                            <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="rNa-rW-r8V" secondAttribute="trailing" constant="20" id="JMq-eK-U0y"/>
+                            <constraint firstItem="1Rl-SI-Ly3" firstAttribute="leading" secondItem="v14-Z7-enj" secondAttribute="trailing" constant="5" id="JYF-8Y-SRO"/>
+                            <constraint firstItem="bsS-Ka-me4" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="KWI-9g-THs"/>
+                            <constraint firstItem="ltF-OM-Acg" firstAttribute="centerY" secondItem="bsS-Ka-me4" secondAttribute="centerY" id="Kq0-ao-xgq"/>
+                            <constraint firstItem="BrN-E1-7HJ" firstAttribute="top" secondItem="bsS-Ka-me4" secondAttribute="bottom" constant="30" id="QV7-FI-emT"/>
+                            <constraint firstItem="bsS-Ka-me4" firstAttribute="top" secondItem="ehf-QO-IM1" secondAttribute="bottom" constant="30" id="W9W-dz-FuZ"/>
+                            <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="ehf-QO-IM1" secondAttribute="trailing" constant="20" id="WPI-fi-YbF"/>
+                            <constraint firstItem="rNa-rW-r8V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Rl-SI-Ly3" secondAttribute="trailing" constant="8" symbolic="YES" id="aOr-NS-rce"/>
+                            <constraint firstItem="KAI-UG-jBy" firstAttribute="centerY" secondItem="ehf-QO-IM1" secondAttribute="centerY" id="dkx-N0-bKr"/>
+                            <constraint firstItem="v14-Z7-enj" firstAttribute="top" secondItem="dKy-79-vlp" secondAttribute="top" constant="30" id="dpN-9I-CzD"/>
+                            <constraint firstItem="g8i-cT-AoU" firstAttribute="centerY" secondItem="BrN-E1-7HJ" secondAttribute="centerY" id="g7A-qx-6jQ"/>
+                            <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="bsS-Ka-me4" secondAttribute="trailing" constant="20" id="i8T-SK-qrA"/>
+                            <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="BrN-E1-7HJ" secondAttribute="trailing" constant="20" id="jeL-er-Spa"/>
+                            <constraint firstItem="bsS-Ka-me4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ltF-OM-Acg" secondAttribute="trailing" constant="8" symbolic="YES" id="lhk-Cy-5Hg"/>
+                            <constraint firstItem="v14-Z7-enj" firstAttribute="leading" secondItem="dKy-79-vlp" secondAttribute="leading" constant="20" id="m5G-cE-ck5"/>
+                            <constraint firstItem="KAI-UG-jBy" firstAttribute="leading" secondItem="dKy-79-vlp" secondAttribute="leading" constant="20" id="n6j-cd-lkf"/>
+                            <constraint firstItem="BrN-E1-7HJ" firstAttribute="height" secondItem="SOb-Sr-ZWS" secondAttribute="height" multiplier="0.045" id="oBa-RF-NWd"/>
+                            <constraint firstItem="g8i-cT-AoU" firstAttribute="leading" secondItem="dKy-79-vlp" secondAttribute="leading" constant="20" id="rc9-9O-l6N"/>
+                            <constraint firstItem="BrN-E1-7HJ" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="sb7-ss-14b"/>
+                            <constraint firstItem="rNa-rW-r8V" firstAttribute="centerY" secondItem="v14-Z7-enj" secondAttribute="centerY" id="siS-uC-nla"/>
+                            <constraint firstItem="ehf-QO-IM1" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="xrm-St-svt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Podo Settings" id="axP-52-vp7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2T-GN-CFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7095" y="1005"/>
+        </scene>
         <!--Analytics-->
         <scene sceneID="0ZO-ge-AqD">
             <objects>
@@ -828,6 +951,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="U6U-ZF-nTY" id="JGS-Mf-yJx"/>
+                        <segue destination="4Ik-gt-dag" kind="show" identifier="toPodoSettings" id="NdU-RP-nbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-nV-AdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1747,7 +1871,6 @@
                             <constraint firstItem="zdU-GY-vi7" firstAttribute="top" secondItem="jf5-gf-JKE" secondAttribute="bottom" constant="30" id="u1J-aU-Ecm"/>
                             <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" secondItem="WzP-r4-IYr" secondAttribute="trailing" constant="20" id="uPX-iK-oLl"/>
                             <constraint firstItem="7tI-Aa-jPb" firstAttribute="top" secondItem="zdU-GY-vi7" secondAttribute="bottom" constant="30" id="utc-um-3fg"/>
-                            <constraint firstItem="Z0L-VE-HI1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7tI-Aa-jPb" secondAttribute="trailing" symbolic="YES" id="v4d-Fc-Z4d"/>
                             <constraint firstItem="04i-Rt-dQD" firstAttribute="leading" secondItem="Z0L-VE-HI1" secondAttribute="leading" constant="20" id="vWg-9d-DRa"/>
                             <constraint firstItem="WzP-r4-IYr" firstAttribute="top" secondItem="psU-Nu-MFg" secondAttribute="bottom" constant="30" id="xqb-Rv-jsz"/>
                             <constraint firstItem="AGv-ov-1NN" firstAttribute="top" secondItem="UGo-8w-Io1" secondAttribute="bottom" constant="10" id="zKQ-TV-cW6"/>
@@ -1975,6 +2098,9 @@
         <designable name="BoE-KI-FCw">
             <size key="intrinsicContentSize" width="18" height="22"/>
         </designable>
+        <designable name="BrN-E1-7HJ">
+            <size key="intrinsicContentSize" width="91" height="34"/>
+        </designable>
         <designable name="HpR-D4-Pgr">
             <size key="intrinsicContentSize" width="20" height="22"/>
         </designable>
@@ -1990,8 +2116,14 @@
         <designable name="YQs-e3-YTl">
             <size key="intrinsicContentSize" width="145" height="34"/>
         </designable>
+        <designable name="bsS-Ka-me4">
+            <size key="intrinsicContentSize" width="84" height="34"/>
+        </designable>
         <designable name="cMZ-7l-ijw">
             <size key="intrinsicContentSize" width="145" height="34"/>
+        </designable>
+        <designable name="ehf-QO-IM1">
+            <size key="intrinsicContentSize" width="93" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
             <size key="intrinsicContentSize" width="93" height="34"/>
@@ -2023,7 +2155,7 @@
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.rain.fill" catalog="system" width="126" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="32" height="32"/>
+        <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="fireplace.fill" catalog="system" width="128" height="103"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
@@ -2036,7 +2168,7 @@
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.quarternote.3" catalog="system" width="128" height="102"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="profile" width="512" height="512"/>

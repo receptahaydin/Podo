@@ -45,6 +45,7 @@
 		DCB75E042B508DE30036A076 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E032B508DE30036A076 /* FirebaseAuthCombine-Community */; };
 		DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E052B508DE30036A076 /* FirebaseCrashlytics */; };
 		DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */; };
+		DCC0BC1F2BB848FF00D42119 /* PodoSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */; };
 		DCC473B92B724BF300940243 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC473B82B724BF300940243 /* CreateTaskViewController.swift */; };
 		DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */; };
 		DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */; };
@@ -110,6 +111,7 @@
 		DCB75DA92B5085840036A076 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCB75DF22B508C6D0036A076 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodoSettingsViewController.swift; sourceTree = "<group>"; };
 		DCC473B82B724BF300940243 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -187,14 +189,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DC021A772BAF0064000250E6 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				DC021A782BAF0080000250E6 /* SoundsViewController.swift */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		DC021A7A2BAF072D000250E6 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,14 +220,6 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		DC251EB32B95E385003E163E /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				DC251EB42B95E3A4003E163E /* CalendarViewController.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
 		DC66B9472B7AB54F003A4BE8 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,14 +243,6 @@
 				DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */,
 			);
 			path = ProfileCell;
-			sourceTree = "<group>";
-		};
-		DCAF4B422B9F031700FA979F /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */,
-			);
-			path = Analytics;
 			sourceTree = "<group>";
 		};
 		DCB346782B58735D0056DEAC /* TableViewCells */ = {
@@ -332,46 +310,6 @@
 			path = RoundedButton;
 			sourceTree = "<group>";
 		};
-		DCB75DA72B50855D0036A076 /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75DF22B508C6D0036A076 /* SignupViewController.swift */,
-			);
-			path = Signup;
-			sourceTree = "<group>";
-		};
-		DCB75DA82B5085670036A076 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				DCB75DA92B5085840036A076 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		DCC473B72B724BCC00940243 /* CreateTask */ = {
-			isa = PBXGroup;
-			children = (
-				DCC473B82B724BF300940243 /* CreateTaskViewController.swift */,
-			);
-			path = CreateTask;
-			sourceTree = "<group>";
-		};
-		DCD9D8722B5097ED00DA0ED3 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		DCD9D8752B50A8C600DA0ED3 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		DCE36BA12B5879AF0057B778 /* SwitchCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,14 +324,6 @@
 				DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */,
 			);
 			path = CalendarCell;
-			sourceTree = "<group>";
-		};
-		DCF3E8DA2B7FCE5700BE2053 /* Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */,
-			);
-			path = Tasks;
 			sourceTree = "<group>";
 		};
 		DCF3E8DD2B7FF83A00BE2053 /* TaskCells */ = {
@@ -496,35 +426,20 @@
 		DCFB59DF2B4D71F000DF2F5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DC021A772BAF0064000250E6 /* Sounds */,
-				DCAF4B422B9F031700FA979F /* Analytics */,
-				DC251EB32B95E385003E163E /* Calendar */,
-				DCF3E8DA2B7FCE5700BE2053 /* Tasks */,
-				DCC473B72B724BCC00940243 /* CreateTask */,
-				DCD9D8752B50A8C600DA0ED3 /* Settings */,
-				DCD9D8722B5097ED00DA0ED3 /* Home */,
-				DCB75DA82B5085670036A076 /* Login */,
-				DCB75DA72B50855D0036A076 /* Signup */,
-				DCFB5A0A2B4D786E00DF2F5D /* Splash */,
-				DCFB5A012B4D725100DF2F5D /* Onboarding */,
+				DC021A782BAF0080000250E6 /* SoundsViewController.swift */,
+				DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */,
+				DC251EB42B95E3A4003E163E /* CalendarViewController.swift */,
+				DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */,
+				DCC473B82B724BF300940243 /* CreateTaskViewController.swift */,
+				DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */,
+				DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */,
+				DCB75DA92B5085840036A076 /* LoginViewController.swift */,
+				DCB75DF22B508C6D0036A076 /* SignupViewController.swift */,
+				DCFB5A0B2B4D787C00DF2F5D /* SplashViewController.swift */,
+				DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */,
+				DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		DCFB5A012B4D725100DF2F5D /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		DCFB5A0A2B4D786E00DF2F5D /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				DCFB5A0B2B4D787C00DF2F5D /* SplashViewController.swift */,
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -691,6 +606,7 @@
 				DCFB5A062B4D72D200DF2F5D /* OnboardingViewController.swift in Sources */,
 				DCFB59FB2B4D724400DF2F5D /* UICollectionView+Reusable.swift in Sources */,
 				DCFB5A002B4D724400DF2F5D /* UIDevice+Extensions.swift in Sources */,
+				DCC0BC1F2BB848FF00D42119 /* PodoSettingsViewController.swift in Sources */,
 				DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */,
 				DCF3E8DC2B7FCE7400BE2053 /* TasksViewController.swift in Sources */,
 				DCEFD9422BA1D2A7003F775B /* CalendarTableViewCell.swift in Sources */,
