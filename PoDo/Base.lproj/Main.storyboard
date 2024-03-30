@@ -697,6 +697,10 @@
                                                         <constraint firstAttribute="width" secondItem="Vgt-Sv-JUh" secondAttribute="height" multiplier="1:1" id="nOD-DI-YcG"/>
                                                     </constraints>
                                                 </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BMv-ue-H9N">
+                                                    <rect key="frame" x="177.5" y="204.5" width="20" height="20"/>
+                                                    <color key="color" name="PODORed"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Vgt-Sv-JUh" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="8ke-0q-iiA"/>
@@ -704,12 +708,15 @@
                                                 <constraint firstItem="Vgt-Sv-JUh" firstAttribute="top" secondItem="5Vq-9j-En8" secondAttribute="top" constant="30" id="Q1c-OP-JEE"/>
                                                 <constraint firstItem="ECF-F5-U7D" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="RzP-Wl-AHG"/>
                                                 <constraint firstItem="Vgt-Sv-JUh" firstAttribute="width" secondItem="5Vq-9j-En8" secondAttribute="width" multiplier="0.4" id="YR2-Ts-qgN"/>
+                                                <constraint firstItem="BMv-ue-H9N" firstAttribute="centerY" secondItem="20I-sL-5H3" secondAttribute="firstBaseline" id="fMR-fe-5iA"/>
                                                 <constraint firstItem="ECF-F5-U7D" firstAttribute="top" secondItem="Vgt-Sv-JUh" secondAttribute="bottom" constant="10" id="hZP-jr-eiN"/>
+                                                <constraint firstItem="BMv-ue-H9N" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="iQU-w5-yPV"/>
                                                 <constraint firstItem="20I-sL-5H3" firstAttribute="centerX" secondItem="5Vq-9j-En8" secondAttribute="centerX" id="v9n-zd-rlS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="email" destination="20I-sL-5H3" id="1jN-5Z-Npj"/>
+                                            <outlet property="loadingIndicator" destination="BMv-ue-H9N" id="Dct-yf-vhb"/>
                                             <outlet property="name" destination="ECF-F5-U7D" id="hlh-CZ-vfJ"/>
                                             <outlet property="profileImage" destination="Vgt-Sv-JUh" id="eca-sB-yLn"/>
                                         </connections>
@@ -1972,34 +1979,34 @@
             <size key="intrinsicContentSize" width="20" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="66" height="34"/>
+            <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="69" height="34"/>
+            <size key="intrinsicContentSize" width="84" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="90.5" height="34"/>
+            <size key="intrinsicContentSize" width="145" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="90.5" height="34"/>
+            <size key="intrinsicContentSize" width="145" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="78" height="34"/>
+            <size key="intrinsicContentSize" width="93" height="34"/>
         </designable>
         <designable name="s8d-EB-DDs">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="76" height="34"/>
+            <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="88" height="34"/>
+            <size key="intrinsicContentSize" width="103" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" name="PODORed"/>
@@ -2025,11 +2032,11 @@
         <image name="green" width="1024" height="1024"/>
         <image name="guitars.fill" catalog="system" width="128" height="104"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
-        <image name="lock.fill" catalog="system" width="32" height="32"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.quarternote.3" catalog="system" width="128" height="102"/>
         <image name="pause.fill" catalog="system" width="117" height="128"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="profile" width="512" height="512"/>

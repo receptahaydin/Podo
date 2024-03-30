@@ -12,6 +12,7 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     let imageManager = ImageManager()
     
@@ -24,9 +25,24 @@ class ProfileTableViewCell: UITableViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
+        
+        fetchUserInfo()
     }
     
     @objc func imageViewTapped() {
         NotificationCenter.default.post(name: Notification.Name("ProfileImageTapped"), object: nil)
+    }
+    
+    func fetchUserInfo() {
+        loadingIndicator.startAnimating()
+        
+        FirestoreManager().getUserInfo { name, email in
+            DispatchQueue.main.async {
+                self.name.text = name ?? "Name not found"
+                self.email.text = email ?? "Email not found"
+                
+                self.loadingIndicator.stopAnimating()
+            }
+        }
     }
 }
