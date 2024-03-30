@@ -629,28 +629,28 @@
         <!--Podo Settings-->
         <scene sceneID="olD-Sf-1wa">
             <objects>
-                <viewController id="4Ik-gt-dag" customClass="PodoSettingsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="podoSettingsVC" id="4Ik-gt-dag" customClass="PodoSettingsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SOb-Sr-ZWS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Sessions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v14-Z7-enj">
-                                <rect key="frame" x="20" y="94" width="137" height="19.5"/>
+                                <rect key="frame" x="20" y="60" width="137" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-rW-r8V">
-                                <rect key="frame" x="261" y="88" width="94" height="32"/>
+                                <rect key="frame" x="261" y="54" width="94" height="32"/>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rl-SI-Ly3">
-                                <rect key="frame" x="162" y="94" width="7.5" height="19.5"/>
+                                <rect key="frame" x="162" y="60" width="7.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-QO-IM1" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="167.5" y="150" width="187.5" height="30"/>
+                                <rect key="frame" x="167.5" y="116" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -664,7 +664,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-E1-7HJ" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="167.5" y="270" width="187.5" height="30"/>
+                                <rect key="frame" x="167.5" y="236" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -678,7 +678,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Ka-me4" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="167.5" y="210" width="187.5" height="30"/>
+                                <rect key="frame" x="167.5" y="176" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -692,23 +692,44 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAI-UG-jBy">
-                                <rect key="frame" x="20" y="155" width="85.5" height="20"/>
+                                <rect key="frame" x="20" y="121" width="85.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltF-OM-Acg">
-                                <rect key="frame" x="20" y="215" width="88" height="20"/>
+                                <rect key="frame" x="20" y="181" width="88" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8i-cT-AoU">
-                                <rect key="frame" x="20" y="275" width="84" height="20"/>
+                                <rect key="frame" x="20" y="241" width="84" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-jv-aX0">
+                                <rect key="frame" x="20" y="296" width="335" height="36.5"/>
+                                <color key="backgroundColor" name="PODORed"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Changes">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createTaskAction:" destination="tiM-JL-v1N" eventType="touchUpInside" id="rli-pH-npT"/>
+                                    <action selector="saveChangesAction:" destination="4Ik-gt-dag" eventType="touchUpInside" id="mkD-xB-EAB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dKy-79-vlp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -724,12 +745,15 @@
                             <constraint firstItem="1Rl-SI-Ly3" firstAttribute="leading" secondItem="v14-Z7-enj" secondAttribute="trailing" constant="5" id="JYF-8Y-SRO"/>
                             <constraint firstItem="bsS-Ka-me4" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="KWI-9g-THs"/>
                             <constraint firstItem="ltF-OM-Acg" firstAttribute="centerY" secondItem="bsS-Ka-me4" secondAttribute="centerY" id="Kq0-ao-xgq"/>
+                            <constraint firstItem="fCu-jv-aX0" firstAttribute="height" secondItem="SOb-Sr-ZWS" secondAttribute="height" multiplier="0.055" id="OlT-BJ-acY"/>
                             <constraint firstItem="BrN-E1-7HJ" firstAttribute="top" secondItem="bsS-Ka-me4" secondAttribute="bottom" constant="30" id="QV7-FI-emT"/>
                             <constraint firstItem="bsS-Ka-me4" firstAttribute="top" secondItem="ehf-QO-IM1" secondAttribute="bottom" constant="30" id="W9W-dz-FuZ"/>
                             <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="ehf-QO-IM1" secondAttribute="trailing" constant="20" id="WPI-fi-YbF"/>
+                            <constraint firstItem="fCu-jv-aX0" firstAttribute="top" secondItem="BrN-E1-7HJ" secondAttribute="bottom" constant="30" id="Zdq-H3-13N"/>
                             <constraint firstItem="rNa-rW-r8V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Rl-SI-Ly3" secondAttribute="trailing" constant="8" symbolic="YES" id="aOr-NS-rce"/>
                             <constraint firstItem="KAI-UG-jBy" firstAttribute="centerY" secondItem="ehf-QO-IM1" secondAttribute="centerY" id="dkx-N0-bKr"/>
-                            <constraint firstItem="v14-Z7-enj" firstAttribute="top" secondItem="dKy-79-vlp" secondAttribute="top" constant="30" id="dpN-9I-CzD"/>
+                            <constraint firstItem="v14-Z7-enj" firstAttribute="top" secondItem="dKy-79-vlp" secondAttribute="top" constant="40" id="dpN-9I-CzD"/>
+                            <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="fCu-jv-aX0" secondAttribute="trailing" constant="20" id="fv2-Nn-vOU"/>
                             <constraint firstItem="g8i-cT-AoU" firstAttribute="centerY" secondItem="BrN-E1-7HJ" secondAttribute="centerY" id="g7A-qx-6jQ"/>
                             <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="bsS-Ka-me4" secondAttribute="trailing" constant="20" id="i8T-SK-qrA"/>
                             <constraint firstItem="dKy-79-vlp" firstAttribute="trailing" secondItem="BrN-E1-7HJ" secondAttribute="trailing" constant="20" id="jeL-er-Spa"/>
@@ -740,10 +764,19 @@
                             <constraint firstItem="g8i-cT-AoU" firstAttribute="leading" secondItem="dKy-79-vlp" secondAttribute="leading" constant="20" id="rc9-9O-l6N"/>
                             <constraint firstItem="BrN-E1-7HJ" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="sb7-ss-14b"/>
                             <constraint firstItem="rNa-rW-r8V" firstAttribute="centerY" secondItem="v14-Z7-enj" secondAttribute="centerY" id="siS-uC-nla"/>
+                            <constraint firstItem="fCu-jv-aX0" firstAttribute="leading" secondItem="SOb-Sr-ZWS" secondAttribute="leading" constant="20" id="xVT-qL-GPn"/>
                             <constraint firstItem="ehf-QO-IM1" firstAttribute="width" secondItem="SOb-Sr-ZWS" secondAttribute="width" multiplier="0.5" id="xrm-St-svt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Podo Settings" id="axP-52-vp7"/>
+                    <connections>
+                        <outlet property="focusTextField" destination="ehf-QO-IM1" id="imS-8m-erX"/>
+                        <outlet property="longBreakLabel" destination="g8i-cT-AoU" id="Q65-gK-R5H"/>
+                        <outlet property="longTextField" destination="BrN-E1-7HJ" id="Kih-aw-LB2"/>
+                        <outlet property="sessionLabel" destination="1Rl-SI-Ly3" id="qXl-P5-fWY"/>
+                        <outlet property="sessionStepper" destination="rNa-rW-r8V" id="wNk-hO-Jsm"/>
+                        <outlet property="shortTextField" destination="bsS-Ka-me4" id="kQ1-JG-GK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2T-GN-CFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -951,7 +984,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="U6U-ZF-nTY" id="JGS-Mf-yJx"/>
-                        <segue destination="4Ik-gt-dag" kind="show" identifier="toPodoSettings" id="NdU-RP-nbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-nV-AdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -121,7 +121,9 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 4 {
-            self.performSegue(withIdentifier: "toPodoSettings", sender: nil)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let createTaskVC = sb.instantiateViewController(withIdentifier: "podoSettingsVC") as! PodoSettingsViewController
+            self.present(createTaskVC, animated: true)
         } else if indexPath.row == 5 {
             present(logoutAction, animated: true)
         }

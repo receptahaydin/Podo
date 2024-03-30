@@ -47,8 +47,8 @@ class CreateTaskViewController: UIViewController {
         titleLabel.isHidden = true
         pickerViewSettings()
         setDateComponents()
-        updateSessionLabel()
         sessionStepper.addTarget(self, action: #selector(updateSessionLabel), for: .valueChanged)
+        fetchPodoSettings()
         
         if let task = selectedTask {
             isUpdateMode = true
@@ -64,6 +64,21 @@ class CreateTaskViewController: UIViewController {
             shortTextField.text = "\(task.shortBreakDuration) min"
             longTextField.text = "\(task.longBreakDuration) min"
         }
+    }
+    
+    private func fetchPodoSettings() {
+        let defaults = UserDefaults.standard
+        let focusValue = defaults.string(forKey: "FocusTime") ?? "25 min"
+        let shortBreakValue = defaults.string(forKey: "ShortBreakTime") ?? "5 min"
+        let longBreakValue = defaults.string(forKey: "LongBreakTime") ?? "15 min"
+        let sessionValue = defaults.string(forKey: "SessionLabelValue") ?? "1"
+        
+        focusTextField.text = focusValue
+        shortTextField.text = shortBreakValue
+        longTextField.text = longBreakValue
+        sessionLabel.text = sessionValue
+        sessionStepper.value = Double(sessionValue) ?? 1.0
+        updateSessionLabel()
     }
     
     private func pickerViewSettings() {
