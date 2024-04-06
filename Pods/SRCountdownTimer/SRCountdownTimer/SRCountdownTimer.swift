@@ -174,7 +174,7 @@ public class SRCountdownTimer: UIView {
     public func end() {
         self.currentCounterValue = 0
         timer?.invalidate()
-        
+        elapsedTime = totalTime
         delegate?.timerDidEnd?(sender: self, elapsedTime: elapsedTime)
     }
     

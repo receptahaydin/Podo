@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
                 taskTitle.text = task.title
                 taskMinute.text = "\(task.sessionDuration) minutes"
                 taskSession.text = "\(task.completedSessionCount)/\(task.sessionCount)"
+                timer.start(beginingValue: task.sessionDuration * 60)
             }
         }
     }
@@ -67,7 +68,6 @@ class HomeViewController: UIViewController {
         timer.trailLineColor = UIColor.init(hexString: "55AA67")
         timer.isLabelHidden = false
         timer.delegate = self
-        timer.start(beginingValue: 1500, interval: 1)
     }
     
     @IBAction func bigButtonAction(_ sender: Any) {
