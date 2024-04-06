@@ -13,6 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var timer: SRCountdownTimer!
     @IBOutlet weak var bigButton: RoundedButton!
     @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet weak var taskTitle: UILabel!
+    @IBOutlet weak var taskSession: UILabel!
+    @IBOutlet weak var taskMinute: UILabel!
     @IBOutlet weak var timerLabel: UILabel! {
         didSet {
             timerLabel.font = timerLabel.font.monospacedDigitFont
@@ -21,6 +24,15 @@ class HomeViewController: UIViewController {
     
     let greenColor = UIColor.init(hexString: "55AA67")
     let img = ImageManager()
+    var selectedTask: Task? {
+        didSet {
+            if let task = selectedTask {
+                taskTitle.text = task.title
+                taskMinute.text = "\(task.sessionDuration) minutes"
+                taskSession.text = "\(task.completedSessionCount)/\(task.sessionCount)"
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1010,7 +1010,7 @@
         <!--Pomodoro Timer-->
         <scene sceneID="ezB-Ew-a2e">
             <objects>
-                <viewController id="Vlh-O5-GCK" customClass="HomeViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="Vlh-O5-GCK" customClass="HomeViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="e7H-gS-bEx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1086,35 +1086,29 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-aX-pgd" userLabel="CardView" customClass="CardView" customModule="PoDo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="109" width="335" height="80"/>
+                                <rect key="frame" x="20" y="109" width="335" height="66.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-oL-3wg">
-                                        <rect key="frame" x="20" y="12" width="56" height="56"/>
+                                        <rect key="frame" x="10" y="10" width="46.5" height="46.5"/>
                                         <color key="backgroundColor" name="CardColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0vu-oL-3wg" secondAttribute="height" multiplier="1:1" id="jVx-7g-Czb"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn UI Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-Nm-FIQ">
-                                        <rect key="frame" x="96" y="12" width="128" height="20.5"/>
+                                        <rect key="frame" x="66.5" y="23" width="128" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bte-qs-Gf7">
-                                        <rect key="frame" x="96" y="50" width="83.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-Yc-MOA">
-                                        <rect key="frame" x="298" y="12" width="27" height="20.5"/>
+                                        <rect key="frame" x="298" y="10" width="27" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Ng-wUz">
-                                        <rect key="frame" x="248.5" y="50" width="76.5" height="18"/>
+                                        <rect key="frame" x="248.5" y="38.5" width="76.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1122,16 +1116,14 @@
                                 </subviews>
                                 <color key="backgroundColor" name="CardColor"/>
                                 <constraints>
-                                    <constraint firstItem="J2a-Yc-MOA" firstAttribute="centerY" secondItem="du2-Nm-FIQ" secondAttribute="centerY" id="1Z5-oA-uVS"/>
                                     <constraint firstItem="0vu-oL-3wg" firstAttribute="centerY" secondItem="0T0-aX-pgd" secondAttribute="centerY" id="AFp-nr-x1R"/>
-                                    <constraint firstItem="QbJ-Ng-wUz" firstAttribute="centerY" secondItem="bte-qs-Gf7" secondAttribute="centerY" id="AMi-YN-YPR"/>
-                                    <constraint firstItem="bte-qs-Gf7" firstAttribute="bottom" secondItem="0vu-oL-3wg" secondAttribute="bottom" id="ReO-Dw-DVn"/>
-                                    <constraint firstItem="0vu-oL-3wg" firstAttribute="leading" secondItem="0T0-aX-pgd" secondAttribute="leading" constant="20" id="V9O-Am-Uil"/>
-                                    <constraint firstItem="du2-Nm-FIQ" firstAttribute="leading" secondItem="0vu-oL-3wg" secondAttribute="trailing" constant="20" id="Yli-XF-8rM"/>
-                                    <constraint firstItem="QbJ-Ng-wUz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bte-qs-Gf7" secondAttribute="trailing" constant="8" symbolic="YES" id="fnH-R7-5SI"/>
+                                    <constraint firstItem="QbJ-Ng-wUz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0vu-oL-3wg" secondAttribute="trailing" constant="8" symbolic="YES" id="CjD-Jb-IhF"/>
+                                    <constraint firstItem="J2a-Yc-MOA" firstAttribute="top" secondItem="0vu-oL-3wg" secondAttribute="top" id="MvC-ty-whE"/>
+                                    <constraint firstItem="du2-Nm-FIQ" firstAttribute="centerY" secondItem="0vu-oL-3wg" secondAttribute="centerY" id="QPI-9p-nJH"/>
+                                    <constraint firstItem="0vu-oL-3wg" firstAttribute="leading" secondItem="0T0-aX-pgd" secondAttribute="leading" constant="10" id="V9O-Am-Uil"/>
+                                    <constraint firstItem="du2-Nm-FIQ" firstAttribute="leading" secondItem="0vu-oL-3wg" secondAttribute="trailing" constant="10" id="Yli-XF-8rM"/>
                                     <constraint firstAttribute="trailing" secondItem="J2a-Yc-MOA" secondAttribute="trailing" constant="10" id="guu-TJ-XhZ"/>
-                                    <constraint firstItem="du2-Nm-FIQ" firstAttribute="top" secondItem="0vu-oL-3wg" secondAttribute="top" id="jsX-Um-nIW"/>
-                                    <constraint firstItem="bte-qs-Gf7" firstAttribute="leading" secondItem="0vu-oL-3wg" secondAttribute="trailing" constant="20" id="o6h-XM-TbH"/>
+                                    <constraint firstItem="QbJ-Ng-wUz" firstAttribute="bottom" secondItem="0vu-oL-3wg" secondAttribute="bottom" id="oJa-yL-nRX"/>
                                     <constraint firstItem="0vu-oL-3wg" firstAttribute="height" secondItem="0T0-aX-pgd" secondAttribute="height" multiplier="0.7" id="ror-I7-vta"/>
                                     <constraint firstAttribute="trailing" secondItem="QbJ-Ng-wUz" secondAttribute="trailing" constant="10" id="wRW-ik-YEQ"/>
                                     <constraint firstItem="J2a-Yc-MOA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="du2-Nm-FIQ" secondAttribute="trailing" constant="8" symbolic="YES" id="xOF-y6-0Z9"/>
@@ -1190,7 +1182,7 @@
                             <constraint firstItem="HpR-D4-Pgr" firstAttribute="leading" secondItem="9HH-z8-9Vk" secondAttribute="trailing" constant="30" id="qJ6-l4-We9"/>
                             <constraint firstItem="BoE-KI-FCw" firstAttribute="height" secondItem="9HH-z8-9Vk" secondAttribute="height" multiplier="0.5" id="r63-Pt-y0e"/>
                             <constraint firstItem="9HH-z8-9Vk" firstAttribute="leading" secondItem="BoE-KI-FCw" secondAttribute="trailing" constant="30" id="rRF-Ed-q8X"/>
-                            <constraint firstItem="0T0-aX-pgd" firstAttribute="height" secondItem="e7H-gS-bEx" secondAttribute="height" multiplier="0.12" id="uc2-KX-YX2"/>
+                            <constraint firstItem="0T0-aX-pgd" firstAttribute="height" secondItem="e7H-gS-bEx" secondAttribute="height" multiplier="0.1" id="uc2-KX-YX2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="stopwatch" catalog="system" id="p10-0A-L7E"/>
@@ -1198,8 +1190,11 @@
                     <connections>
                         <outlet property="bigButton" destination="9HH-z8-9Vk" id="SLS-Cm-2c1"/>
                         <outlet property="soundButton" destination="hqD-hA-5vD" id="hv0-Se-fIE"/>
+                        <outlet property="taskMinute" destination="QbJ-Ng-wUz" id="caB-Mu-jhG"/>
+                        <outlet property="taskSession" destination="J2a-Yc-MOA" id="ftN-07-rM5"/>
+                        <outlet property="taskTitle" destination="du2-Nm-FIQ" id="iwm-IY-szZ"/>
                         <outlet property="timer" destination="eYP-2B-5G9" id="Rvf-in-9DP"/>
-                        <outlet property="timerLabel" destination="uqg-WH-gad" id="PKV-qe-B2g"/>
+                        <outlet property="timerLabel" destination="uqg-WH-gad" id="Tg9-rH-xDa"/>
                         <segue destination="9TF-IB-pEQ" kind="show" identifier="homeToSound" id="k1p-j6-f5A"/>
                     </connections>
                 </viewController>
@@ -1485,6 +1480,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundedButton" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="playButtonTapped:" destination="yCF-7s-r6b" eventType="touchUpInside" id="NxW-0j-OvH"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -2131,46 +2129,46 @@
             <size key="intrinsicContentSize" width="18" height="22"/>
         </designable>
         <designable name="BrN-E1-7HJ">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="HpR-D4-Pgr">
             <size key="intrinsicContentSize" width="20" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="66" height="34"/>
         </designable>
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="bsS-Ka-me4">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="ehf-QO-IM1">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="s8d-EB-DDs">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="103" height="34"/>
+            <size key="intrinsicContentSize" width="88" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" name="PODORed"/>

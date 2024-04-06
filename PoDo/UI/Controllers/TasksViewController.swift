@@ -158,6 +158,20 @@ class TasksViewController: UIViewController {
         }
     }
     
+    @IBAction func playButtonTapped(_ sender: UIButton) {
+        if let cell = sender.superview?.superview as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell) {
+            selectedTask = TaskManager.shared.filteredTasks[indexPath.row]
+            
+            if let tabBarController = self.tabBarController,
+               let homeNavVC = tabBarController.viewControllers?[0] as? UINavigationController,
+               let homeVC = homeNavVC.viewControllers.first as? HomeViewController {
+                homeVC.selectedTask = selectedTask
+                tabBarController.selectedIndex = 0
+            }
+        }
+    }
+    
     @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
         let selectedSegmentIndex = sender.selectedSegmentIndex
         filterTasks(for: selectedSegmentIndex)
