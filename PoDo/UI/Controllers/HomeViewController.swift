@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
                 taskTitle.text = task.title
                 taskMinute.text = "\(task.sessionDuration) minutes"
                 taskSession.text = "\(task.completedSessionCount)/\(task.sessionCount)"
-                timer.start(beginingValue: task.sessionDuration * 60)
+                setRoadMap()
             }
         }
     }
@@ -68,6 +68,24 @@ class HomeViewController: UIViewController {
         timer.trailLineColor = UIColor.init(hexString: "55AA67")
         timer.isLabelHidden = false
         timer.delegate = self
+    }
+    
+    private func setRoadMap() {
+        var roadMap: [String] = []
+        
+        if let sessionCount = selectedTask?.sessionCount {
+            for i in 0..<(sessionCount * 2) - 1 {
+                if i % 2 == 0 {
+                    roadMap.append("T")
+                } else if i == 7 || i == 15 {
+                    roadMap.append("L")
+                } else {
+                    roadMap.append("S")
+                }
+            }
+        }
+        
+        print(roadMap)
     }
     
     @IBAction func bigButtonAction(_ sender: Any) {
@@ -117,6 +135,10 @@ extension HomeViewController: SRCountdownTimerDelegate {
         } else {
             timerLabel.text = "\(newValue)"
         }
+    }
+    
+    func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval) {
+        
     }
 }
 
