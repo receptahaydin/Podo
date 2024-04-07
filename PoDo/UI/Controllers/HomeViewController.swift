@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    var roadMap: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,21 +72,47 @@ class HomeViewController: UIViewController {
     }
     
     private func setRoadMap() {
-        var roadMap: [String] = []
+        roadMap = []
         
-        if let sessionCount = selectedTask?.sessionCount {
-            for i in 0..<(sessionCount * 2) - 1 {
-                if i % 2 == 0 {
-                    roadMap.append("T")
-                } else if i == 7 || i == 15 {
-                    roadMap.append("L")
-                } else {
-                    roadMap.append("S")
-                }
+        for i in 0..<(selectedTask!.sessionCount * 2) - 1 {
+            if i % 2 == 0 {
+                roadMap.append("T")
+            } else if i % 8 == 7 {
+                roadMap.append("L")
+            } else {
+                roadMap.append("S")
             }
         }
         
+        for i in 0..<(selectedTask!.completedSessionCount * 2) {
+            roadMap[i] = "F"
+        }
         print(roadMap)
+        timerSessionControl()
+    }
+    
+    private func timerSessionControl() {
+        for i in 0..<roadMap.count {
+            if roadMap[i] == "T" {
+                taskTitle.text = selectedTask!.title
+                taskMinute.text = "\(selectedTask!.sessionDuration) minutes"
+                taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
+                timer.start(beginingValue: 10)
+                break
+            } else if roadMap[i] == "S" {
+                taskTitle.text = "Short Break"
+                taskMinute.text = "\(selectedTask!.shortBreakDuration) minutes"
+                taskSession.text = ""
+                timer.start(beginingValue: 3)
+                break
+            } else if roadMap[i] == "L" {
+                taskTitle.text = "Long Break"
+                taskMinute.text = "\(selectedTask!.longBreakDuration) minutes"
+                taskSession.text = ""
+                timer.start(beginingValue: 5)
+                break
+            }
+        }
     }
     
     @IBAction func bigButtonAction(_ sender: Any) {
@@ -138,7 +165,21 @@ extension HomeViewController: SRCountdownTimerDelegate {
     }
     
     func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval) {
-        
+        for i in 0..<roadMap.count {
+            if roadMap[i] != "F" {
+                if i == 0 {
+                    // status 1 olacak
+                    print("1")
+                } else if i == roadMap.count - 1 {
+                    // status 2 olacak
+                    print("2")
+                }
+                roadMap[i] = "F"
+                break
+            }
+        }
+        print(roadMap)
+        timerSessionControl()
     }
 }
 
