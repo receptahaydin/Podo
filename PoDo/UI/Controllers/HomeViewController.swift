@@ -13,9 +13,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var timer: SRCountdownTimer!
     @IBOutlet weak var bigButton: RoundedButton!
     @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var taskTitle: UILabel!
     @IBOutlet weak var taskSession: UILabel!
     @IBOutlet weak var taskMinute: UILabel!
+    @IBOutlet weak var taskIcon: UIImageView!
+    @IBOutlet weak var startPodoButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel! {
         didSet {
             timerLabel.font = timerLabel.font.monospacedDigitFont
@@ -24,16 +27,7 @@ class HomeViewController: UIViewController {
     
     let greenColor = UIColor.init(hexString: "55AA67")
     let img = ImageManager()
-    var selectedTask: Task? {
-        didSet {
-            if let task = selectedTask {
-                taskTitle.text = task.title
-                taskMinute.text = "\(task.sessionDuration) minutes"
-                taskSession.text = "\(task.completedSessionCount)/\(task.sessionCount)"
-                setRoadMap()
-            }
-        }
-    }
+    var selectedTask: Task?
     var roadMap: [String] = []
     
     override func viewDidLoad() {
@@ -71,7 +65,12 @@ class HomeViewController: UIViewController {
         timer.delegate = self
     }
     
-    private func setRoadMap() {
+    func setRoadMap() {
+        taskTitle.text = selectedTask!.title
+        taskMinute.text = "\(selectedTask!.sessionDuration) minutes"
+        taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
+        startPodoButton.isHidden = true
+        cardView.isHidden = false
         roadMap = []
         
         for i in 0..<(selectedTask!.sessionCount * 2) - 1 {
@@ -97,18 +96,21 @@ class HomeViewController: UIViewController {
                 taskTitle.text = selectedTask!.title
                 taskMinute.text = "\(selectedTask!.sessionDuration) minutes"
                 taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
+                taskIcon.image = UIImage(named: "green")
                 timer.start(beginingValue: 10)
                 break
             } else if roadMap[i] == "S" {
                 taskTitle.text = "Short Break"
                 taskMinute.text = "\(selectedTask!.shortBreakDuration) minutes"
-                taskSession.text = ""
+                taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
+                taskIcon.image = UIImage(named: "break")
                 timer.start(beginingValue: 3)
                 break
             } else if roadMap[i] == "L" {
                 taskTitle.text = "Long Break"
                 taskMinute.text = "\(selectedTask!.longBreakDuration) minutes"
-                taskSession.text = ""
+                taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
+                taskIcon.image = UIImage(named: "break")
                 timer.start(beginingValue: 5)
                 break
             }
@@ -150,6 +152,14 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func startPodoButtonAction(_ sender: Any) {
+        if let tabBarController = self.tabBarController,
+           let tasksNavVC = tabBarController.viewControllers?[1] as? UINavigationController,
+           let taskVC = tasksNavVC.viewControllers.first as? TasksViewController {
+            tabBarController.selectedIndex = 1
+        }
+    }
+    
     @IBAction func soundButtonAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "homeToSound", sender: nil)
     }
@@ -167,12 +177,15 @@ extension HomeViewController: SRCountdownTimerDelegate {
     func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval) {
         for i in 0..<roadMap.count {
             if roadMap[i] != "F" {
+                if roadMap[i] == "T" {
+                    selectedTask?.completedSessionCount += 1
+                }
+                
                 if i == 0 {
-                    // status 1 olacak
-                    print("1")
+                    selectedTask?.status = 1
                 } else if i == roadMap.count - 1 {
-                    // status 2 olacak
-                    print("2")
+                    selectedTask?.status = 2
+                    taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
                 }
                 roadMap[i] = "F"
                 break

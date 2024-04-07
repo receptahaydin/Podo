@@ -167,6 +167,7 @@ class TasksViewController: UIViewController {
                let homeNavVC = tabBarController.viewControllers?[0] as? UINavigationController,
                let homeVC = homeNavVC.viewControllers.first as? HomeViewController {
                 homeVC.selectedTask = selectedTask
+                homeVC.setRoadMap()
                 tabBarController.selectedIndex = 0
             }
         }
