@@ -110,11 +110,18 @@ class TasksViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let selectedSegmentIndex = self.segmentControl.selectedSegmentIndex
-        self.filterTasks(for: selectedSegmentIndex)
-        self.tableView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        TaskManager.shared.tasks = []
+        TaskManager.shared.filteredTasks = []
+        showLoadingIndicator()
+        self.firestoreManager.readTaskFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            if let selectedSegmentIndex = self?.segmentControl.selectedSegmentIndex {
+                self?.filterTasks(for: selectedSegmentIndex)
+            }
+            self?.tableView.reloadData()
+        }
     }
     
     override func viewDidLayoutSubviews() {
