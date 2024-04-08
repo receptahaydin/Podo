@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    let greenColor = UIColor.init(hexString: "55AA67")
     let img = ImageManager()
     var selectedTask: Task?
     var roadMap: [String] = []
@@ -66,6 +65,9 @@ class HomeViewController: UIViewController {
     }
     
     func setRoadMap() {
+        bigButton.backgroundColor = UIColor.podoRed
+        bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        
         taskTitle.text = selectedTask!.title
         taskMinute.text = "\(selectedTask!.sessionDuration) minutes"
         taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
@@ -118,27 +120,30 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func bigButtonAction(_ sender: Any) {
-        if bigButton.backgroundColor == greenColor {
+        if bigButton.backgroundColor == UIColor.PODOGreen {
             bigButton.backgroundColor = UIColor.podoRed
             bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             timer.resume()
         } else {
-            bigButton.backgroundColor = greenColor
+            bigButton.backgroundColor = UIColor.PODOGreen
             bigButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             timer.pause()
         }
     }
     
     @IBAction func refreshButtonAction(_ sender: Any) {
-        timer.start(beginingValue: 15, interval: 1)
-        
-        if bigButton.isEnabled != true {
-            bigButton.isEnabled = true
-        }
-        
-        if bigButton.backgroundColor == greenColor {
-            bigButton.backgroundColor = UIColor.podoRed
-            bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        let timeString = taskMinute.text ?? ""
+        let components = timeString.components(separatedBy: " ")
+        if let intValue = Int(components.first ?? "") {
+            timer.start(beginingValue: intValue * 60)
+            if bigButton.isEnabled != true {
+                bigButton.isEnabled = true
+            }
+            
+            if bigButton.backgroundColor == UIColor.PODOGreen {
+                bigButton.backgroundColor = UIColor.podoRed
+                bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            }
         }
     }
     
@@ -146,8 +151,8 @@ class HomeViewController: UIViewController {
         timer.reset()
         bigButton.isEnabled = false
         
-        if bigButton.backgroundColor != greenColor {
-            bigButton.backgroundColor = greenColor
+        if bigButton.backgroundColor != UIColor.PODOGreen {
+            bigButton.backgroundColor = UIColor.PODOGreen
             bigButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
     }

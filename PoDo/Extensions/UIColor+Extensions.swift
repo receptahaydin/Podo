@@ -6,6 +6,10 @@ extension UIColor {
     @objc class var PODORed: UIColor {
         return UIColor(named: "PODORed")!
     }
+    
+    @objc class var PODOGreen: UIColor {
+        return UIColor(named: "GreenColor")!
+    }
 }
 
 extension UIColor {
