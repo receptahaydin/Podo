@@ -132,29 +132,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func refreshButtonAction(_ sender: Any) {
-        let timeString = taskMinute.text ?? ""
-        let components = timeString.components(separatedBy: " ")
-        if let intValue = Int(components.first ?? "") {
-            timer.start(beginingValue: intValue * 60)
-            if bigButton.isEnabled != true {
-                bigButton.isEnabled = true
-            }
-            
-            if bigButton.backgroundColor == UIColor.PODOGreen {
-                bigButton.backgroundColor = UIColor.podoRed
-                bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-            }
+        timerSessionControl()
+        
+        if bigButton.backgroundColor == UIColor.PODOGreen {
+            bigButton.backgroundColor = UIColor.podoRed
+            bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         }
     }
     
     @IBAction func stopButtonAction(_ sender: Any) {
-        timer.reset()
-        bigButton.isEnabled = false
-        
-        if bigButton.backgroundColor != UIColor.PODOGreen {
-            bigButton.backgroundColor = UIColor.PODOGreen
-            bigButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        }
+        timer.end()
     }
     
     @IBAction func startPodoButtonAction(_ sender: Any) {
