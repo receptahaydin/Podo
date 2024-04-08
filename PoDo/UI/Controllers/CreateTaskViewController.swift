@@ -59,6 +59,7 @@ class CreateTaskViewController: UIViewController {
             setDatePickerForTask(task)
             categoryTextField.text = task.category
             sessionStepper.value = Double(task.sessionCount)
+            sessionStepper.minimumValue = Double(task.completedSessionCount) + 1
             updateSessionLabel()
             focusTextField.text = "\(task.sessionDuration) min"
             shortTextField.text = "\(task.shortBreakDuration) min"
@@ -185,7 +186,7 @@ class CreateTaskViewController: UIViewController {
             "category": categoryTextField.text ?? "",
             "status": selectedTask?.status ?? 0,
             "sessionCount": Int(sessionLabel.text!)!,
-            "completedSessionCount": 0,
+            "completedSessionCount": selectedTask?.completedSessionCount ?? 0,
             "sessionDuration": extractNumber(from: focusTextField.text!)!,
             "shortBreakDuration": extractNumber(from: shortTextField.text!)!,
             "longBreakDuration": extractNumber(from: longTextField.text!)!

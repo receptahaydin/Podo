@@ -90,6 +90,34 @@ class FirestoreManager {
         }
     }
     
+    func incrementCompletedSessionCount(taskID: String, completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
+        
+        taskDocumentRef.updateData(["completedSessionCount": FieldValue.increment(Int64(1))]) { error in
+            if let error = error {
+                print("Error incrementing completedSessionCount: \(error.localizedDescription)")
+            } else {
+                print("completedSessionCount incremented successfully.")
+            }
+            
+            completion(error)
+        }
+    }
+    
+    func updateTaskStatus(taskID: String, newStatus: Int, completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
+        
+        taskDocumentRef.updateData(["status": newStatus]) { error in
+            if let error = error {
+                print("Error updating task status: \(error.localizedDescription)")
+            } else {
+                print("Task status updated successfully.")
+            }
+            
+            completion(error)
+        }
+    }
+    
     func getUserInfo(completion: @escaping (String?, String?) -> Void) {
         if let currentUser = Auth.auth().currentUser {
             let userDocumentRef = db.collection("Users").document(currentUser.uid)

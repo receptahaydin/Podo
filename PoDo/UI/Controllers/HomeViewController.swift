@@ -86,7 +86,7 @@ class HomeViewController: UIViewController {
         for i in 0..<(selectedTask!.completedSessionCount * 2) {
             roadMap[i] = "F"
         }
-        print(roadMap)
+        
         timerSessionControl()
     }
     
@@ -179,19 +179,37 @@ extension HomeViewController: SRCountdownTimerDelegate {
             if roadMap[i] != "F" {
                 if roadMap[i] == "T" {
                     selectedTask?.completedSessionCount += 1
+                    FirestoreManager().incrementCompletedSessionCount(taskID: selectedTask!.id) { error in
+                        if let error = error {
+                            print("Error incrementing completedSessionCount: \(error.localizedDescription)")
+                        } else {
+                            print("completedSessionCount incremented successfully.")
+                        }
+                    }
                 }
                 
                 if i == 0 {
-                    selectedTask?.status = 1
+                    FirestoreManager().updateTaskStatus(taskID: selectedTask!.id, newStatus: 1) { error in
+                        if let error = error {
+                            print("Error updating task status: \(error.localizedDescription)")
+                        } else {
+                            print("Task status updated successfully.")
+                        }
+                    }
                 } else if i == roadMap.count - 1 {
-                    selectedTask?.status = 2
+                    FirestoreManager().updateTaskStatus(taskID: selectedTask!.id, newStatus: 2) { error in
+                        if let error = error {
+                            print("Error updating task status: \(error.localizedDescription)")
+                        } else {
+                            print("Task status updated successfully.")
+                        }
+                    }
                     taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
                 }
                 roadMap[i] = "F"
                 break
             }
         }
-        print(roadMap)
         timerSessionControl()
     }
 }
