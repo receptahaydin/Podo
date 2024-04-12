@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLetter" translatesAutoresizingMaskIntoConstraints="NO" id="Xfw-jO-x5g">
-                                <rect key="frame" x="118" y="346.66666666666669" width="157" height="158.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Xfw-jO-x5g">
+                                <rect key="frame" x="59" y="288.33333333333337" width="275" height="275.33333333333337"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Xfw-jO-x5g" secondAttribute="height" multiplier="493:497" id="4KO-jK-F1T"/>
+                                    <constraint firstAttribute="width" secondItem="Xfw-jO-x5g" secondAttribute="height" multiplier="1024:1024" id="4KO-jK-F1T"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="PODORed"/>
                         <constraints>
-                            <constraint firstItem="Xfw-jO-x5g" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.4" id="Lla-5s-0Jd"/>
+                            <constraint firstItem="Xfw-jO-x5g" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="Lla-5s-0Jd"/>
                             <constraint firstItem="Xfw-jO-x5g" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gx3-Ao-a8g"/>
                             <constraint firstItem="Xfw-jO-x5g" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="smp-eY-nhz"/>
                         </constraints>
@@ -39,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PLetter" width="493" height="497"/>
+        <image name="podo_icon" width="1024" height="1024"/>
         <namedColor name="PODORed">
             <color red="0.9137254901960784" green="0.23529411764705882" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

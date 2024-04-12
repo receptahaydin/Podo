@@ -122,7 +122,7 @@
 		DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		DCF3E8DE2B7FF85400BE2053 /* UncompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncompletedTaskCell.swift; sourceTree = "<group>"; };
 		DCF6560A2B9095CA005E7B15 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		DCFB59C52B4D711D00DF2F5D /* PoDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFB59C52B4D711D00DF2F5D /* Podo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFB59C82B4D711D00DF2F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFB59CA2B4D711D00DF2F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DCFB59CF2B4D711D00DF2F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		DCFB59BC2B4D711D00DF2F5D = {
 			isa = PBXGroup;
 			children = (
-				DCFB59C72B4D711D00DF2F5D /* PoDo */,
+				DCFB59C72B4D711D00DF2F5D /* Podo */,
 				DCFB59C62B4D711D00DF2F5D /* Products */,
 				51CAE66C417E6FE4701A9063 /* Pods */,
 				D6F735E84E90BA30C2C8B677 /* Frameworks */,
@@ -288,12 +288,12 @@
 		DCFB59C62B4D711D00DF2F5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCFB59C52B4D711D00DF2F5D /* PoDo.app */,
+				DCFB59C52B4D711D00DF2F5D /* Podo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCFB59C72B4D711D00DF2F5D /* PoDo */ = {
+		DCFB59C72B4D711D00DF2F5D /* Podo */ = {
 			isa = PBXGroup;
 			children = (
 				DC021A7A2BAF072D000250E6 /* Sound */,
@@ -311,7 +311,7 @@
 				DCFB59D62B4D711E00DF2F5D /* Info.plist */,
 				DCB75DAB2B50867C0036A076 /* GoogleService-Info.plist */,
 			);
-			path = PoDo;
+			path = Podo;
 			sourceTree = "<group>";
 		};
 		DCFB59DC2B4D71C800DF2F5D /* Utils */ = {
@@ -376,9 +376,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DCFB59C42B4D711D00DF2F5D /* PoDo */ = {
+		DCFB59C42B4D711D00DF2F5D /* Podo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCFB59D92B4D711E00DF2F5D /* Build configuration list for PBXNativeTarget "PoDo" */;
+			buildConfigurationList = DCFB59D92B4D711E00DF2F5D /* Build configuration list for PBXNativeTarget "Podo" */;
 			buildPhases = (
 				320BAD16764EB5C2DBBC4C4C /* [CP] Check Pods Manifest.lock */,
 				DCFB59C12B4D711D00DF2F5D /* Sources */,
@@ -390,7 +390,7 @@
 			);
 			dependencies = (
 			);
-			name = PoDo;
+			name = Podo;
 			packageProductDependencies = (
 				DCB75DF52B508DE30036A076 /* FirebaseAnalytics */,
 				DCB75DF72B508DE30036A076 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -406,7 +406,7 @@
 				DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */,
 			);
 			productName = PoDo;
-			productReference = DCFB59C52B4D711D00DF2F5D /* PoDo.app */;
+			productReference = DCFB59C52B4D711D00DF2F5D /* Podo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -424,7 +424,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DCFB59C02B4D711D00DF2F5D /* Build configuration list for PBXProject "PoDo" */;
+			buildConfigurationList = DCFB59C02B4D711D00DF2F5D /* Build configuration list for PBXProject "Podo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -441,7 +441,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DCFB59C42B4D711D00DF2F5D /* PoDo */,
+				DCFB59C42B4D711D00DF2F5D /* Podo */,
 			);
 		};
 /* End PBXProject section */
@@ -718,7 +718,8 @@
 				DEVELOPMENT_TEAM = M9BG9J9LFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoDo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PoDo;
+				INFOPLIST_KEY_CFBundleDisplayName = Podo;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -730,7 +731,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Recep.PoDo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Recep.Podo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -752,7 +753,8 @@
 				DEVELOPMENT_TEAM = M9BG9J9LFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoDo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PoDo;
+				INFOPLIST_KEY_CFBundleDisplayName = Podo;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -764,7 +766,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Recep.PoDo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Recep.Podo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -778,7 +780,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DCFB59C02B4D711D00DF2F5D /* Build configuration list for PBXProject "PoDo" */ = {
+		DCFB59C02B4D711D00DF2F5D /* Build configuration list for PBXProject "Podo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCFB59D72B4D711E00DF2F5D /* Debug */,
@@ -787,7 +789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCFB59D92B4D711E00DF2F5D /* Build configuration list for PBXNativeTarget "PoDo" */ = {
+		DCFB59D92B4D711E00DF2F5D /* Build configuration list for PBXNativeTarget "Podo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCFB59DA2B4D711E00DF2F5D /* Debug */,
