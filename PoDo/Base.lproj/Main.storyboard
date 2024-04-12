@@ -1053,7 +1053,7 @@
                                     <action selector="bigButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="e24-AO-Vgw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-KI-FCw" userLabel="RefreshButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-KI-FCw" userLabel="RefreshButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
                                 <rect key="frame" x="82.5" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
@@ -1069,7 +1069,7 @@
                                     <action selector="refreshButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="2Sd-eY-IfP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-D4-Pgr" userLabel="StopButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-D4-Pgr" userLabel="StopButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
                                 <rect key="frame" x="255" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
@@ -1082,7 +1082,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="stopButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="oNC-eF-Pc0"/>
+                                    <action selector="nextButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="Goe-sx-YFf"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-aX-pgd" userLabel="CardView" customClass="CardView" customModule="PoDo" customModuleProvider="target">
@@ -1210,6 +1210,8 @@
                     <connections>
                         <outlet property="bigButton" destination="9HH-z8-9Vk" id="SLS-Cm-2c1"/>
                         <outlet property="cardView" destination="0T0-aX-pgd" id="cDy-2S-cnx"/>
+                        <outlet property="nextButton" destination="HpR-D4-Pgr" id="Bgq-e2-QxP"/>
+                        <outlet property="refreshButton" destination="BoE-KI-FCw" id="Qd8-n2-HYj"/>
                         <outlet property="soundButton" destination="hqD-hA-5vD" id="hv0-Se-fIE"/>
                         <outlet property="startPodoButton" destination="Wcw-Bf-Dib" id="rnd-ru-szy"/>
                         <outlet property="taskIcon" destination="0vu-oL-3wg" id="aYJ-dW-ehi"/>

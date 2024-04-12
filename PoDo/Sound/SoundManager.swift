@@ -12,6 +12,7 @@ class SoundManager {
     static let shared = SoundManager()
     
     private var player: AVAudioPlayer?
+    private var backgroundMusicPlayer: AVAudioPlayer?
     var soundType: Int = -1
     
     private init() {}
@@ -25,24 +26,26 @@ class SoundManager {
             try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
             
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.numberOfLoops = -1
-            player?.play()
+            if name == "ding" {
+                player = try AVAudioPlayer(contentsOf: url)
+                player?.numberOfLoops = 0
+                player?.play()
+                return
+            }
             
-            if name == "fireplace" {
-                soundType = 0
-            } else if name == "rain" {
-                soundType = 1
-            } else if name == "nature" {
-                soundType = 2
-            } else if name == "clock" {
-                soundType = 3
-            } else if name == "jazz" {
-                soundType = 4
-            } else if name == "piano" {
-                soundType = 5
-            } else if name == "relax" {
-                soundType = 6
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
+            backgroundMusicPlayer?.numberOfLoops = -1
+            backgroundMusicPlayer?.play()
+            
+            switch name {
+            case "fireplace": soundType = 0
+            case "rain": soundType = 1
+            case "nature": soundType = 2
+            case "clock": soundType = 3
+            case "jazz": soundType = 4
+            case "piano": soundType = 5
+            case "relax": soundType = 6
+            default: break
             }
         } catch {
             print("\(error.localizedDescription)")
@@ -50,7 +53,7 @@ class SoundManager {
     }
     
     func stopSound() {
-        player?.stop()
+        backgroundMusicPlayer?.stop()
         soundType = -1
     }
 }

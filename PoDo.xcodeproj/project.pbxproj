@@ -50,6 +50,7 @@
 		DCD9D8742B50980B00DA0ED3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */; };
 		DCD9D8772B50A8DC00DA0ED3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */; };
 		DCE36BA32B5879C40057B778 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */; };
+		DCE8D6F62BC97795004746FF /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCE8D6F52BC97795004746FF /* ding.mp3 */; };
 		DCEFD9422BA1D2A7003F775B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */; };
 		DCF3E8DC2B7FCE7400BE2053 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */; };
 		DCF3E8DF2B7FF85400BE2053 /* UncompletedTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF3E8DE2B7FF85400BE2053 /* UncompletedTaskCell.swift */; };
@@ -116,6 +117,7 @@
 		DCD9D8732B50980B00DA0ED3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCD9D8762B50A8DC00DA0ED3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DCE36BA22B5879C40057B778 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		DCE8D6F52BC97795004746FF /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		DCEFD9412BA1D2A7003F775B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		DCF3E8DB2B7FCE7400BE2053 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		DCF3E8DE2B7FF85400BE2053 /* UncompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncompletedTaskCell.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				DC021A7B2BAF072D000250E6 /* rain.mp3 */,
 				DC021A7C2BAF072D000250E6 /* nature.mp3 */,
 				DC30AE2B2BB6F20400AD83F1 /* clock.mp3 */,
+				DCE8D6F52BC97795004746FF /* ding.mp3 */,
 				DC30AE292BB6F20400AD83F1 /* jazz.mp3 */,
 				DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */,
 				DC30AE2A2BB6F20400AD83F1 /* relax.mp3 */,
@@ -452,6 +455,7 @@
 				DC30AE2F2BB6F20400AD83F1 /* clock.mp3 in Resources */,
 				DC30AE302BB6F20400AD83F1 /* piano.mp3 in Resources */,
 				DCFB59D52B4D711E00DF2F5D /* LaunchScreen.storyboard in Resources */,
+				DCE8D6F62BC97795004746FF /* ding.mp3 in Resources */,
 				DC30AE2D2BB6F20400AD83F1 /* jazz.mp3 in Resources */,
 				DC30AE2E2BB6F20400AD83F1 /* relax.mp3 in Resources */,
 				DC021A7E2BAF072D000250E6 /* rain.mp3 in Resources */,

@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var timer: SRCountdownTimer!
     @IBOutlet weak var bigButton: RoundedButton!
+    @IBOutlet weak var refreshButton: RoundedButton!
+    @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var taskTitle: UILabel!
@@ -67,6 +69,8 @@ class HomeViewController: UIViewController {
     func setRoadMap() {
         bigButton.backgroundColor = UIColor.podoRed
         bigButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        refreshButton.isEnabled = true
+        nextButton.isEnabled = true
         
         taskTitle.text = selectedTask!.title
         taskMinute.text = "\(selectedTask!.sessionDuration) minutes"
@@ -140,7 +144,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func stopButtonAction(_ sender: Any) {
+    @IBAction func nextButtonAction(_ sender: Any) {
         timer.end()
     }
     
@@ -167,6 +171,10 @@ extension HomeViewController: SRCountdownTimerDelegate {
     }
     
     func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval) {
+        DispatchQueue.global(qos: .background).async {
+            SoundManager.shared.playSound(named: "ding", withExtension: "mp3")
+        }
+        
         for i in 0..<roadMap.count {
             if roadMap[i] != "F" {
                 if roadMap[i] == "T" {
@@ -174,8 +182,6 @@ extension HomeViewController: SRCountdownTimerDelegate {
                     FirestoreManager().incrementCompletedSessionCount(taskID: selectedTask!.id) { error in
                         if let error = error {
                             print("Error incrementing completedSessionCount: \(error.localizedDescription)")
-                        } else {
-                            print("completedSessionCount incremented successfully.")
                         }
                     }
                 }
@@ -184,16 +190,12 @@ extension HomeViewController: SRCountdownTimerDelegate {
                     FirestoreManager().updateTaskStatus(taskID: selectedTask!.id, newStatus: 1) { error in
                         if let error = error {
                             print("Error updating task status: \(error.localizedDescription)")
-                        } else {
-                            print("Task status updated successfully.")
                         }
                     }
                 } else if i == roadMap.count - 1 {
                     FirestoreManager().updateTaskStatus(taskID: selectedTask!.id, newStatus: 2) { error in
                         if let error = error {
                             print("Error updating task status: \(error.localizedDescription)")
-                        } else {
-                            print("Task status updated successfully.")
                         }
                     }
                     taskSession.text = "\(selectedTask!.completedSessionCount)/\(selectedTask!.sessionCount)"
