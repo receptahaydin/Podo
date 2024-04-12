@@ -2127,7 +2127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Das-hp-M86">
-                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <rect key="frame" x="94" y="240" width="187.5" height="187.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Das-hp-M86" secondAttribute="height" multiplier="1024:1024" id="0Fj-oe-00z"/>
                                 </constraints>
@@ -2138,7 +2138,7 @@
                         <constraints>
                             <constraint firstItem="Das-hp-M86" firstAttribute="centerX" secondItem="idz-7d-aRv" secondAttribute="centerX" id="DHA-ue-QFD"/>
                             <constraint firstItem="Das-hp-M86" firstAttribute="centerY" secondItem="idz-7d-aRv" secondAttribute="centerY" id="J8K-Ok-QFc"/>
-                            <constraint firstItem="Das-hp-M86" firstAttribute="width" secondItem="idz-7d-aRv" secondAttribute="width" multiplier="0.7" id="fhs-kX-2K8"/>
+                            <constraint firstItem="Das-hp-M86" firstAttribute="width" secondItem="idz-7d-aRv" secondAttribute="width" multiplier="0.5" id="fhs-kX-2K8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -2155,46 +2155,46 @@
             <size key="intrinsicContentSize" width="18" height="22"/>
         </designable>
         <designable name="BrN-E1-7HJ">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="HpR-D4-Pgr">
             <size key="intrinsicContentSize" width="20" height="22"/>
         </designable>
         <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="66" height="34"/>
         </designable>
         <designable name="SBP-RE-5nw">
             <size key="intrinsicContentSize" width="15" height="22"/>
         </designable>
         <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="bsS-Ka-me4">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="145" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="ehf-QO-IM1">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="93" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="s8d-EB-DDs">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="92" height="34"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="103" height="34"/>
+            <size key="intrinsicContentSize" width="88" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" name="PODORed"/>
@@ -2225,7 +2225,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="podo_icon" width="1024" height="1024"/>
+        <image name="podo_icon" width="654" height="654"/>
         <image name="profile" width="512" height="512"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
