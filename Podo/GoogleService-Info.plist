@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Recep.PoDo</string>
+	<string>com.Recep.Podo</string>
 	<key>PROJECT_ID</key>
 	<string>podo-mobile</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:686932504577:ios:5b8690670dae56433f1000</string>
+	<string>1:686932504577:ios:003bdcc3838ae7793f1000</string>
 </dict>
 </plist>
