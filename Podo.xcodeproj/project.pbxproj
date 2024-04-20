@@ -21,6 +21,8 @@
 		DC30AE302BB6F20400AD83F1 /* piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */; };
 		DC450C742BA474C40002A824 /* CompletedTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC450C732BA474C40002A824 /* CompletedTaskCell.swift */; };
 		DC66B9492B7AB570003A4BE8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66B9482B7AB570003A4BE8 /* Model.swift */; };
+		DC7582E52BD3F32500A591F3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7582E42BD3F32500A591F3 /* CollectionViewCell.swift */; };
+		DC7582E72BD3F42500A591F3 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */; };
 		DC9B27512B78ED0300EFE6D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27502B78ED0300EFE6D9 /* FirebaseFirestore */; };
 		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
 		DCA49A9A2BAB7484003D5FEB /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA49A992BAB7484003D5FEB /* ImageManager.swift */; };
@@ -100,6 +102,8 @@
 		DC30AE2C2BB6F20400AD83F1 /* piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano.mp3; sourceTree = "<group>"; };
 		DC450C732BA474C40002A824 /* CompletedTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskCell.swift; sourceTree = "<group>"; };
 		DC66B9482B7AB570003A4BE8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC7582E42BD3F32500A591F3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		DCA49A992BAB7484003D5FEB /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,14 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		DC7582E32BD3F30000A591F3 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DC7582E42BD3F32500A591F3 /* CollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		DCA49A982BAB7478003D5FEB /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +265,7 @@
 				DCB75D972B5083330036A076 /* CardView.swift */,
 				DCB75D952B5083330036A076 /* DesignableUITextField.swift */,
 				DCB75D9C2B5083330036A076 /* RoundedButton.swift */,
+				DC7582E32BD3F30000A591F3 /* CollectionViewCells */,
 				DCB346782B58735D0056DEAC /* TableViewCells */,
 			);
 			path = Components;
@@ -371,6 +384,7 @@
 				DCFB5A0B2B4D787C00DF2F5D /* SplashViewController.swift */,
 				DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */,
 				DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */,
+				DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -544,6 +558,8 @@
 				DCB75DA62B5083330036A076 /* RoundedButton.swift in Sources */,
 				DCF3E8DC2B7FCE7400BE2053 /* TasksViewController.swift in Sources */,
 				DCEFD9422BA1D2A7003F775B /* CalendarTableViewCell.swift in Sources */,
+				DC7582E52BD3F32500A591F3 /* CollectionViewCell.swift in Sources */,
+				DC7582E72BD3F42500A591F3 /* ToDoViewController.swift in Sources */,
 				DCFB59FF2B4D724400DF2F5D /* UITableView+Extensions.swift in Sources */,
 				DCB75DA32B5083330036A076 /* CardView.swift in Sources */,
 				DCF3E8DF2B7FF85400BE2053 /* UncompletedTaskCell.swift in Sources */,
