@@ -9,6 +9,9 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var listName: UILabel!
     
-    
+    func configure(name: String) {
+        listName.text = name
+    }
 }

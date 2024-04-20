@@ -9,9 +9,8 @@ import UIKit
 
 class ToDoViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,11 +26,16 @@ extension ToDoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         let colors: [UIColor] = [.red, .blue, .green, .yellow, .purple, .orange]
-            
-            // indexPath.row kullanarak farklı bir renk seç
-            let colorIndex = indexPath.row % colors.count
-            cell.backgroundColor = colors[colorIndex]
-            
-            return cell
+        let colorIndex = indexPath.row % colors.count
+        cell.backgroundColor = colors[colorIndex]
+        if indexPath.row == 3 {
+            cell.configure(name: "Label dfmdfldmşfmdfşd")
+        } else if indexPath.row == 6{
+            cell.configure(name: "sssss")
+        } else {
+            cell.configure(name: "x")
+        }
+
+        return cell
     }
 }
