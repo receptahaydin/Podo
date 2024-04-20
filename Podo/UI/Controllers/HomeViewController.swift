@@ -192,7 +192,9 @@ extension HomeViewController: SRCountdownTimerDelegate {
                             print("Error updating task status: \(error.localizedDescription)")
                         }
                     }
-                } else if i == roadMap.count - 1 {
+                }
+                
+                if i == roadMap.count - 1 {
                     FirestoreManager().updateTaskStatus(taskID: selectedTask!.id, newStatus: 2) { error in
                         if let error = error {
                             print("Error updating task status: \(error.localizedDescription)")

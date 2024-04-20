@@ -13,6 +13,8 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
+    
     var toggleButton = UIBarButtonItem()
     var isWeeklyMode = false
     
@@ -42,11 +44,12 @@ class CalendarViewController: UIViewController {
         if isWeeklyMode {
             calendar.scope = .week
             toggleButton.title = "Month"
+            calendarHeightConstraint.constant = 120
         } else {
             calendar.scope = .month
             toggleButton.title = "Week"
+            calendarHeightConstraint.constant = 300
         }
-        print(calendar.frame.height)
         showTasks(for: calendar.selectedDate ?? Date())
     }
     

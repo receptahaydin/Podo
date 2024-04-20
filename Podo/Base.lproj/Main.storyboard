@@ -14,7 +14,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="onboardingVC" title="Onboarding View Controller" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingVC" title="Onboarding View Controller" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
         <!--Signup View Controller-->
         <scene sceneID="9b0-sW-cto">
             <objects>
-                <viewController storyboardIdentifier="signupVC" title="Signup View Controller" id="G0A-ki-0kH" customClass="SignupViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVC" title="Signup View Controller" id="G0A-ki-0kH" customClass="SignupViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fE3-Wf-Q1s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-5W-Dwx">
                                                 <rect key="frame" x="20" y="78.5" width="335" height="172"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-K8-Da6" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-K8-Da6" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
                                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -119,7 +119,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-EB-DDs" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-EB-DDs" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="64" width="335" height="44"/>
                                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -137,7 +137,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQs-e3-YTl" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQs-e3-YTl" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="128" width="335" height="44"/>
                                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -159,7 +159,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="po6-Br-NbK" customClass="LoaderButton" customModule="PoDo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="po6-Br-NbK" customClass="LoaderButton" customModule="Podo" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="275.5" width="335" height="50"/>
                                                 <color key="backgroundColor" name="PODORed"/>
                                                 <constraints>
@@ -272,7 +272,7 @@
         <!--Login View Controller -->
         <scene sceneID="CeN-cU-mfU">
             <objects>
-                <viewController storyboardIdentifier="loginVC" title="Login View Controller " id="zQf-9Z-W0b" customClass="LoginViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="Login View Controller " id="zQf-9Z-W0b" customClass="LoginViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fww-1I-ijl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +294,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rVz-5d-M4Z">
                                                 <rect key="frame" x="20" y="83.5" width="335" height="113"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbu-dQ-fYF" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbu-dQ-fYF" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
                                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -312,7 +312,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-7l-ijw" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-7l-ijw" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="69" width="335" height="44"/>
                                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -334,7 +334,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65d-7W-j0U" customClass="LoaderButton" customModule="PoDo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65d-7W-j0U" customClass="LoaderButton" customModule="Podo" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="226.5" width="335" height="50"/>
                                                 <color key="backgroundColor" name="PODORed"/>
                                                 <constraints>
@@ -446,7 +446,7 @@
         <!--Analytics-->
         <scene sceneID="crv-Ba-kFp">
             <objects>
-                <viewController id="5g3-EC-Rtf" customClass="AnalyticsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5g3-EC-Rtf" customClass="AnalyticsViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="252-zS-T2A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -460,7 +460,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-Ig-cu6">
                                                 <rect key="frame" x="20" y="20" width="335" height="70"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POL-1E-2fc" customClass="CardView" customModule="PoDo" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POL-1E-2fc" customClass="CardView" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Podo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-aD-BRa">
@@ -503,7 +503,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-UL-agX" customClass="CardView" customModule="PoDo" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-UL-agX" customClass="CardView" customModule="Podo" customModuleProvider="target">
                                                         <rect key="frame" x="172.5" y="0.0" width="162.5" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Focus Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTe-jy-07S">
@@ -629,7 +629,7 @@
         <!--Podo Settings-->
         <scene sceneID="olD-Sf-1wa">
             <objects>
-                <viewController storyboardIdentifier="podoSettingsVC" id="4Ik-gt-dag" customClass="PodoSettingsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="podoSettingsVC" id="4Ik-gt-dag" customClass="PodoSettingsViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SOb-Sr-ZWS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,7 +649,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-QO-IM1" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-QO-IM1" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="116" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -663,7 +663,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-E1-7HJ" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-E1-7HJ" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="236" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -677,7 +677,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Ka-me4" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Ka-me4" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="176" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -819,7 +819,7 @@
         <!--Settings-->
         <scene sceneID="8KA-iG-juv">
             <objects>
-                <viewController id="HXl-xK-YiJ" userLabel="Settings" customClass="SettingsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HXl-xK-YiJ" userLabel="Settings" customClass="SettingsViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1y-H5-bGs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -828,7 +828,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" rowHeight="290" id="DK8-vb-Pqh" userLabel="TopCell" customClass="ProfileTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" rowHeight="290" id="DK8-vb-Pqh" userLabel="TopCell" customClass="ProfileTableViewCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="290"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK8-vb-Pqh" id="5Vq-9j-En8">
@@ -877,7 +877,7 @@
                                             <outlet property="profileImage" destination="Vgt-Sv-JUh" id="eca-sB-yLn"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="optionCell" rowHeight="60" id="wpd-Hr-3V1" userLabel="OptionCell" customClass="OptionTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="optionCell" rowHeight="60" id="wpd-Hr-3V1" userLabel="OptionCell" customClass="OptionTableViewCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="340" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpd-Hr-3V1" id="J7N-uh-4o5">
@@ -914,7 +914,7 @@
                                             <outlet property="label" destination="RO5-ah-v4y" id="gv4-r6-0Bg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="switchCell" rowHeight="60" id="UUK-kI-5pE" userLabel="SwitchCell" customClass="SwitchTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="switchCell" rowHeight="60" id="UUK-kI-5pE" userLabel="SwitchCell" customClass="SwitchTableViewCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="400" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UUK-kI-5pE" id="6pV-41-CaC">
@@ -1010,7 +1010,7 @@
         <!--Pomodoro Timer-->
         <scene sceneID="ezB-Ew-a2e">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="Vlh-O5-GCK" customClass="HomeViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="Vlh-O5-GCK" customClass="HomeViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="e7H-gS-bEx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1032,7 +1032,7 @@
                                     <constraint firstItem="uqg-WH-gad" firstAttribute="centerX" secondItem="eYP-2B-5G9" secondAttribute="centerX" id="ed0-ol-v2k"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-z8-9Vk" userLabel="BigButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-z8-9Vk" userLabel="BigButton" customClass="RoundedButton" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="150" y="471" width="75" height="75"/>
                                 <color key="backgroundColor" name="GreenColor"/>
                                 <constraints>
@@ -1053,7 +1053,7 @@
                                     <action selector="bigButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="e24-AO-Vgw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-KI-FCw" userLabel="RefreshButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-KI-FCw" userLabel="RefreshButton" customClass="RoundedButton" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="82.5" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
@@ -1069,7 +1069,7 @@
                                     <action selector="refreshButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="2Sd-eY-IfP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-D4-Pgr" userLabel="StopButton" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-D4-Pgr" userLabel="StopButton" customClass="RoundedButton" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="255" y="490" width="37.5" height="37.5"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
@@ -1085,7 +1085,7 @@
                                     <action selector="nextButtonAction:" destination="Vlh-O5-GCK" eventType="touchUpInside" id="Goe-sx-YFf"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-aX-pgd" userLabel="CardView" customClass="CardView" customModule="PoDo" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-aX-pgd" userLabel="CardView" customClass="CardView" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="109" width="335" height="66.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-oL-3wg">
@@ -1230,7 +1230,7 @@
         <!--Sound-->
         <scene sceneID="hDC-cJ-N4t">
             <objects>
-                <viewController title="Sound" id="9TF-IB-pEQ" customClass="SoundsViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sound" id="9TF-IB-pEQ" customClass="SoundsViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWB-kc-rP7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1440,7 +1440,7 @@
         <!--Tasks-->
         <scene sceneID="BzC-10-NTr">
             <objects>
-                <viewController title="Tasks" id="yCF-7s-r6b" customClass="TasksViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tasks" id="yCF-7s-r6b" customClass="TasksViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X8V-d8-r1Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1449,7 +1449,7 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="uncompletedTaskCell" rowHeight="75" id="iNc-pw-6d8" customClass="UncompletedTaskCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="uncompletedTaskCell" rowHeight="75" id="iNc-pw-6d8" customClass="UncompletedTaskCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNc-pw-6d8" id="dZt-Fz-lsv">
@@ -1493,7 +1493,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBP-RE-5nw" customClass="RoundedButton" customModule="PoDo" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBP-RE-5nw" customClass="RoundedButton" customModule="Podo" customModuleProvider="target">
                                                     <rect key="frame" x="311.5" y="19" width="37.5" height="37.5"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
@@ -1540,7 +1540,7 @@
                                             <outlet property="titleLabel" destination="Y6O-bv-mC2" id="WLc-7Z-99A"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedTaskCell" rowHeight="75" id="hKF-zt-Imz" customClass="CompletedTaskCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedTaskCell" rowHeight="75" id="hKF-zt-Imz" customClass="CompletedTaskCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="125" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKF-zt-Imz" id="fXm-wK-Rxr">
@@ -1674,7 +1674,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oMn-Tz-ebN">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" id="1aF-x1-C59" customClass="TabBarController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="1aF-x1-C59" customClass="TabBarController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1b1-44-JFa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1695,7 +1695,7 @@
         <!--New Task-->
         <scene sceneID="2zz-wa-isG">
             <objects>
-                <viewController storyboardIdentifier="createTaskVC" title="New Task" id="tiM-JL-v1N" customClass="CreateTaskViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createTaskVC" title="New Task" id="tiM-JL-v1N" customClass="CreateTaskViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NDF-NU-NzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1731,7 +1731,7 @@
                                 <rect key="frame" x="127.5" y="256.5" width="227.5" height="36"/>
                                 <color key="tintColor" name="PODORed"/>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Working" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-GY-vi7" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Working" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-GY-vi7" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="322.5" width="335" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1798,7 +1798,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psU-Nu-MFg" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psU-Nu-MFg" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="438.5" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1812,7 +1812,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xId-P7-bj3" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xId-P7-bj3" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="558.5" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1826,7 +1826,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzP-r4-IYr" customClass="DesignableUITextField" customModule="PoDo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 min" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzP-r4-IYr" customClass="DesignableUITextField" customModule="Podo" customModuleProvider="target">
                                 <rect key="frame" x="167.5" y="498.5" width="187.5" height="30"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1954,7 +1954,7 @@
         <!--Calendar-->
         <scene sceneID="uKK-ea-VGb">
             <objects>
-                <viewController storyboardIdentifier="CalendarViewController" title="Calendar" hidesBottomBarWhenPushed="YES" id="bVr-8J-GpN" customClass="CalendarViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" title="Calendar" hidesBottomBarWhenPushed="YES" id="bVr-8J-GpN" customClass="CalendarViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ES-N2-RR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1962,6 +1962,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-VS-tFE" customClass="FSCalendar">
                                 <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="YzP-3Q-b8m"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
                                         <color key="value" name="PODORed"/>
@@ -2003,7 +2006,7 @@
                                 <rect key="frame" x="0.0" y="364" width="375" height="303"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCell" rowHeight="75" id="Qwp-ko-cbT" customClass="CalendarTableViewCell" customModule="PoDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCell" rowHeight="75" id="Qwp-ko-cbT" customClass="CalendarTableViewCell" customModule="Podo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qwp-ko-cbT" id="FcF-lE-kal">
@@ -2083,7 +2086,6 @@
                         <constraints>
                             <constraint firstItem="Fvu-s5-1C2" firstAttribute="trailing" secondItem="gRc-VX-pWP" secondAttribute="trailing" id="6UE-er-vYY"/>
                             <constraint firstItem="Fvu-s5-1C2" firstAttribute="bottom" secondItem="gRc-VX-pWP" secondAttribute="bottom" id="BAJ-io-wtP"/>
-                            <constraint firstItem="HLp-VS-tFE" firstAttribute="height" secondItem="2ES-N2-RR5" secondAttribute="height" multiplier="0.45" id="JpE-IG-KRW"/>
                             <constraint firstItem="HLp-VS-tFE" firstAttribute="top" secondItem="Fvu-s5-1C2" secondAttribute="top" id="bK8-uU-WUR"/>
                             <constraint firstItem="gRc-VX-pWP" firstAttribute="top" secondItem="HLp-VS-tFE" secondAttribute="bottom" id="j5T-Bz-pAt"/>
                             <constraint firstItem="gRc-VX-pWP" firstAttribute="leading" secondItem="Fvu-s5-1C2" secondAttribute="leading" id="jti-4K-ilY"/>
@@ -2094,6 +2096,7 @@
                     <navigationItem key="navigationItem" id="jaG-4y-p7Q"/>
                     <connections>
                         <outlet property="calendar" destination="HLp-VS-tFE" id="ce1-eh-x6B"/>
+                        <outlet property="calendarHeightConstraint" destination="YzP-3Q-b8m" id="0Rw-bK-e2w"/>
                         <outlet property="tableView" destination="gRc-VX-pWP" id="9Oy-4f-x8e"/>
                     </connections>
                 </viewController>
@@ -2121,7 +2124,7 @@
         <!--Splash View Controller-->
         <scene sceneID="ejH-LP-rLL">
             <objects>
-                <viewController storyboardIdentifier="splashVC" title="Splash View Controller" id="VAq-BN-DEA" customClass="SplashViewController" customModule="PoDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="splashVC" title="Splash View Controller" id="VAq-BN-DEA" customClass="SplashViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idz-7d-aRv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
