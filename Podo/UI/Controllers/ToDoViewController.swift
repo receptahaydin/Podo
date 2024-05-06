@@ -24,7 +24,7 @@ extension ToDoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
         if indexPath.item == lastItemIndex {
-            self.performSegue(withIdentifier: "xx", sender: nil)
+            self.performSegue(withIdentifier: "newList", sender: nil)
         } else {
             guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
             let line = UIView(frame: CGRect(x: 0, y: selectedCell.frame.height - 2, width: selectedCell.frame.width, height: 2))
@@ -35,10 +35,13 @@ extension ToDoViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        for cell in collectionView.visibleCells {
-            for subview in cell.subviews {
-                if subview.tag == 100 {
-                    subview.removeFromSuperview()
+        let itemCount = collectionView.numberOfItems(inSection: 0)
+        for index in 0..<itemCount {
+            if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) {
+                for subview in cell.subviews {
+                    if subview.tag == 100 {
+                        subview.removeFromSuperview()
+                    }
                 }
             }
         }

@@ -1754,7 +1754,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Mtf-Gx-3jA" id="0HU-gD-nIv"/>
-                        <segue destination="Rga-8H-Lc1" kind="show" identifier="listToItem" id="Ffy-RJ-tcy"/>
+                        <segue destination="Rga-8H-Lc1" kind="show" identifier="newList" id="eUd-81-j3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s24-D5-SiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1764,14 +1764,14 @@
         <!--New List-->
         <scene sceneID="Zaa-pb-Mob">
             <objects>
-                <viewController id="Rga-8H-Lc1" customClass="NewListViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newListVC" id="Rga-8H-Lc1" customClass="NewListViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esu-Jn-P0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-cw-TVM">
                                 <rect key="frame" x="20" y="84" width="335" height="460.5"/>
-                                <color key="backgroundColor" name="ButtonColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1826,45 +1826,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSM-qu-mk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7205.6000000000004" y="-171.36431784107947"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7Py-Xr-jhA">
-            <objects>
-                <viewController id="E7k-Xo-1ee" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GdY-Xo-IAI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5UP-Jm-rKl">
-                                <rect key="frame" x="20" y="120" width="335" height="260"/>
-                                <color key="backgroundColor" name="ButtonColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="Rga-8H-Lc1" id="VKj-sU-IKE"/>
-                                </connections>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Zto-M6-BUO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5UP-Jm-rKl" firstAttribute="top" secondItem="Zto-M6-BUO" secondAttribute="top" constant="100" id="9uw-zJ-kos"/>
-                            <constraint firstItem="Zto-M6-BUO" firstAttribute="bottom" secondItem="5UP-Jm-rKl" secondAttribute="bottom" constant="20" id="Crt-Rz-jc4"/>
-                            <constraint firstItem="Zto-M6-BUO" firstAttribute="trailing" secondItem="5UP-Jm-rKl" secondAttribute="trailing" constant="20" id="FhJ-zJ-Scg"/>
-                            <constraint firstItem="5UP-Jm-rKl" firstAttribute="leading" secondItem="Zto-M6-BUO" secondAttribute="leading" constant="20" id="Ngr-KE-cLj"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="375" height="400"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QRQ-1S-fdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7206" y="381"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oMn-Tz-ebN">
