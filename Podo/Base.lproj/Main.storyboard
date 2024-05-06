@@ -625,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlU-9S-mOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6276" y="624"/>
+            <point key="canvasLocation" x="6276" y="623.38830584707648"/>
         </scene>
         <!--Podo Settings-->
         <scene sceneID="olD-Sf-1wa">
@@ -1719,8 +1719,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXQ-Z5-kJA">
-                                                    <rect key="frame" x="43.5" y="12" width="41.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="45.5" y="13" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1754,11 +1754,117 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Mtf-Gx-3jA" id="0HU-gD-nIv"/>
+                        <segue destination="Rga-8H-Lc1" kind="show" identifier="listToItem" id="Ffy-RJ-tcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s24-D5-SiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6276" y="-171.36431784107947"/>
+            <point key="canvasLocation" x="6276" y="-171"/>
+        </scene>
+        <!--New List-->
+        <scene sceneID="Zaa-pb-Mob">
+            <objects>
+                <viewController id="Rga-8H-Lc1" customClass="NewListViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esu-Jn-P0g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-cw-TVM">
+                                <rect key="frame" x="20" y="84" width="335" height="460.5"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Rga-8H-Lc1" id="IOb-8W-Amd"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-Wa-dV9">
+                                <rect key="frame" x="20" y="564.5" width="335" height="33.5"/>
+                                <color key="backgroundColor" name="PODORed"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Create New List">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createTaskAction:" destination="tiM-JL-v1N" eventType="touchUpInside" id="haH-3Z-Yk7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rHO-Ga-PKk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bgi-Wa-dV9" secondAttribute="trailing" constant="20" id="OON-2u-DSa"/>
+                            <constraint firstItem="GEd-cw-TVM" firstAttribute="top" secondItem="rHO-Ga-PKk" secondAttribute="top" constant="20" id="YoE-bn-xDy"/>
+                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="height" secondItem="esu-Jn-P0g" secondAttribute="height" multiplier="0.05" id="ZBE-YU-tlV"/>
+                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="top" secondItem="GEd-cw-TVM" secondAttribute="bottom" constant="20" id="bMS-o4-Edv"/>
+                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="bottom" secondItem="Bgi-Wa-dV9" secondAttribute="bottom" constant="20" id="dOs-iI-mMN"/>
+                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="trailing" secondItem="GEd-cw-TVM" secondAttribute="trailing" constant="20" id="ilL-gZ-N6E"/>
+                            <constraint firstItem="GEd-cw-TVM" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="20" id="quF-CM-Z9J"/>
+                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="20" id="tIy-D2-UzE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New List" id="hsR-3W-lGJ"/>
+                    <connections>
+                        <outlet property="textView" destination="GEd-cw-TVM" id="4x1-IO-id1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSM-qu-mk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7205.6000000000004" y="-171.36431784107947"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Py-Xr-jhA">
+            <objects>
+                <viewController id="E7k-Xo-1ee" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GdY-Xo-IAI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5UP-Jm-rKl">
+                                <rect key="frame" x="20" y="120" width="335" height="260"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Rga-8H-Lc1" id="VKj-sU-IKE"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zto-M6-BUO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5UP-Jm-rKl" firstAttribute="top" secondItem="Zto-M6-BUO" secondAttribute="top" constant="100" id="9uw-zJ-kos"/>
+                            <constraint firstItem="Zto-M6-BUO" firstAttribute="bottom" secondItem="5UP-Jm-rKl" secondAttribute="bottom" constant="20" id="Crt-Rz-jc4"/>
+                            <constraint firstItem="Zto-M6-BUO" firstAttribute="trailing" secondItem="5UP-Jm-rKl" secondAttribute="trailing" constant="20" id="FhJ-zJ-Scg"/>
+                            <constraint firstItem="5UP-Jm-rKl" firstAttribute="leading" secondItem="Zto-M6-BUO" secondAttribute="leading" constant="20" id="Ngr-KE-cLj"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRQ-1S-fdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7206" y="381"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oMn-Tz-ebN">
@@ -2304,7 +2410,7 @@
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.rain.fill" catalog="system" width="126" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="128" height="85"/>
+        <image name="envelope.fill" catalog="system" width="32" height="32"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="fireplace.fill" catalog="system" width="128" height="103"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
@@ -2316,7 +2422,7 @@
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.quarternote.3" catalog="system" width="128" height="102"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="podo_icon" width="654" height="654"/>

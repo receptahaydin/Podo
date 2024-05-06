@@ -18,15 +18,20 @@ class ToDoViewController: UIViewController {
 
 extension ToDoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
-        let line = UIView(frame: CGRect(x: 0, y: selectedCell.frame.height - 2, width: selectedCell.frame.width, height: 2))
-        line.backgroundColor = .podoRed
-        line.tag = 100
-        selectedCell.addSubview(line)
+        let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
+        if indexPath.item == lastItemIndex {
+            self.performSegue(withIdentifier: "xx", sender: nil)
+        } else {
+            guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
+            let line = UIView(frame: CGRect(x: 0, y: selectedCell.frame.height - 2, width: selectedCell.frame.width, height: 2))
+            line.backgroundColor = .podoRed
+            line.tag = 100
+            selectedCell.addSubview(line)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -44,11 +49,16 @@ extension ToDoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellPadding: CGFloat = 15
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
         
-        if indexPath.row == 3 {
+        if indexPath.row == 0 {
+            cell.configure(name: "⭐")
+        } else if indexPath.row == 3 {
             cell.configure(name: "Label dfmdfldmşfmdfşd")
         } else if indexPath.row == 6 {
             cell.configure(name: "sssss")
+        } else if indexPath.row == lastItemIndex {
+            cell.configure(name: "+ New List")
         } else {
             cell.configure(name: "x")
         }
@@ -63,11 +73,16 @@ extension ToDoViewController: UICollectionViewDelegateFlowLayout {
 extension ToDoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
         
-        if indexPath.row == 3 {
+        if indexPath.row == 0 {
+            cell.configure(name: "⭐")
+        } else if indexPath.row == 3 {
             cell.configure(name: "Label dfmdfldmşfmdfşd")
-        } else if indexPath.row == 6{
+        } else if indexPath.row == 6 {
             cell.configure(name: "sssss")
+        } else if indexPath.row == lastItemIndex {
+            cell.configure(name: "+ New List")
         } else {
             cell.configure(name: "x")
         }

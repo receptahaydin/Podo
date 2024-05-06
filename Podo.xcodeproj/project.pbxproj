@@ -30,6 +30,7 @@
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
+		DCB72E882BDABDF20059C07F /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB72E872BDABDF20059C07F /* NewListViewController.swift */; };
 		DCB75DA12B5083330036A076 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D932B5083330036A076 /* LoaderButton.swift */; };
 		DCB75DA22B5083330036A076 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D952B5083330036A076 /* DesignableUITextField.swift */; };
 		DCB75DA32B5083330036A076 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D972B5083330036A076 /* CardView.swift */; };
@@ -109,6 +110,7 @@
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		DCB72E872BDABDF20059C07F /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		DCB75D932B5083330036A076 /* LoaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		DCB75D952B5083330036A076 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		DCB75D972B5083330036A076 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */,
 				DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */,
 				DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */,
+				DCB72E872BDABDF20059C07F /* NewListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
 				DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */,
 				DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */,
+				DCB72E882BDABDF20059C07F /* NewListViewController.swift in Sources */,
 				DC021A822BAF097D000250E6 /* SoundManager.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,
 				DCFB59F52B4D724400DF2F5D /* CALayerExtensions.swift in Sources */,
