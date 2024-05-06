@@ -7,14 +7,29 @@
 
 import UIKit
 
+protocol NewListDelegate: AnyObject {
+    func didCreateList(name: String)
+}
+
 class NewListViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
+    
+    weak var delegate: NewListDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = "Please enter a list name"
         textView.textColor = UIColor.lightGray
+    }
+    
+    @IBAction func doneClicked(_ sender: Any) {
+        guard let listName = textView.text, !listName.isEmpty, listName != "Please enter a list name" else {
+            return
+        }
+        
+        delegate?.didCreateList(name: listName)
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -28,7 +43,7 @@ extension NewListViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Placeholder"
+            textView.text = "Please enter a list name"
             textView.textColor = UIColor.lightGray
         }
     }

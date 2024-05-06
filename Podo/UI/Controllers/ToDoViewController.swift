@@ -11,20 +11,32 @@ class ToDoViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var lists: [String] = ["⭐", "A", "B"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
+extension ToDoViewController: NewListDelegate {
+    func didCreateList(name: String) {
+        lists.append(name)
+        collectionView.reloadData()
+    }
+}
+
 extension ToDoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return lists.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
         if indexPath.item == lastItemIndex {
-            self.performSegue(withIdentifier: "newList", sender: nil)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let newListVC = sb.instantiateViewController(withIdentifier: "newListVC") as! NewListViewController
+            newListVC.delegate = self
+            self.present(newListVC, animated: true)
         } else {
             guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
             let line = UIView(frame: CGRect(x: 0, y: selectedCell.frame.height - 2, width: selectedCell.frame.width, height: 2))
@@ -48,48 +60,40 @@ extension ToDoViewController: UICollectionViewDelegate {
     }
 }
 
-extension ToDoViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellPadding: CGFloat = 15
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
-        
-        if indexPath.row == 0 {
-            cell.configure(name: "⭐")
-        } else if indexPath.row == 3 {
-            cell.configure(name: "Label dfmdfldmşfmdfşd")
-        } else if indexPath.row == 6 {
-            cell.configure(name: "sssss")
-        } else if indexPath.row == lastItemIndex {
-            cell.configure(name: "+ New List")
+extension ToDoViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.item == lists.count {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+            cell.configure(name: "+ New Task")
+            return cell
         } else {
-            cell.configure(name: "x")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+            cell.configure(name: lists[indexPath.item])
+            return cell
         }
-        
-        let labelSize = cell.listName.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
-        let cellWidth = labelSize.width + 2 * cellPadding
-        return CGSize(width: cellWidth, height: 44)
     }
 }
 
+extension ToDoViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellPadding: CGFloat = 15
 
-extension ToDoViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
-        
-        if indexPath.row == 0 {
-            cell.configure(name: "⭐")
-        } else if indexPath.row == 3 {
-            cell.configure(name: "Label dfmdfldmşfmdfşd")
-        } else if indexPath.row == 6 {
-            cell.configure(name: "sssss")
-        } else if indexPath.row == lastItemIndex {
-            cell.configure(name: "+ New List")
+        var cellWidth: CGFloat = 0
+
+        if indexPath.item == lists.count {
+            // Calculate width for "+ New Task" cell
+            let labelSize = "+ New Task".size(withAttributes: [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) // Adjust font size as needed
+            ])
+            cellWidth = labelSize.width + 2 * cellPadding
         } else {
-            cell.configure(name: "x")
+            // Calculate width for other cells
+            let labelSize = lists[indexPath.item].size(withAttributes: [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) // Adjust font size as needed
+            ])
+            cellWidth = labelSize.width + 2 * cellPadding
         }
-        
-        return cell
+
+        return CGSize(width: cellWidth, height: 44) // Adjust height as needed
     }
 }

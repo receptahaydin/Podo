@@ -1754,7 +1754,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Mtf-Gx-3jA" id="0HU-gD-nIv"/>
-                        <segue destination="Rga-8H-Lc1" kind="show" identifier="newList" id="eUd-81-j3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s24-D5-SiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1770,10 +1769,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-cw-TVM">
-                                <rect key="frame" x="20" y="84" width="335" height="460.5"/>
+                                <rect key="frame" x="10" y="80.5" width="355" height="566.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1784,41 +1783,42 @@
                                     <outlet property="delegate" destination="Rga-8H-Lc1" id="IOb-8W-Amd"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-Wa-dV9">
-                                <rect key="frame" x="20" y="564.5" width="335" height="33.5"/>
-                                <color key="backgroundColor" name="PODORed"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="plain" title="Create New List">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-N3-TeM">
+                                <rect key="frame" x="122" y="40" width="131.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-uz-EOh">
+                                <rect key="frame" x="310.5" y="33" width="64.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
-                                    <action selector="createTaskAction:" destination="tiM-JL-v1N" eventType="touchUpInside" id="haH-3Z-Yk7"/>
+                                    <action selector="doneClicked:" destination="Rga-8H-Lc1" eventType="touchUpInside" id="Atq-u9-GP9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rHO-Ga-PKk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Bgi-Wa-dV9" secondAttribute="trailing" constant="20" id="OON-2u-DSa"/>
-                            <constraint firstItem="GEd-cw-TVM" firstAttribute="top" secondItem="rHO-Ga-PKk" secondAttribute="top" constant="20" id="YoE-bn-xDy"/>
-                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="height" secondItem="esu-Jn-P0g" secondAttribute="height" multiplier="0.05" id="ZBE-YU-tlV"/>
-                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="top" secondItem="GEd-cw-TVM" secondAttribute="bottom" constant="20" id="bMS-o4-Edv"/>
-                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="bottom" secondItem="Bgi-Wa-dV9" secondAttribute="bottom" constant="20" id="dOs-iI-mMN"/>
-                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="trailing" secondItem="GEd-cw-TVM" secondAttribute="trailing" constant="20" id="ilL-gZ-N6E"/>
-                            <constraint firstItem="GEd-cw-TVM" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="20" id="quF-CM-Z9J"/>
-                            <constraint firstItem="Bgi-Wa-dV9" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="20" id="tIy-D2-UzE"/>
+                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="bottom" secondItem="GEd-cw-TVM" secondAttribute="bottom" constant="20" id="9aR-d2-lbi"/>
+                            <constraint firstItem="JJQ-N3-TeM" firstAttribute="centerX" secondItem="esu-Jn-P0g" secondAttribute="centerX" id="JUc-zI-C5u"/>
+                            <constraint firstItem="GEd-cw-TVM" firstAttribute="top" secondItem="JJQ-N3-TeM" secondAttribute="bottom" constant="20" id="NlD-hl-8G9"/>
+                            <constraint firstItem="hdg-uz-EOh" firstAttribute="trailing" secondItem="rHO-Ga-PKk" secondAttribute="trailing" id="RCS-Sp-8H7"/>
+                            <constraint firstItem="hdg-uz-EOh" firstAttribute="centerY" secondItem="JJQ-N3-TeM" secondAttribute="centerY" id="VWR-jc-NYe"/>
+                            <constraint firstItem="GEd-cw-TVM" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="10" id="quF-CM-Z9J"/>
+                            <constraint firstItem="JJQ-N3-TeM" firstAttribute="top" secondItem="rHO-Ga-PKk" secondAttribute="top" constant="20" id="qzc-Sx-qRe"/>
+                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="trailing" secondItem="GEd-cw-TVM" secondAttribute="trailing" constant="10" id="v4q-Ip-s30"/>
+                            <constraint firstItem="hdg-uz-EOh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JJQ-N3-TeM" secondAttribute="trailing" constant="8" symbolic="YES" id="vgN-h2-6Sv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New List" id="hsR-3W-lGJ"/>
+                    <navigationItem key="navigationItem" title="New List" style="editor" id="hsR-3W-lGJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="lee-XQ-Kde">
+                            <connections>
+                                <action selector="doneClicked:" destination="Rga-8H-Lc1" id="dIo-aJ-DNC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="GEd-cw-TVM" id="4x1-IO-id1"/>
                     </connections>
