@@ -10,6 +10,7 @@ import UIKit
 class ToDoViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     var lists: [String] = ["⭐", "A", "B"]
     
@@ -22,6 +23,17 @@ extension ToDoViewController: NewListDelegate {
     func didCreateList(name: String) {
         lists.append(name)
         collectionView.reloadData()
+    }
+}
+
+extension ToDoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTaskCell", for: indexPath) as! TodoTaskTableViewCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 }
 
@@ -64,7 +76,7 @@ extension ToDoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == lists.count {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-            cell.configure(name: "+ New Task")
+            cell.configure(name: "+ New List")
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
@@ -77,23 +89,21 @@ extension ToDoViewController: UICollectionViewDataSource {
 extension ToDoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellPadding: CGFloat = 15
-
+        
         var cellWidth: CGFloat = 0
-
+        
         if indexPath.item == lists.count {
-            // Calculate width for "+ New Task" cell
-            let labelSize = "+ New Task".size(withAttributes: [
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) // Adjust font size as needed
+            let labelSize = "+ New List".size(withAttributes: [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
             ])
             cellWidth = labelSize.width + 2 * cellPadding
         } else {
-            // Calculate width for other cells
             let labelSize = lists[indexPath.item].size(withAttributes: [
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) // Adjust font size as needed
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
             ])
             cellWidth = labelSize.width + 2 * cellPadding
         }
-
-        return CGSize(width: cellWidth, height: 44) // Adjust height as needed
+        
+        return CGSize(width: cellWidth, height: 44)
     }
 }
