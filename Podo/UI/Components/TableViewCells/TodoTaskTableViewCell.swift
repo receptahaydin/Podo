@@ -13,6 +13,9 @@ class TodoTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var taskName: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
     
+    var isCompleted = false
+    var isFavourite = false
+        
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,34 +25,36 @@ class TodoTaskTableViewCell: UITableViewCell {
     }
     
     @IBAction func completedButtonAction(_ sender: UIButton) {
-            // Check if the button's current image is square or square.fill
-            if sender.currentImage == UIImage(named: "square") {
-                // Change the button image to square.fill
-                sender.setImage(UIImage(named: "square.fill"), for: .normal)
-                
-                // Apply strikethrough style to the task name label
-                let attributedText = NSAttributedString(
-                    string: taskName.text!,
-                    attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue]
-                )
-                taskName.attributedText = attributedText
-            } else if sender.currentImage == UIImage(named: "square.fill") {
-                // Change the button image to square
-                sender.setImage(UIImage(named: "square"), for: .normal)
-                
-                // Remove strikethrough style from the task name label
-                let attributedText = NSAttributedString(
-                    string: taskName.text!,
-                    attributes: [:]
-                )
-                taskName.attributedText = attributedText
-            }
-        
-
+        if isCompleted {
+            completedButton.setImage(UIImage(systemName: "square"), for: .normal)
+            
+            let attributedText = NSAttributedString(
+                string: taskName.text!,
+                attributes: [:]
+            )
+            taskName.attributedText = attributedText
+            
+            isCompleted = false
+        } else {
+            completedButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            
+            let attributedText = NSAttributedString(
+                string: taskName.text!,
+                attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue]
+            )
+            taskName.attributedText = attributedText
+            
+            isCompleted = true
+        }
     }
     
-    
     @IBAction func favoruiteButtonAction(_ sender: UIButton) {
-        
+        if isFavourite {
+            favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            isFavourite = false
+        } else {
+            favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            isFavourite = true
+        }
     }
 }
