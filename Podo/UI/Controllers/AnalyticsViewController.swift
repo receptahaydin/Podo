@@ -16,19 +16,12 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
     let firestoreManager = FirestoreManager()
     private var selectedSliceIndex: Int?
     
-    private let loadingIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.color = .podoRed
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        return indicator
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskManager.shared.tasks = []
         TaskManager.shared.filteredTasks = []
         showLoadingIndicator()
-        self.firestoreManager.readTaskFromDatabase { [weak self] in
+        self.firestoreManager.readTasksFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             self?.setupPieChart()
             self?.setupBarChart()
@@ -85,20 +78,5 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
         set.colors = ChartColorTemplates.pastel()
         let data = BarChartData(dataSet: set)
         barChart.data = data
-    }
-    
-    private func showLoadingIndicator() {
-        view.addSubview(loadingIndicator)
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        
-        loadingIndicator.startAnimating()
-    }
-    
-    private func hideLoadingIndicator() {
-        loadingIndicator.stopAnimating()
-        loadingIndicator.removeFromSuperview()
     }
 }

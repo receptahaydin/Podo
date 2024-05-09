@@ -52,3 +52,15 @@ struct Task {
         longBreakDuration = data["longBreakDuration"] as? Int ?? 0
     }
 }
+
+struct List {
+    var id: String
+    var createdDate: String
+    var title: String
+    
+    init(data: [String: Any]) {
+        self.id = ""
+        createdDate = data["createdDate"] as? String ?? ""
+        title = data["title"] as? String ?? ""
+    }
+}

@@ -27,6 +27,7 @@
 		DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC9B27522B78ED0300EFE6D9 /* FirebaseFirestoreSwift */; };
 		DCA49A9A2BAB7484003D5FEB /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA49A992BAB7484003D5FEB /* ImageManager.swift */; };
 		DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */; };
+		DCA8572A2BECD8E4000E60AD /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA857292BECD8E4000E60AD /* ListManager.swift */; };
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
@@ -108,6 +109,7 @@
 		DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		DCA49A992BAB7484003D5FEB /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		DCA857292BECD8E4000E60AD /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				DCF6560A2B9095CA005E7B15 /* TaskManager.swift */,
+				DCA857292BECD8E4000E60AD /* ListManager.swift */,
 				DC1B1B232B92115F00C7E21B /* FirestoreManager.swift */,
 			);
 			path = Network;
@@ -589,6 +592,7 @@
 				DCFB59FC2B4D724400DF2F5D /* UIButton+Extensions.swift in Sources */,
 				DCFB59E62B4D723600DF2F5D /* UiModelState.swift in Sources */,
 				DCFB5A0C2B4D787C00DF2F5D /* SplashViewController.swift in Sources */,
+				DCA8572A2BECD8E4000E60AD /* ListManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

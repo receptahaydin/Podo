@@ -12,16 +12,22 @@ class ToDoViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
-    var lists: [String] = ["⭐", "A", "B"]
-    
+    let firestoreManager = FirestoreManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        ListManager.shared.lists = []
+        showLoadingIndicator()
+        self.firestoreManager.readListsFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.collectionView.reloadData()
+        }
     }
 }
 
 extension ToDoViewController: NewListDelegate {
-    func didCreateList(name: String) {
-        lists.append(name)
+    func didCreateList(list: List) {
+        ListManager.shared.lists.append(list)
         collectionView.reloadData()
     }
 }
@@ -39,7 +45,7 @@ extension ToDoViewController: UITableViewDataSource {
 
 extension ToDoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lists.count + 1
+        return ListManager.shared.lists.count + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -74,36 +80,42 @@ extension ToDoViewController: UICollectionViewDelegate {
 
 extension ToDoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == lists.count {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        
+        if indexPath.item == 0 {
+            cell.configure(name: "⭐")
+        } else if indexPath.item == ListManager.shared.lists.count + 1 {
             cell.configure(name: "+ New List")
-            return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-            cell.configure(name: lists[indexPath.item])
-            return cell
+            let list = ListManager.shared.lists[indexPath.item - 1]
+            cell.configure(name: list.title)
         }
+        
+        return cell
     }
 }
 
 extension ToDoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellPadding: CGFloat = 15
-        
         var cellWidth: CGFloat = 0
+        var labelSize: CGSize
         
-        if indexPath.item == lists.count {
-            let labelSize = "+ New List".size(withAttributes: [
+        if indexPath.item == 0 {
+            labelSize = "⭐".size(withAttributes: [
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
             ])
-            cellWidth = labelSize.width + 2 * cellPadding
+        } else if indexPath.item == ListManager.shared.lists.count + 1 {
+            labelSize = "+ New List".size(withAttributes: [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
+            ])
         } else {
-            let labelSize = lists[indexPath.item].size(withAttributes: [
+            labelSize = ListManager.shared.lists[indexPath.item - 1].title.size(withAttributes: [
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
             ])
-            cellWidth = labelSize.width + 2 * cellPadding
         }
         
+        cellWidth = labelSize.width + 2 * cellPadding
         return CGSize(width: cellWidth, height: 44)
     }
 }

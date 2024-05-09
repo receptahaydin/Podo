@@ -40,9 +40,38 @@ class FirestoreManager {
         ])
     }
     
-    func readTaskFromDatabase(completion: @escaping () -> Void) {
+    func addList(list: List) {
+        db.collection("Users").document(getCurrentUserID()!).collection("TodoLists").document().setData([
+            "createdDate": list.createdDate,
+            "title": list.title
+        ])
+    }
+    
+    func readListsFromDatabase(completion: @escaping () -> Void) {
+        let listsCollection = db.collection("Users").document(getCurrentUserID()!).collection("TodoLists")
+        
+        listsCollection.order(by: "createdDate").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                var lists: [List] = []
+                
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    var list = List(data: data)
+                    list.id = document.documentID
+                    lists.append(list)
+                }
+                
+                ListManager.shared.lists = lists
+                completion()
+            }
+        }
+    }
+    
+    func readTasksFromDatabase(completion: @escaping () -> Void) {
         let tasksCollection = db.collection("Users").document(getCurrentUserID()!).collection("Tasks")
-
+        
         tasksCollection.order(by: "date").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -64,28 +93,28 @@ class FirestoreManager {
     
     func deleteTask(taskID: String, completion: @escaping (Error?) -> Void) {
         let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
-
+        
         taskDocumentRef.delete { error in
             if let error = error {
                 print("Error deleting task: \(error.localizedDescription)")
             } else {
                 print("Task deleted successfully.")
             }
-
+            
             completion(error)
         }
     }
     
     func updateTask(taskID: String, updatedData: [String: Any], completion: @escaping (Error?) -> Void) {
         let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Tasks").document(taskID)
-
+        
         taskDocumentRef.updateData(updatedData) { error in
             if let error = error {
                 print("Error updating task: \(error.localizedDescription)")
             } else {
                 print("Task updated successfully.")
             }
-
+            
             completion(error)
         }
     }

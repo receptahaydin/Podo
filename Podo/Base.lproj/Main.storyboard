@@ -2439,7 +2439,7 @@
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.rain.fill" catalog="system" width="126" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="envelope.fill" catalog="system" width="128" height="85"/>
+        <image name="envelope.fill" catalog="system" width="32" height="32"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
         <image name="fireplace.fill" catalog="system" width="128" height="103"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
@@ -2451,7 +2451,7 @@
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.quarternote.3" catalog="system" width="128" height="102"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="pianokeys.inverse" catalog="system" width="128" height="93"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="podo_icon" width="654" height="654"/>

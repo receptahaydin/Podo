@@ -26,13 +26,6 @@ class TasksViewController: UIViewController {
         return button
     }()
     
-    private let loadingIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.color = .podoRed
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        return indicator
-    }()
-    
     private lazy var moreActions: UIAlertController = {
         let alert = UIAlertController(
             title: nil,
@@ -102,7 +95,7 @@ class TasksViewController: UIViewController {
         TaskManager.shared.tasks = []
         TaskManager.shared.filteredTasks = []
         showLoadingIndicator()
-        self.firestoreManager.readTaskFromDatabase { [weak self] in
+        self.firestoreManager.readTasksFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             self?.segmentControlTapped(self?.segmentControl ?? UISegmentedControl())
         }
@@ -115,7 +108,7 @@ class TasksViewController: UIViewController {
         TaskManager.shared.tasks = []
         TaskManager.shared.filteredTasks = []
         showLoadingIndicator()
-        self.firestoreManager.readTaskFromDatabase { [weak self] in
+        self.firestoreManager.readTasksFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             if let selectedSegmentIndex = self?.segmentControl.selectedSegmentIndex {
                 self?.filterTasks(for: selectedSegmentIndex)
@@ -210,21 +203,6 @@ class TasksViewController: UIViewController {
             break
         }
     }
-    
-    private func showLoadingIndicator() {
-        view.addSubview(loadingIndicator)
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        
-        loadingIndicator.startAnimating()
-    }
-    
-    private func hideLoadingIndicator() {
-        loadingIndicator.stopAnimating()
-        loadingIndicator.removeFromSuperview()
-    }
 }
 
 extension TasksViewController: UITableViewDataSource {
@@ -254,7 +232,7 @@ extension TasksViewController: UITableViewDelegate {
 extension TasksViewController: CreateTaskDelegate {
     func didCreateTask() {
         showLoadingIndicator()
-        self.firestoreManager.readTaskFromDatabase { [weak self] in
+        self.firestoreManager.readTasksFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             if let selectedSegmentIndex = self?.segmentControl.selectedSegmentIndex {
                 self?.filterTasks(for: selectedSegmentIndex)
