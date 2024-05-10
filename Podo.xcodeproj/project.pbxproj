@@ -28,6 +28,7 @@
 		DCA49A9A2BAB7484003D5FEB /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA49A992BAB7484003D5FEB /* ImageManager.swift */; };
 		DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */; };
 		DCA8572A2BECD8E4000E60AD /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA857292BECD8E4000E60AD /* ListManager.swift */; };
+		DCA8572C2BECF3F4000E60AD /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8572B2BECF3F4000E60AD /* NewItemViewController.swift */; };
 		DCAF4B442B9F035A00FA979F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */; };
 		DCB346772B586A3F0056DEAC /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */; };
 		DCB3467B2B5873890056DEAC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */; };
@@ -110,6 +111,7 @@
 		DCA49A992BAB7484003D5FEB /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		DCA51AA42BAB063B00E2F8BB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		DCA857292BECD8E4000E60AD /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		DCA8572B2BECF3F4000E60AD /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		DCAF4B432B9F035A00FA979F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		DCB346762B586A3F0056DEAC /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		DCB3467A2B5873890056DEAC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				DCC0BC1E2BB848FF00D42119 /* PodoSettingsViewController.swift */,
 				DC7582E62BD3F42500A591F3 /* ToDoViewController.swift */,
 				DCB72E872BDABDF20059C07F /* NewListViewController.swift */,
+				DCA8572B2BECF3F4000E60AD /* NewItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				DCFB59E42B4D723600DF2F5D /* XIBLocalizable.swift in Sources */,
 				DCA51AA52BAB063B00E2F8BB /* ProfileTableViewCell.swift in Sources */,
 				DC0C25202BA48243004C0FF1 /* TabBarController.swift in Sources */,
+				DCA8572C2BECF3F4000E60AD /* NewItemViewController.swift in Sources */,
 				DCB72E882BDABDF20059C07F /* NewListViewController.swift in Sources */,
 				DC021A822BAF097D000250E6 /* SoundManager.swift in Sources */,
 				DCFB59E52B4D723600DF2F5D /* ReusableView.swift in Sources */,

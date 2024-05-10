@@ -43,7 +43,8 @@ class FirestoreManager {
     func addList(list: List) {
         db.collection("Users").document(getCurrentUserID()!).collection("TodoLists").document().setData([
             "createdDate": list.createdDate,
-            "title": list.title
+            "title": list.title,
+            "items": []
         ])
     }
     
