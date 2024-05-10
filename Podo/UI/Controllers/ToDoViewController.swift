@@ -13,6 +13,7 @@ class ToDoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let firestoreManager = FirestoreManager()
+    private var selectedListIndex: Int = 0
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -24,7 +25,7 @@ class ToDoViewController: UIViewController {
         button.layer.cornerRadius = 30
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ListManager.shared.lists = []
@@ -35,17 +36,13 @@ class ToDoViewController: UIViewController {
         }
         view.addSubview(floatingButton)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
-        addRedLineBelowCell(indexPath: 0) // Makes favorites cell underlined on opening
+        addRedLineBelowCell(indexPath: 0)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        ListManager.shared.lists = []
-        showLoadingIndicator()
-        self.firestoreManager.readListsFromDatabase { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.collectionView.reloadData()
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        removeRedLineFromCells()
+        addRedLineBelowCell(indexPath: selectedListIndex)
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,6 +65,19 @@ class ToDoViewController: UIViewController {
         line.backgroundColor = .podoRed
         line.tag = 100
         cell.addSubview(line)
+    }
+    
+    private func removeRedLineFromCells() {
+        let itemCount = collectionView.numberOfItems(inSection: 0)
+        for index in 0..<itemCount {
+            if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) {
+                for subview in cell.subviews {
+                    if subview.tag == 100 {
+                        subview.removeFromSuperview()
+                    }
+                }
+            }
+        }
     }
     
     private func findSelectedList() -> String {
@@ -132,24 +142,9 @@ extension ToDoViewController: UICollectionViewDelegate {
             newListVC.delegate = self
             self.present(newListVC, animated: true)
         } else {
-            guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
-            let line = UIView(frame: CGRect(x: 0, y: selectedCell.frame.height - 2, width: selectedCell.frame.width, height: 2))
-            line.backgroundColor = .podoRed
-            line.tag = 100
-            selectedCell.addSubview(line)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let itemCount = collectionView.numberOfItems(inSection: 0)
-        for index in 0..<itemCount {
-            if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) {
-                for subview in cell.subviews {
-                    if subview.tag == 100 {
-                        subview.removeFromSuperview()
-                    }
-                }
-            }
+            removeRedLineFromCells()
+            addRedLineBelowCell(indexPath: indexPath.item)
+            selectedListIndex = indexPath.item
         }
     }
 }
