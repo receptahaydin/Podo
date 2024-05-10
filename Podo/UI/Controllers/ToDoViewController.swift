@@ -29,11 +29,7 @@ class ToDoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ListManager.shared.lists = []
-        showLoadingIndicator()
-        self.firestoreManager.readListsFromDatabase { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.collectionView.reloadData()
-        }
+        fetchListsAndItemsFromDatabase()
         view.addSubview(floatingButton)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
         addRedLineBelowCell(indexPath: 0)
@@ -57,6 +53,28 @@ class ToDoViewController: UIViewController {
                                       height: 60)
         
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 30, right: 0)
+    }
+    
+    func fetchListsAndItemsFromDatabase() {
+        showLoadingIndicator()
+
+        let group = DispatchGroup()
+        
+        group.enter()
+        self.firestoreManager.readListsFromDatabase {
+            group.leave()
+        }
+        
+        group.enter()
+        self.firestoreManager.readItemsFromDatabase {
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            self.hideLoadingIndicator()
+            self.collectionView.reloadData()
+            self.tableView.reloadData()
+        }
     }
     
     private func addRedLineBelowCell(indexPath: Int) {
@@ -120,12 +138,14 @@ extension ToDoViewController: NewListDelegate {
 
 extension ToDoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = ItemManager.shared.items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTaskCell", for: indexPath) as! TodoTaskTableViewCell
+        cell.configureCell(item: item)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return ItemManager.shared.items.count
     }
 }
 

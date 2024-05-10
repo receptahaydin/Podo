@@ -80,6 +80,28 @@ class FirestoreManager {
         }
     }
     
+    func readItemsFromDatabase(completion: @escaping () -> Void) {
+        let itemsCollection = db.collection("Users").document(getCurrentUserID()!).collection("Todos")
+        
+        itemsCollection.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                var items: [ListItem] = []
+                
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    var item = ListItem(data: data)
+                    item.id = document.documentID
+                    items.append(item)
+                }
+                
+                ItemManager.shared.items = items
+                completion()
+            }
+        }
+    }
+    
     func readTasksFromDatabase(completion: @escaping () -> Void) {
         let tasksCollection = db.collection("Users").document(getCurrentUserID()!).collection("Tasks")
         

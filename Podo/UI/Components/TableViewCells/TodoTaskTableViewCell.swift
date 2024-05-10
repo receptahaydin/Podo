@@ -24,6 +24,32 @@ class TodoTaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    public func configureCell(item: ListItem) {
+        taskName.text = item.title
+        
+        if item.isFavourite {
+            favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        
+        if item.isCompleted {
+            completedButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            
+            taskName.attributedText = NSAttributedString(
+                string: taskName.text!,
+                attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue]
+            )
+        } else {
+            completedButton.setImage(UIImage(systemName: "square"), for: .normal)
+            
+            taskName.attributedText = NSAttributedString(
+                string: taskName.text!,
+                attributes: [:]
+            )
+        }
+    }
+    
     @IBAction func completedButtonAction(_ sender: UIButton) {
         isCompleted.toggle()
         if isCompleted {

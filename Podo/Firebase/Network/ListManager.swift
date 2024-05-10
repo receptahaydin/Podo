@@ -11,7 +11,6 @@ class ListManager {
     static let shared = ListManager()
     
     var lists: [List] = []
-    //var items: [Item] = []
     
     private init() {}
 }
