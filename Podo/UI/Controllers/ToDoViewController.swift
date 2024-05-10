@@ -14,6 +14,7 @@ class ToDoViewController: UIViewController {
     
     let firestoreManager = FirestoreManager()
     private var selectedListIndex: Int = 0
+    var filteredItems: [ListItem] = []
     
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -72,8 +73,29 @@ class ToDoViewController: UIViewController {
         
         group.notify(queue: .main) {
             self.hideLoadingIndicator()
+            self.filterItems()
             self.collectionView.reloadData()
             self.tableView.reloadData()
+        }
+    }
+    
+    private func filterItems() {
+        filteredItems = []
+        
+        if selectedListIndex == 0 {
+            for item in ItemManager.shared.items {
+                if item.isFavourite == true {
+                    filteredItems.append(item)
+                }
+            }
+        } else {
+            var listID = ListManager.shared.lists[selectedListIndex - 1].id
+            
+            for item in ItemManager.shared.items {
+                if item.listId == listID {
+                    filteredItems.append(item)
+                }
+            }
         }
     }
     
@@ -138,14 +160,14 @@ extension ToDoViewController: NewListDelegate {
 
 extension ToDoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = ItemManager.shared.items[indexPath.row]
+        let item = filteredItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTaskCell", for: indexPath) as! TodoTaskTableViewCell
         cell.configureCell(item: item)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ItemManager.shared.items.count
+        return filteredItems.count
     }
 }
 
@@ -165,6 +187,8 @@ extension ToDoViewController: UICollectionViewDelegate {
             removeRedLineFromCells()
             addRedLineBelowCell(indexPath: indexPath.item)
             selectedListIndex = indexPath.item
+            filterItems()
+            tableView.reloadData()
         }
     }
 }
