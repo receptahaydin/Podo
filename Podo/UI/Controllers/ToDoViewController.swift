@@ -35,6 +35,17 @@ class ToDoViewController: UIViewController {
         }
         view.addSubview(floatingButton)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
+        addRedLineBelowCell(indexPath: 0) // Makes favorites cell underlined on opening
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ListManager.shared.lists = []
+        showLoadingIndicator()
+        self.firestoreManager.readListsFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.collectionView.reloadData()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,31 +62,49 @@ class ToDoViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 30, right: 0)
     }
     
+    private func addRedLineBelowCell(indexPath: Int) {
+        guard let cell = collectionView.cellForItem(at: IndexPath(item: indexPath, section: 0)) else { return }
+        let line = UIView(frame: CGRect(x: 0, y: cell.frame.height - 2, width: cell.frame.width, height: 2))
+        line.backgroundColor = .podoRed
+        line.tag = 100
+        cell.addSubview(line)
+    }
+    
     private func findSelectedList() -> String {
         let itemCount = collectionView.numberOfItems(inSection: 0)
+        var selectedIndex = -1
         for index in 0..<itemCount {
             if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) {
                 for subview in cell.subviews {
                     if subview.tag == 100 {
-                        print(index)
+                        selectedIndex = index
                     }
                 }
             }
+        }
+        
+        if selectedIndex == 0 {
+            return "-2"
+        } else {
+            return ListManager.shared.lists[selectedIndex - 1].id
         }
     }
     
     @objc private func didTapFloatingButton() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let newItemVC = sb.instantiateViewController(withIdentifier: "newItemVC") as! NewItemViewController
-       //newItemVC.listID = 
+        newItemVC.listID = findSelectedList()
         self.present(newItemVC, animated: true)
     }
 }
 
 extension ToDoViewController: NewListDelegate {
     func didCreateList(list: List) {
-        ListManager.shared.lists.append(list)
-        collectionView.reloadData()
+        showLoadingIndicator()
+        self.firestoreManager.readListsFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.collectionView.reloadData()
+        }
     }
 }
 

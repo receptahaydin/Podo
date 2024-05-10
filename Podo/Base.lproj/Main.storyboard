@@ -1953,6 +1953,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favouriteButton" destination="6Z8-ay-yWj" id="N7J-Cv-SRh"/>
                         <outlet property="textView" destination="a9Y-oy-e2d" id="HEs-zu-p1p"/>
                     </connections>
                 </viewController>

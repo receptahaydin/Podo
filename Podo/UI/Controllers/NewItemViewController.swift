@@ -8,8 +8,9 @@
 import UIKit
 
 class NewItemViewController: UIViewController {
-
+    
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var favouriteButton: UIButton!
     
     var listID: String?
     
@@ -20,12 +21,32 @@ class NewItemViewController: UIViewController {
     }
     
     @IBAction func favouriteButtonClicked(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        
+        if sender.isSelected {
+            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            sender.setImage(UIImage(systemName: "star"), for: .normal)
+        }
     }
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
-        guard let listName = textView.text, !listName.isEmpty, listName != "Please enter an item name" else {
+        guard let itemName = textView.text, !itemName.isEmpty, itemName != "Please enter an item name" else {
             return
         }
+        
+        let isFavourite = favouriteButton.isSelected
+        
+        let itemData: [String: Any] = [
+            "isFavourite": isFavourite,
+            "listId": listID!,
+            "title": itemName
+        ]
+        
+        let item = ListItem(data: itemData)
+        FirestoreManager().addListItem(item: item)
+        //delegate?.didCreateList(list: list)
+        dismiss(animated: true, completion: nil)
     }
 }
 

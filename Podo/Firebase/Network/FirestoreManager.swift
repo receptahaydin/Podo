@@ -41,10 +41,20 @@ class FirestoreManager {
     }
     
     func addList(list: List) {
-        db.collection("Users").document(getCurrentUserID()!).collection("TodoLists").document().setData([
+        let newDocRef = db.collection("Users").document(getCurrentUserID()!).collection("TodoLists").document()
+        
+        newDocRef.setData([
             "createdDate": list.createdDate,
-            "title": list.title,
-            "items": []
+            "title": list.title
+        ])
+    }
+    
+    func addListItem(item: ListItem) {
+        db.collection("Users").document(getCurrentUserID()!).collection("Todos").document().setData([
+            "isCompleted": item.isCompleted,
+            "isFavourite": item.isFavourite,
+            "listId": item.listId,
+            "title": item.title
         ])
     }
     
