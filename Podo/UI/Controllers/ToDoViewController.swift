@@ -58,7 +58,7 @@ class ToDoViewController: UIViewController {
     
     func fetchListsAndItemsFromDatabase() {
         showLoadingIndicator()
-
+        
         let group = DispatchGroup()
         
         group.enter()
@@ -107,6 +107,7 @@ class ToDoViewController: UIViewController {
         line.backgroundColor = .podoRed
         line.tag = 100
         cell.addSubview(line)
+        filterItems()
     }
     
     private func removeRedLineFromCells() {
@@ -145,6 +146,7 @@ class ToDoViewController: UIViewController {
     @objc private func didTapFloatingButton() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let newItemVC = sb.instantiateViewController(withIdentifier: "newItemVC") as! NewItemViewController
+        newItemVC.delegate = self
         newItemVC.listID = findSelectedList()
         self.present(newItemVC, animated: true)
     }
@@ -155,6 +157,7 @@ extension ToDoViewController: NewListDelegate {
         showLoadingIndicator()
         self.firestoreManager.readListsFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
+            self?.selectedListIndex = ListManager.shared.lists.count
             self?.collectionView.reloadData()
         }
     }
@@ -166,7 +169,6 @@ extension ToDoViewController: NewItemDelegate {
         self.firestoreManager.readItemsFromDatabase { [weak self] in
             self?.hideLoadingIndicator()
             self?.filterItems()
-            self?.tableView.reloadData()
         }
     }
 }
@@ -198,9 +200,8 @@ extension ToDoViewController: UICollectionViewDelegate {
             self.present(newListVC, animated: true)
         } else {
             removeRedLineFromCells()
-            addRedLineBelowCell(indexPath: indexPath.item)
             selectedListIndex = indexPath.item
-            filterItems()
+            addRedLineBelowCell(indexPath: indexPath.item)
         }
     }
 }
@@ -217,6 +218,9 @@ extension ToDoViewController: UICollectionViewDataSource {
             let list = ListManager.shared.lists[indexPath.item - 1]
             cell.configure(name: list.title)
         }
+
+        removeRedLineFromCells()
+        addRedLineBelowCell(indexPath: selectedListIndex)
         
         return cell
     }

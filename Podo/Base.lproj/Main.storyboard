@@ -1908,7 +1908,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonClicked:" destination="SrI-9k-2BP" eventType="touchUpInside" id="6vK-fq-HUP"/>
-                                    <action selector="doneClicked:" destination="Rga-8H-Lc1" eventType="touchUpInside" id="kNL-at-MNf"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a9Y-oy-e2d">
