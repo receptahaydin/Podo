@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol NewItemDelegate: AnyObject {
+    func didCreateItem(item: ListItem)
+}
+
 class NewItemViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var favouriteButton: UIButton!
     
+    weak var delegate: NewItemDelegate?
     var listID: String?
     
     override func viewDidLoad() {
@@ -45,7 +50,7 @@ class NewItemViewController: UIViewController {
         
         let item = ListItem(data: itemData)
         FirestoreManager().addListItem(item: item)
-        //delegate?.didCreateList(list: list)
+        delegate?.didCreateItem(item: item)
         dismiss(animated: true, completion: nil)
     }
 }

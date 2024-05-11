@@ -33,13 +33,13 @@ class ToDoViewController: UIViewController {
         fetchListsAndItemsFromDatabase()
         view.addSubview(floatingButton)
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
-        addRedLineBelowCell(indexPath: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         removeRedLineFromCells()
         addRedLineBelowCell(indexPath: selectedListIndex)
+        filterItems()
     }
     
     override func viewDidLayoutSubviews() {
@@ -84,12 +84,12 @@ class ToDoViewController: UIViewController {
         
         if selectedListIndex == 0 {
             for item in ItemManager.shared.items {
-                if item.isFavourite == true {
+                if item.isFavourite == true || item.listId == "-2" {
                     filteredItems.append(item)
                 }
             }
         } else {
-            var listID = ListManager.shared.lists[selectedListIndex - 1].id
+            let listID = ListManager.shared.lists[selectedListIndex - 1].id
             
             for item in ItemManager.shared.items {
                 if item.listId == listID {
@@ -97,6 +97,8 @@ class ToDoViewController: UIViewController {
                 }
             }
         }
+        
+        tableView.reloadData()
     }
     
     private func addRedLineBelowCell(indexPath: Int) {
@@ -158,6 +160,17 @@ extension ToDoViewController: NewListDelegate {
     }
 }
 
+extension ToDoViewController: NewItemDelegate {
+    func didCreateItem(item: ListItem) {
+        showLoadingIndicator()
+        self.firestoreManager.readItemsFromDatabase { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.filterItems()
+            self?.tableView.reloadData()
+        }
+    }
+}
+
 extension ToDoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = filteredItems[indexPath.row]
@@ -188,7 +201,6 @@ extension ToDoViewController: UICollectionViewDelegate {
             addRedLineBelowCell(indexPath: indexPath.item)
             selectedListIndex = indexPath.item
             filterItems()
-            tableView.reloadData()
         }
     }
 }
