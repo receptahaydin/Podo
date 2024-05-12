@@ -1828,66 +1828,6 @@
             </objects>
             <point key="canvasLocation" x="6276" y="-171"/>
         </scene>
-        <!--New List View Controller-->
-        <scene sceneID="Zaa-pb-Mob">
-            <objects>
-                <viewController storyboardIdentifier="newListVC" id="Rga-8H-Lc1" customClass="NewListViewController" customModule="Podo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="esu-Jn-P0g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-cw-TVM">
-                                <rect key="frame" x="10" y="80.5" width="355" height="566.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="Rga-8H-Lc1" id="IOb-8W-Amd"/>
-                                </connections>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-N3-TeM">
-                                <rect key="frame" x="125.5" y="40" width="124" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-uz-EOh">
-                                <rect key="frame" x="310.5" y="33" width="64.5" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
-                                <connections>
-                                    <action selector="doneClicked:" destination="Rga-8H-Lc1" eventType="touchUpInside" id="Atq-u9-GP9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rHO-Ga-PKk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="bottom" secondItem="GEd-cw-TVM" secondAttribute="bottom" constant="20" id="9aR-d2-lbi"/>
-                            <constraint firstItem="JJQ-N3-TeM" firstAttribute="centerX" secondItem="esu-Jn-P0g" secondAttribute="centerX" id="JUc-zI-C5u"/>
-                            <constraint firstItem="GEd-cw-TVM" firstAttribute="top" secondItem="JJQ-N3-TeM" secondAttribute="bottom" constant="20" id="NlD-hl-8G9"/>
-                            <constraint firstItem="hdg-uz-EOh" firstAttribute="trailing" secondItem="rHO-Ga-PKk" secondAttribute="trailing" id="RCS-Sp-8H7"/>
-                            <constraint firstItem="hdg-uz-EOh" firstAttribute="centerY" secondItem="JJQ-N3-TeM" secondAttribute="centerY" id="VWR-jc-NYe"/>
-                            <constraint firstItem="GEd-cw-TVM" firstAttribute="leading" secondItem="rHO-Ga-PKk" secondAttribute="leading" constant="10" id="quF-CM-Z9J"/>
-                            <constraint firstItem="JJQ-N3-TeM" firstAttribute="top" secondItem="rHO-Ga-PKk" secondAttribute="top" constant="20" id="qzc-Sx-qRe"/>
-                            <constraint firstItem="rHO-Ga-PKk" firstAttribute="trailing" secondItem="GEd-cw-TVM" secondAttribute="trailing" constant="10" id="v4q-Ip-s30"/>
-                            <constraint firstItem="hdg-uz-EOh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JJQ-N3-TeM" secondAttribute="trailing" constant="8" symbolic="YES" id="vgN-h2-6Sv"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="textView" destination="GEd-cw-TVM" id="4x1-IO-id1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rSM-qu-mk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7205.6000000000004" y="-171.36431784107947"/>
-        </scene>
         <!--New Item View Controller-->
         <scene sceneID="dJ2-Ig-OYy">
             <objects>
@@ -1954,11 +1894,12 @@
                     <connections>
                         <outlet property="favouriteButton" destination="6Z8-ay-yWj" id="N7J-Cv-SRh"/>
                         <outlet property="textView" destination="a9Y-oy-e2d" id="HEs-zu-p1p"/>
+                        <outlet property="titleLabel" destination="ydn-1a-nkb" id="fja-Gt-Vv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9f-pE-MgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8072.8000000000002" y="-171.36431784107947"/>
+            <point key="canvasLocation" x="7206" y="-171"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oMn-Tz-ebN">

@@ -37,8 +37,8 @@ class ToDoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        addRedLineBelowCell(indexPath: selectedListIndex)
         if selectedListIndex == 0 {
+            addRedLineBelowCell(indexPath: selectedListIndex)
             floatingButton.isHidden = true
         }
     }
@@ -144,13 +144,17 @@ class ToDoViewController: UIViewController {
     @objc private func didTapFloatingButton() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let newItemVC = sb.instantiateViewController(withIdentifier: "newItemVC") as! NewItemViewController
+        if let presentationController = newItemVC.presentationController as? UISheetPresentationController {
+            presentationController.detents = [.medium()]
+        }
         newItemVC.delegate = self
         newItemVC.listID = findSelectedList()
+        newItemVC.pageType = .addItem
         self.present(newItemVC, animated: true)
     }
 }
 
-extension ToDoViewController: NewListDelegate {
+extension ToDoViewController: NewTodoDelegate {
     func didCreateList(list: List) {
         showLoadingIndicator()
         self.firestoreManager.readListsFromDatabase { [weak self] in
@@ -159,9 +163,7 @@ extension ToDoViewController: NewListDelegate {
             self?.collectionView.reloadData()
         }
     }
-}
-
-extension ToDoViewController: NewItemDelegate {
+    
     func didCreateItem(item: ListItem) {
         showLoadingIndicator()
         self.firestoreManager.readItemsFromDatabase { [weak self] in
@@ -193,15 +195,19 @@ extension ToDoViewController: UICollectionViewDelegate {
         let lastItemIndex = collectionView.numberOfItems(inSection: indexPath.section) - 1
         if indexPath.item == lastItemIndex {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let newListVC = sb.instantiateViewController(withIdentifier: "newListVC") as! NewListViewController
-            newListVC.delegate = self
-            self.present(newListVC, animated: true)
+            let newItemVC = sb.instantiateViewController(withIdentifier: "newItemVC") as! NewItemViewController
+            if let presentationController = newItemVC.presentationController as? UISheetPresentationController {
+                presentationController.detents = [.medium()]
+            }
+            newItemVC.delegate = self
+            newItemVC.pageType = .addList
+            self.present(newItemVC, animated: true)
         } else {
             selectedListIndex = indexPath.item
             addRedLineBelowCell(indexPath: indexPath.item)
         }
         
-        if indexPath.item == 0 {
+        if indexPath.item == 0 || selectedListIndex == 0 {
             floatingButton.isHidden = true
         } else {
             floatingButton.isHidden = false
