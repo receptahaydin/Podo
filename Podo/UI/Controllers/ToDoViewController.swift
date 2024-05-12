@@ -38,6 +38,9 @@ class ToDoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addRedLineBelowCell(indexPath: selectedListIndex)
+        if selectedListIndex == 0 {
+            floatingButton.isHidden = true
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -200,6 +203,12 @@ extension ToDoViewController: UICollectionViewDelegate {
         } else {
             selectedListIndex = indexPath.item
             addRedLineBelowCell(indexPath: indexPath.item)
+        }
+        
+        if indexPath.item == 0 {
+            floatingButton.isHidden = true
+        } else {
+            floatingButton.isHidden = false
         }
     }
 }
