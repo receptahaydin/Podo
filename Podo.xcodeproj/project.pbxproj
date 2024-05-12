@@ -86,13 +86,15 @@
 		DCFB5A062B4D72D200DF2F5D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB5A042B4D72D200DF2F5D /* OnboardingViewController.swift */; };
 		DCFB5A092B4D737500DF2F5D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFB5A082B4D737500DF2F5D /* Colors.xcassets */; };
 		DCFB5A0C2B4D787C00DF2F5D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB5A0B2B4D787C00DF2F5D /* SplashViewController.swift */; };
-		E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */; };
+		FA41B24B58110207DB424CD1 /* Pods_Podo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8D5D9D06BA82A8333E30E8 /* Pods_Podo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.debug.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
+		34812140DA1AE8555984D397 /* Pods-Podo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podo.debug.xcconfig"; path = "Target Support Files/Pods-Podo/Pods-Podo.debug.xcconfig"; sourceTree = "<group>"; };
+		8A8D5D9D06BA82A8333E30E8 /* Pods_Podo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102EBB11EE8BA7B661BDDE8 /* Pods-Podo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podo.release.xcconfig"; path = "Target Support Files/Pods-Podo/Pods-Podo.release.xcconfig"; sourceTree = "<group>"; };
 		B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoDo.release.xcconfig"; path = "Target Support Files/Pods-PoDo/Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
-		CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC021A782BAF0080000250E6 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		DC021A7B2BAF072D000250E6 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
 		DC021A7C2BAF072D000250E6 /* nature.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nature.mp3; sourceTree = "<group>"; };
@@ -180,9 +182,9 @@
 				DC9B27532B78ED0300EFE6D9 /* FirebaseFirestoreSwift in Frameworks */,
 				DCB75DFE2B508DE30036A076 /* FirebaseAppCheck in Frameworks */,
 				DCB75E062B508DE30036A076 /* FirebaseCrashlytics in Frameworks */,
-				E41A364E8EEAE40294D7BDE2 /* Pods_PoDo.framework in Frameworks */,
 				DCB75E092B508E930036A076 /* IQKeyboardManagerSwift in Frameworks */,
 				DCB75E022B508DE30036A076 /* FirebaseAuth in Frameworks */,
+				FA41B24B58110207DB424CD1 /* Pods_Podo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +196,8 @@
 			children = (
 				1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */,
 				B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */,
+				34812140DA1AE8555984D397 /* Pods-Podo.debug.xcconfig */,
+				A102EBB11EE8BA7B661BDDE8 /* Pods-Podo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -201,7 +205,7 @@
 		D6F735E84E90BA30C2C8B677 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA33DEEB9C4185AC7BC16FD1 /* Pods_PoDo.framework */,
+				8A8D5D9D06BA82A8333E30E8 /* Pods_Podo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -466,7 +470,7 @@
 			mainGroup = DCFB59BC2B4D711D00DF2F5D;
 			packageReferences = (
 				DCB75DF42B508DE30036A076 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
 			);
 			productRefGroup = DCFB59C62B4D711D00DF2F5D /* Products */;
 			projectDirPath = "";
@@ -516,7 +520,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PoDo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -529,15 +533,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Podo/Pods-Podo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Podo/Pods-Podo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoDo/Pods-PoDo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Podo/Pods-Podo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -747,7 +751,7 @@
 		};
 		DCFB59DA2B4D711E00DF2F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D23CEEDB38BEA34736808B5 /* Pods-PoDo.debug.xcconfig */;
+			baseConfigurationReference = 34812140DA1AE8555984D397 /* Pods-Podo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -783,7 +787,7 @@
 		};
 		DCFB59DB2B4D711E00DF2F5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4DE1C807EAE66E98B34948A /* Pods-PoDo.release.xcconfig */;
+			baseConfigurationReference = A102EBB11EE8BA7B661BDDE8 /* Pods-Podo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -849,7 +853,7 @@
 				minimumVersion = 10.19.1;
 			};
 		};
-		DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -917,7 +921,7 @@
 		};
 		DCB75E082B508E930036A076 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = DCB75E072B508E930036A076 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */;
 			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

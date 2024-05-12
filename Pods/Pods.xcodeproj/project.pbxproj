@@ -32,6 +32,7 @@
 		1714FDFB0AF4B02211F89D339D8CCFC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
 		19F40EB97D44872C2F155EB91889EEDD /* BarChartDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3F1F9A7B1E3C73663ECC63B84DAEAF /* BarChartDataSetProtocol.swift */; };
 		1A030724AF2EC27ACF3221FA5D79D580 /* MinMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5698FE13C55FBAD528354D50E3235E /* MinMax.swift */; };
+		1B8567A8B603589030B4D7F840392176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
 		1C7423F964AEF53EA37E1B4F2F4C8A3D /* MoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590D657DF62155739053EBC44ED68EE5 /* MoveViewJob.swift */; };
 		1FF421C714EDBE044E5EEB1E0C6A8571 /* FSCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF41AF104CCD7FE019A2A9508F968789 /* FSCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22725F307C8A12F85C2E583CE9D67A68 /* CrossShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD6A70A8DD0C3336CDDE22AABF7F68 /* CrossShapeRenderer.swift */; };
@@ -58,7 +59,6 @@
 		3CCE8A616A323BDE56FA02CAB953BA18 /* BubbleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798AF45489E81F844F4FD0BD9C987712 /* BubbleChartView.swift */; };
 		3E4E56584545A9F057D6A39565EEBE81 /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2F709624E5DAABFC3B35F0500B4978 /* FSCalendar-dummy.m */; };
 		3F7DE7DD33C07E28ABBF80B3AFBCDF44 /* HorizontalBarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD354CA5E91314D41D1B2A68977558 /* HorizontalBarChartRenderer.swift */; };
-		41885C10F54A02117B5770A61DCEC384 /* Pods-PoDo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25196783CAC98CA9FAAA829EF6842CA3 /* Pods-PoDo-dummy.m */; };
 		42361A518637B458CBB971D21E43346E /* CombinedChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252EC168D4B4241509F7463DE51D4FD0 /* CombinedChartView.swift */; };
 		4304139B7049F735A4879E7A14DCA236 /* ScatterChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED60D4EFD3A1E166A0056D848E67E105 /* ScatterChartRenderer.swift */; };
 		4412B151ED4921518E19FA644D282D99 /* LineRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F7D5317C3006D262D4AB5A7E63AC6 /* LineRadarRenderer.swift */; };
@@ -119,7 +119,6 @@
 		78064F135E3DA7F2DC994F14023CB600 /* FlattenCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10A9A5653AF30E2536F2E805DB918F7 /* FlattenCollection.swift */; };
 		7899A9D1751880EC7A2649DF35617F67 /* Sequence+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0A71E2470D875BF438CFE740F271D /* Sequence+KeyPath.swift */; };
 		7A52005D206FA5BEC462EC1ED5E34423 /* XAxisRendererHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB26AB16E41E30A4EDA9595C6D98AB /* XAxisRendererHorizontalBarChart.swift */; };
-		7BECBB4839CC583D7D8BEE7689119D69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
 		7C09D13338B7A0BF4A0EB9763EE60339 /* ChevronUpShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0514C90BCA6BE29D6D53316B2336EFE8 /* ChevronUpShapeRenderer.swift */; };
 		7E98902CA894CFE1F54E7934B24B0B37 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18952BE8824073738C101662F7AF0094 /* FSCalendarCollectionView.m */; };
 		7FDEAD728DF7397DAEE4237F07AD5A70 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2A8087F43D06BC638CC00D792E717 /* FSCalendarHeaderView.m */; };
@@ -187,6 +186,7 @@
 		CF491A4A998823F62438EFF79A37028E /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379BB978A94CCE6F470BFA1725A9AB9 /* ViewPortHandler.swift */; };
 		CF53CF4998B07E3B054A32F34598D911 /* CombinedChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFAF27ABA3292392825DF40C74B6F7E /* CombinedChartRenderer.swift */; };
 		D44078A1F1CDB70D6EE87689EE274CAD /* AnimatedMoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3A27D74F2E41DDB0C11EE66DCBF8F /* AnimatedMoveViewJob.swift */; };
+		D460FDA8A2A54184BB19E38D4E1A2B3C /* Pods-Podo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DCF74582D834037F97DBF4C92C02AC /* Pods-Podo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D806EE791E0C1722A40410F0084F63E6 /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910BE123CB6B4862D2CFF3D740102DCB /* BarChartDataEntry.swift */; };
 		DB13171585A147FFDE19FED165897AD2 /* PieChartDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9FEAEDF0581F8AB50F0D6043BB44F /* PieChartDataSetProtocol.swift */; };
 		DD062811D95B55D3C25F0FDE3008F558 /* RadarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ED8936ED035AB17428FECB0248ABD /* RadarHighlighter.swift */; };
@@ -206,12 +206,12 @@
 		E95EA2841D37DFBF3466B135E5230EE8 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9909664C4B40E10C81A37EA44307D /* Highlight.swift */; };
 		EAEAAF8F0F0344C5C5F036E55BEE8B12 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B916322BE584BD7E6CF7DE95A537C6 /* Chain.swift */; };
 		EAED453972AC1583C649AB1A2B1E02E4 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F912638241CBC9945404771634A17A85 /* Fill.swift */; };
+		EBDD9FEBF462E35D0AAD589C08CE8E46 /* Pods-Podo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCC88C1EAE55F05FFEE2AFF6AA4049 /* Pods-Podo-dummy.m */; };
 		EF96959C3049DAF932F792D19608F437 /* BubbleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD835C5F47EAE574EBB73E9666CD44 /* BubbleChartDataEntry.swift */; };
 		EFA2F1EB7DA69A8C4DD49ADC73F7F556 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6DABC7740F949AAC669F24D49C7EB9 /* Suffix.swift */; };
 		EFE503C8BD962191136CFAB1255DFFE1 /* MarkerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4377F2FF75259AF79555990EF8C7C21 /* MarkerImage.swift */; };
 		F1B9720240D5609A1DE32B8350FE0B5B /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F92CA00E017DEDAC5D181849D0C21B /* FSCalendarCalculator.m */; };
 		F3F18A1FEC8212A61301637E40558A13 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B669E802D8B288AD5F96311B1E5ECB /* FSCalendarAppearance.m */; };
-		F4FA6C51DF3D6D81BF090EF835E73968 /* Pods-PoDo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E037B0E0DF4AC28485EB86E4C0B3116 /* Pods-PoDo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F603462FDFD131FD88F624EFDE944C1D /* Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C5DB9496CC929034606FE456E79E72 /* Unique.swift */; };
 		F7C20C67D0D5A1C73A0A057268A719C1 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F3A738201520B958751E161EA7FE6 /* FSCalendar.m */; };
 		F8DDF36D6B4FF40D16F8D1F19DD11173 /* XAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6129F86546C8992680D7130F481FC47 /* XAxis.swift */; };
@@ -224,20 +224,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1AE01D730B2E7D411483B3DCFCE7DDC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
-			remoteInfo = FSCalendar;
-		};
-		2AE8F9363C78947841E68CF3E7C332FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
-			remoteInfo = Charts;
-		};
 		33A64E33BE75A581D15C04F7233F6756 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -245,19 +231,33 @@
 			remoteGlobalIDString = 2C511EE63C6E7D5843B971D1E441119E;
 			remoteInfo = SwiftAlgorithms;
 		};
-		4717EFA6FA16AA5EE32814881044A768 /* PBXContainerItemProxy */ = {
+		5E93663BB7D7061949F2799C79F75DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C511EE63C6E7D5843B971D1E441119E;
+			remoteInfo = SwiftAlgorithms;
+		};
+		8E1F9D59987B016EBF1186A9E28B3FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A32423E0D02E0A41B4E900FB52F6D139;
 			remoteInfo = SRCountdownTimer;
 		};
-		F7626A665DB65117CBC08499E54CF4C2 /* PBXContainerItemProxy */ = {
+		A6790710EB6E6BB650B14068F6C51023 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C511EE63C6E7D5843B971D1E441119E;
-			remoteInfo = SwiftAlgorithms;
+			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
+			remoteInfo = Charts;
+		};
+		CB6F51950B6570D985EB2B475EACA5CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
+			remoteInfo = FSCalendar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -278,7 +278,9 @@
 		11F92CA00E017DEDAC5D181849D0C21B /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
 		12EC52F6B06FFB17F89B46294EAAC86C /* TransformerHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformerHorizontalBarChart.swift; path = Source/Charts/Utils/TransformerHorizontalBarChart.swift; sourceTree = "<group>"; };
 		132812A13ACCD6EB1A51B6B7EC7B2F70 /* DefaultAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAxisValueFormatter.swift; path = Source/Charts/Formatters/DefaultAxisValueFormatter.swift; sourceTree = "<group>"; };
+		144A693FE1DF6E1B365B63BC02E490DE /* Pods-Podo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Podo-frameworks.sh"; sourceTree = "<group>"; };
 		14DB09C3FC75CE162F4C79AD6E2F40B9 /* RadarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartData.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartData.swift; sourceTree = "<group>"; };
+		1511C97C646FD5A2DFAC44A0C4EAEA72 /* Pods-Podo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Podo.release.xcconfig"; sourceTree = "<group>"; };
 		1732E987EC60D120FC8630612521992D /* PieRadarChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarChartViewBase.swift; path = Source/Charts/Charts/PieRadarChartViewBase.swift; sourceTree = "<group>"; };
 		1754BB17413003E83297D8FB149815CE /* CandleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartDataSet.swift; sourceTree = "<group>"; };
 		180710F07415F7F2C2841D814E8CC041 /* ScatterChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartData.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartData.swift; sourceTree = "<group>"; };
@@ -297,7 +299,6 @@
 		21683D2355165054725BF0ED096BE370 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
 		227AECC99271C37DF7E0E5F0E1A3790F /* Platform+Gestures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Gestures.swift"; path = "Source/Charts/Utils/Platform+Gestures.swift"; sourceTree = "<group>"; };
 		24FC3E566A90EE7FA8051E3BA5D3647C /* AnimatedViewPortJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedViewPortJob.swift; path = Source/Charts/Jobs/AnimatedViewPortJob.swift; sourceTree = "<group>"; };
-		25196783CAC98CA9FAAA829EF6842CA3 /* Pods-PoDo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PoDo-dummy.m"; sourceTree = "<group>"; };
 		252EC168D4B4241509F7463DE51D4FD0 /* CombinedChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartView.swift; path = Source/Charts/Charts/CombinedChartView.swift; sourceTree = "<group>"; };
 		2560F32C9CBF246F129C83CABAD3EB57 /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSCalendar.modulemap; sourceTree = "<group>"; };
 		25BE0746C15BA9C73F92DB904BCEBFEE /* LineChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineChartDataSetProtocol.swift; sourceTree = "<group>"; };
@@ -322,13 +323,16 @@
 		3F473FB6EE9F909FC1CC6A3040CCF5BD /* LineScatterCandleRadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineScatterCandleRadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		41507B7AC1BAB70EA2042161480C60FA /* Permutations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permutations.swift; path = Sources/Algorithms/Permutations.swift; sourceTree = "<group>"; };
 		4205BCAAC64C89DF2D3B6AE2EE21F7F0 /* LineChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartView.swift; path = Source/Charts/Charts/LineChartView.swift; sourceTree = "<group>"; };
+		425125136C98F2B6C69434C0DB79B32E /* Pods-Podo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Podo.debug.xcconfig"; sourceTree = "<group>"; };
 		460C5ABDA07A48050FDFE8BFC5692C0E /* Platform+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Color.swift"; path = "Source/Charts/Utils/Platform+Color.swift"; sourceTree = "<group>"; };
 		469B52088AFA664748E7F131339D510B /* XAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRenderer.swift; path = Source/Charts/Renderers/XAxisRenderer.swift; sourceTree = "<group>"; };
 		47B916322BE584BD7E6CF7DE95A537C6 /* Chain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chain.swift; path = Sources/Algorithms/Chain.swift; sourceTree = "<group>"; };
+		48DCF74582D834037F97DBF4C92C02AC /* Pods-Podo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Podo-umbrella.h"; sourceTree = "<group>"; };
 		4A6DABC7740F949AAC669F24D49C7EB9 /* Suffix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Suffix.swift; path = Sources/Algorithms/Suffix.swift; sourceTree = "<group>"; };
 		4A88DEFA489349505ADFDB691136315C /* ChevronDownShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChevronDownShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift; sourceTree = "<group>"; };
 		4AEE6821555C01A9E55394F67A1CFA1D /* YAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRenderer.swift; path = Source/Charts/Renderers/YAxisRenderer.swift; sourceTree = "<group>"; };
 		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4C2C074DD7CD1FB03B3D0EE4FAE0ACB0 /* Pods-Podo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Podo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4D5FE75B93771EF0686F5B330D427A54 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
 		4EE90A60C7277022E39B29C4D1BFE8D5 /* Joined.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Joined.swift; path = Sources/Algorithms/Joined.swift; sourceTree = "<group>"; };
 		503CA555B71DD7A81473DEB98D377DF5 /* PieHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieHighlighter.swift; path = Source/Charts/Highlight/PieHighlighter.swift; sourceTree = "<group>"; };
@@ -344,17 +348,15 @@
 		590D657DF62155739053EBC44ED68EE5 /* MoveViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveViewJob.swift; path = Source/Charts/Jobs/MoveViewJob.swift; sourceTree = "<group>"; };
 		5B9565D82ABEA64AD7AC7DF597E9EAAE /* CombinedChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartDataProvider.swift; path = Source/Charts/Interfaces/CombinedChartDataProvider.swift; sourceTree = "<group>"; };
 		5C88EBAC5CA844551DFC3BCF77A4E0B4 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarSeparatorDecorationView.h; path = FSCalendar/FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
-		5D100E04616CE7694E7BD6BBFF827B97 /* Pods-PoDo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PoDo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5D3AE5588D0D3D3AAA32711D76E5D6E2 /* Pods-PoDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoDo.debug.xcconfig"; sourceTree = "<group>"; };
 		5EDD354CA5E91314D41D1B2A68977558 /* HorizontalBarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartRenderer.swift; path = Source/Charts/Renderers/HorizontalBarChartRenderer.swift; sourceTree = "<group>"; };
 		5FD4473A1C2B8653ADB619530D6DF71C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		60064E1D8934453966098DE39F22BED9 /* Charts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Charts.release.xcconfig; sourceTree = "<group>"; };
 		603AAFE203945ECEC37CDE21D8817E5A /* XShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/XShapeRenderer.swift; sourceTree = "<group>"; };
+		6140EF4E3CF0E872A05B3367CDD6B550 /* Pods-Podo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Podo-acknowledgements.plist"; sourceTree = "<group>"; };
+		6372D648BD61F9DA1BE0E16718B89BE1 /* Pods-Podo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Podo-Info.plist"; sourceTree = "<group>"; };
 		65FB26AB16E41E30A4EDA9595C6D98AB /* XAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
 		6757DEEFC061D43973A3C9FA6953BC68 /* ValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueFormatter.swift; path = Source/Charts/Formatters/ValueFormatter.swift; sourceTree = "<group>"; };
 		68805B33662482C7D1EB8BDC9EBDD78E /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
-		69C6FB415BF077E3A6749FFC1BB2625D /* Pods-PoDo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PoDo"; path = Pods_PoDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EFDB4045819355D842FBBB917A963F /* Pods-PoDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoDo.release.xcconfig"; sourceTree = "<group>"; };
 		6A6B57972432E307E51229B8C389D2B5 /* FSCalendarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
 		6BD7FAF42F3FB22AB3F7909E5BD0F982 /* Platform+Touch Handling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Touch Handling.swift"; path = "Source/Charts/Utils/Platform+Touch Handling.swift"; sourceTree = "<group>"; };
 		6CD61FF372CD0C0B7C3FCD8D03DD0672 /* SRCountdownTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SRCountdownTimer-dummy.m"; sourceTree = "<group>"; };
@@ -369,11 +371,11 @@
 		7648062AF1AF90BCD8DA2D79B2C1F8B4 /* LineRadarChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/LineRadarChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		790F6D50619727038991884AD86420F1 /* CircleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift; sourceTree = "<group>"; };
 		798AF45489E81F844F4FD0BD9C987712 /* BubbleChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartView.swift; path = Source/Charts/Charts/BubbleChartView.swift; sourceTree = "<group>"; };
+		7ACCC88C1EAE55F05FFEE2AFF6AA4049 /* Pods-Podo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Podo-dummy.m"; sourceTree = "<group>"; };
+		7B067EA7D5389B7817BDA203440FDE9B /* Pods-Podo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Podo.modulemap"; sourceTree = "<group>"; };
 		7CFAF27ABA3292392825DF40C74B6F7E /* CombinedChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartRenderer.swift; path = Source/Charts/Renderers/CombinedChartRenderer.swift; sourceTree = "<group>"; };
-		7E037B0E0DF4AC28485EB86E4C0B3116 /* Pods-PoDo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PoDo-umbrella.h"; sourceTree = "<group>"; };
 		7FA0A71E2470D875BF438CFE740F271D /* Sequence+KeyPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+KeyPath.swift"; path = "Source/Charts/Utils/Sequence+KeyPath.swift"; sourceTree = "<group>"; };
 		7FF287BBF8A769C3AE7FE480A6F92902 /* AdjacentPairs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdjacentPairs.swift; path = Sources/Algorithms/AdjacentPairs.swift; sourceTree = "<group>"; };
-		809CD0D190B09D2F09178CD4912D32EC /* Pods-PoDo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoDo-acknowledgements.plist"; sourceTree = "<group>"; };
 		80F1AB3EF2CBB1CCE623EDE720565C15 /* DataApproximator+N.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataApproximator+N.swift"; path = "Source/Charts/Filters/DataApproximator+N.swift"; sourceTree = "<group>"; };
 		836CEE1C2903A21C587334AC8D88E06D /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Source/Charts/Components/Description.swift; sourceTree = "<group>"; };
 		83B8E517432CD2562966B6B0FEC62F84 /* Platform+Graphics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Graphics.swift"; path = "Source/Charts/Utils/Platform+Graphics.swift"; sourceTree = "<group>"; };
@@ -381,7 +383,6 @@
 		854DA58E1C86E08959722CBAB3B12273 /* BubbleChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartRenderer.swift; path = Source/Charts/Renderers/BubbleChartRenderer.swift; sourceTree = "<group>"; };
 		895053D06B2936F3CEAA8E67879785FC /* SRCountdownTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SRCountdownTimer-umbrella.h"; sourceTree = "<group>"; };
 		8A52B2DB6075B3F819046017688F40FF /* PieChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartRenderer.swift; path = Source/Charts/Renderers/PieChartRenderer.swift; sourceTree = "<group>"; };
-		8B667CF71D41CDF4F46BCE8E648FB3F1 /* Pods-PoDo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoDo.modulemap"; sourceTree = "<group>"; };
 		8CC24F7D9CF5C176BD109E422D9F6AF5 /* ChartBaseDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartBaseDataSet.swift; path = Source/Charts/Data/Implementations/ChartBaseDataSet.swift; sourceTree = "<group>"; };
 		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SRCountdownTimer; path = SRCountdownTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +394,7 @@
 		95209B8BB966524BC76543F99C75F5FE /* FSCalendar */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95328712FF17FF078A0E2780A8728249 /* RadarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartView.swift; path = Source/Charts/Charts/RadarChartView.swift; sourceTree = "<group>"; };
 		9750205DC9E17E1FD57DECA2AD6ABCFA /* Highlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlighter.swift; path = Source/Charts/Highlight/Highlighter.swift; sourceTree = "<group>"; };
+		978D46FA9E298B744FE620ED02346461 /* Pods-Podo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Podo"; path = Pods_Podo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BFF62BA8F0EC36265208F4D127080 /* ChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataEntry.swift; sourceTree = "<group>"; };
 		998C8179CF569707494F114FA8249B8E /* CandleChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/CandleChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		99CA222C712062A7A3299A2F21FD30BE /* Windows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Windows.swift; path = Sources/Algorithms/Windows.swift; sourceTree = "<group>"; };
@@ -428,7 +430,6 @@
 		B6A15E73E12E532879BDD160F91C34ED /* Product.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Sources/Algorithms/Product.swift; sourceTree = "<group>"; };
 		B7105F48E3BC97A00308B9F019D003C4 /* BarLineScatterCandleBubbleChartDataSetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleChartDataSetProtocol.swift; path = Source/Charts/Data/Interfaces/BarLineScatterCandleBubbleChartDataSetProtocol.swift; sourceTree = "<group>"; };
 		B83871161AECC48F8D7AE93EA08B1A4D /* BarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartRenderer.swift; path = Source/Charts/Renderers/BarChartRenderer.swift; sourceTree = "<group>"; };
-		BA2A35404AC734EF09215345CBD3FCAF /* Pods-PoDo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoDo-Info.plist"; sourceTree = "<group>"; };
 		BA605E7A432978D9DF7434C9D8DE10B3 /* LineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift; sourceTree = "<group>"; };
 		BACD835C5F47EAE574EBB73E9666CD44 /* BubbleChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/BubbleChartDataEntry.swift; sourceTree = "<group>"; };
 		BB0A01ABA76FA9B0A659EA2E7D690076 /* FSCalendarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
@@ -451,7 +452,6 @@
 		CBFF8D42DC79E80458D15D2C0F95A72C /* FSCalendarExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
 		CCB9CD551F5CBF399B4920B694B220C7 /* XAxisRendererRadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererRadarChart.swift; path = Source/Charts/Renderers/XAxisRendererRadarChart.swift; sourceTree = "<group>"; };
 		CD19E98B3EA0563BDD61F14B0D384730 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
-		CE5ED64D22684F06EE4C006ED2C4AD3B /* Pods-PoDo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoDo-frameworks.sh"; sourceTree = "<group>"; };
 		CE942234890ABC843298A724858E389C /* SwiftAlgorithms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftAlgorithms-prefix.pch"; sourceTree = "<group>"; };
 		CFC859C120F26589438BF201D31A11B1 /* Platform+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Platform+Accessibility.swift"; path = "Source/Charts/Utils/Platform+Accessibility.swift"; sourceTree = "<group>"; };
 		D0588F45BA2C0F7130950CF7747098F9 /* ChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartData.swift; path = Source/Charts/Data/Implementations/Standard/ChartData.swift; sourceTree = "<group>"; };
@@ -516,19 +516,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5062C72F15BFA6FF28C186CA2D7B157F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BECBB4839CC583D7D8BEE7689119D69 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5159F981F147F67FF7942CB4F410A55B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				95A890F78881D4122FF82989C52A1670 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DF862379FD0E66B54C0AEFC25DD5D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B8567A8B603589030B4D7F840392176 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,23 +553,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03548706D06F216F30687B714B4AD5DB /* Pods-PoDo */ = {
-			isa = PBXGroup;
-			children = (
-				8B667CF71D41CDF4F46BCE8E648FB3F1 /* Pods-PoDo.modulemap */,
-				5D100E04616CE7694E7BD6BBFF827B97 /* Pods-PoDo-acknowledgements.markdown */,
-				809CD0D190B09D2F09178CD4912D32EC /* Pods-PoDo-acknowledgements.plist */,
-				25196783CAC98CA9FAAA829EF6842CA3 /* Pods-PoDo-dummy.m */,
-				CE5ED64D22684F06EE4C006ED2C4AD3B /* Pods-PoDo-frameworks.sh */,
-				BA2A35404AC734EF09215345CBD3FCAF /* Pods-PoDo-Info.plist */,
-				7E037B0E0DF4AC28485EB86E4C0B3116 /* Pods-PoDo-umbrella.h */,
-				5D3AE5588D0D3D3AAA32711D76E5D6E2 /* Pods-PoDo.debug.xcconfig */,
-				69EFDB4045819355D842FBBB917A963F /* Pods-PoDo.release.xcconfig */,
-			);
-			name = "Pods-PoDo";
-			path = "Target Support Files/Pods-PoDo";
-			sourceTree = "<group>";
-		};
 		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,12 +818,16 @@
 			path = SwiftAlgorithms;
 			sourceTree = "<group>";
 		};
-		7D2F6AFC22A062B80BC464DC081413B3 /* Targets Support Files */ = {
+		7F368C28EC9940A62BF677A767FB6611 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03548706D06F216F30687B714B4AD5DB /* Pods-PoDo */,
+				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */,
+				95209B8BB966524BC76543F99C75F5FE /* FSCalendar */,
+				978D46FA9E298B744FE620ED02346461 /* Pods-Podo */,
+				8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */,
+				F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9D772DDB5337EEE72C25D17CECF1E2E4 /* Support Files */ = {
@@ -868,18 +855,6 @@
 			path = SRCountdownTimer;
 			sourceTree = "<group>";
 		};
-		B78CF29A206624F6D3C5E190F477240F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts */,
-				95209B8BB966524BC76543F99C75F5FE /* FSCalendar */,
-				69C6FB415BF077E3A6749FFC1BB2625D /* Pods-PoDo */,
-				8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */,
-				F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BB6EA0F1FDED8CF4BE1B1603716558DD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -901,9 +876,26 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				60FCCAF0C17B2614C00D4C8F2222AD91 /* Pods */,
-				B78CF29A206624F6D3C5E190F477240F /* Products */,
-				7D2F6AFC22A062B80BC464DC081413B3 /* Targets Support Files */,
+				7F368C28EC9940A62BF677A767FB6611 /* Products */,
+				F4B89D29D8A53B4BD20D23E4CA94A57B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		DE22CFAE4DCCEB34DCB2E23D52E6BC1B /* Pods-Podo */ = {
+			isa = PBXGroup;
+			children = (
+				7B067EA7D5389B7817BDA203440FDE9B /* Pods-Podo.modulemap */,
+				4C2C074DD7CD1FB03B3D0EE4FAE0ACB0 /* Pods-Podo-acknowledgements.markdown */,
+				6140EF4E3CF0E872A05B3367CDD6B550 /* Pods-Podo-acknowledgements.plist */,
+				7ACCC88C1EAE55F05FFEE2AFF6AA4049 /* Pods-Podo-dummy.m */,
+				144A693FE1DF6E1B365B63BC02E490DE /* Pods-Podo-frameworks.sh */,
+				6372D648BD61F9DA1BE0E16718B89BE1 /* Pods-Podo-Info.plist */,
+				48DCF74582D834037F97DBF4C92C02AC /* Pods-Podo-umbrella.h */,
+				425125136C98F2B6C69434C0DB79B32E /* Pods-Podo.debug.xcconfig */,
+				1511C97C646FD5A2DFAC44A0C4EAEA72 /* Pods-Podo.release.xcconfig */,
+			);
+			name = "Pods-Podo";
+			path = "Target Support Files/Pods-Podo";
 			sourceTree = "<group>";
 		};
 		E313301E21D2444D2E1C7FA5F93BDECC /* Support Files */ = {
@@ -931,6 +923,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F4B89D29D8A53B4BD20D23E4CA94A57B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE22CFAE4DCCEB34DCB2E23D52E6BC1B /* Pods-Podo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -950,11 +950,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B55516B3289758D9A91E411AC44157A /* Headers */ = {
+		6AAC8C7CC0F661CE4B26EBC753FAD8EA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FA6C51DF3D6D81BF090EF835E73968 /* Pods-PoDo-umbrella.h in Headers */,
+				D460FDA8A2A54184BB19E38D4E1A2B3C /* Pods-Podo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,28 +1029,6 @@
 			productReference = F3E7458F7D38C89A9DE4BBACD3450C88 /* SwiftAlgorithms */;
 			productType = "com.apple.product-type.framework";
 		};
-		919891CD9DCBF161EECE31EE3F4D121D /* Pods-PoDo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52F996EAF9D58A8898D8EE233D9F5D58 /* Build configuration list for PBXNativeTarget "Pods-PoDo" */;
-			buildPhases = (
-				5B55516B3289758D9A91E411AC44157A /* Headers */,
-				5A3B1886B93770750A9DE5DE0A4E9D41 /* Sources */,
-				5062C72F15BFA6FF28C186CA2D7B157F /* Frameworks */,
-				17A9FF128037BE79E4872E0157206E9B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C4E993D29D9EE9CF8313DF053CCB817 /* PBXTargetDependency */,
-				80ED82D73AAAF63A6C159FBAAF49494D /* PBXTargetDependency */,
-				EB76DA5FCEFE872A2B09A10EED645334 /* PBXTargetDependency */,
-				B19051DEEB2B95846431B383135AB913 /* PBXTargetDependency */,
-			);
-			name = "Pods-PoDo";
-			productName = Pods_PoDo;
-			productReference = 69C6FB415BF077E3A6749FFC1BB2625D /* Pods-PoDo */;
-			productType = "com.apple.product-type.framework";
-		};
 		A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3EEE17F402D41D393B04007AEA48CF /* Build configuration list for PBXNativeTarget "SRCountdownTimer" */;
@@ -1067,6 +1045,28 @@
 			name = SRCountdownTimer;
 			productName = SRCountdownTimer;
 			productReference = 8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */;
+			productType = "com.apple.product-type.framework";
+		};
+		ADE109BF3C334D5008E3D329E38BEC84 /* Pods-Podo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0137D00A4A99589A8D7518218A4A07A6 /* Build configuration list for PBXNativeTarget "Pods-Podo" */;
+			buildPhases = (
+				6AAC8C7CC0F661CE4B26EBC753FAD8EA /* Headers */,
+				61948222ACF29C58779D0F54A4912744 /* Sources */,
+				78DF862379FD0E66B54C0AEFC25DD5D0 /* Frameworks */,
+				3B6886EE7E43270C283FE5D0FC4F0C0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC37AB3F10F5769C12D044ADA417F63 /* PBXTargetDependency */,
+				1B390BA0EE8D9EE8FE3EBC70C60CAEC7 /* PBXTargetDependency */,
+				F0A66CE38AD973959685170118321267 /* PBXTargetDependency */,
+				DA4AA9BB40CDAF2880482BB969B43FA1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Podo";
+			productName = Pods_Podo;
+			productReference = 978D46FA9E298B744FE620ED02346461 /* Pods-Podo */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */ = {
@@ -1106,13 +1106,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B78CF29A206624F6D3C5E190F477240F /* Products */;
+			productRefGroup = 7F368C28EC9940A62BF677A767FB6611 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */,
 				13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */,
-				919891CD9DCBF161EECE31EE3F4D121D /* Pods-PoDo */,
+				ADE109BF3C334D5008E3D329E38BEC84 /* Pods-Podo */,
 				A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */,
 				2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */,
 			);
@@ -1120,7 +1120,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		17A9FF128037BE79E4872E0157206E9B /* Resources */ = {
+		3B6886EE7E43270C283FE5D0FC4F0C0A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1339,11 +1339,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A3B1886B93770750A9DE5DE0A4E9D41 /* Sources */ = {
+		61948222ACF29C58779D0F54A4912744 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41885C10F54A02117B5770A61DCEC384 /* Pods-PoDo-dummy.m in Sources */,
+				EBDD9FEBF462E35D0AAD589C08CE8E46 /* Pods-Podo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,17 +1382,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7C4E993D29D9EE9CF8313DF053CCB817 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
-			targetProxy = 2AE8F9363C78947841E68CF3E7C332FE /* PBXContainerItemProxy */;
-		};
-		80ED82D73AAAF63A6C159FBAAF49494D /* PBXTargetDependency */ = {
+		1B390BA0EE8D9EE8FE3EBC70C60CAEC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FSCalendar;
 			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
-			targetProxy = 1AE01D730B2E7D411483B3DCFCE7DDC5 /* PBXContainerItemProxy */;
+			targetProxy = CB6F51950B6570D985EB2B475EACA5CF /* PBXContainerItemProxy */;
+		};
+		5CC37AB3F10F5769C12D044ADA417F63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
+			targetProxy = A6790710EB6E6BB650B14068F6C51023 /* PBXContainerItemProxy */;
 		};
 		90D0AA0826C00E3CFC0648F25767FAA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1400,24 +1400,24 @@
 			target = 2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */;
 			targetProxy = 33A64E33BE75A581D15C04F7233F6756 /* PBXContainerItemProxy */;
 		};
-		B19051DEEB2B95846431B383135AB913 /* PBXTargetDependency */ = {
+		DA4AA9BB40CDAF2880482BB969B43FA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftAlgorithms;
 			target = 2C511EE63C6E7D5843B971D1E441119E /* SwiftAlgorithms */;
-			targetProxy = F7626A665DB65117CBC08499E54CF4C2 /* PBXContainerItemProxy */;
+			targetProxy = 5E93663BB7D7061949F2799C79F75DE1 /* PBXContainerItemProxy */;
 		};
-		EB76DA5FCEFE872A2B09A10EED645334 /* PBXTargetDependency */ = {
+		F0A66CE38AD973959685170118321267 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SRCountdownTimer;
 			target = A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */;
-			targetProxy = 4717EFA6FA16AA5EE32814881044A768 /* PBXContainerItemProxy */;
+			targetProxy = 8E1F9D59987B016EBF1186A9E28B3FEC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FEB5AF250705E848036BEE98D7AB1BB /* Debug */ = {
+		1CC704E518D0E0B0B0E5DE4B64173014 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D3AE5588D0D3D3AAA32711D76E5D6E2 /* Pods-PoDo.debug.xcconfig */;
+			baseConfigurationReference = 1511C97C646FD5A2DFAC44A0C4EAEA72 /* Pods-Podo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1429,7 +1429,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PoDo/Pods-PoDo-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Podo/Pods-Podo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1438,7 +1438,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PoDo/Pods-PoDo.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Podo/Pods-Podo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1447,10 +1447,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		394A021FB53645E8C38517D1BBF9AC40 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1486,44 +1487,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		5D364D18DD52B25C1535073B2932E1C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69EFDB4045819355D842FBBB917A963F /* Pods-PoDo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PoDo/Pods-PoDo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PoDo/Pods-PoDo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		6A3410D1E419FC53E143DD1FF7FAB1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1589,6 +1552,43 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFED0219EFA810C8C0CEA173BC176D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425125136C98F2B6C69434C0DB79B32E /* Pods-Podo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Podo/Pods-Podo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Podo/Pods-Podo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1903,6 +1903,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0137D00A4A99589A8D7518218A4A07A6 /* Build configuration list for PBXNativeTarget "Pods-Podo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFED0219EFA810C8C0CEA173BC176D3 /* Debug */,
+				1CC704E518D0E0B0B0E5DE4B64173014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3C9F1E8CC2EB7C944989DFC3E98E9033 /* Build configuration list for PBXNativeTarget "Charts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1926,15 +1935,6 @@
 			buildConfigurations = (
 				73FBC83DA060410357FD0C30D352B208 /* Debug */,
 				A160472351B46C565056074E8EAAC9F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52F996EAF9D58A8898D8EE233D9F5D58 /* Build configuration list for PBXNativeTarget "Pods-PoDo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FEB5AF250705E848036BEE98D7AB1BB /* Debug */,
-				5D364D18DD52B25C1535073B2932E1C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

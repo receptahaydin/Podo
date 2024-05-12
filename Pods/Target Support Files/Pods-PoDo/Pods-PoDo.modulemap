@@ -1,5 +1,5 @@
-framework module Pods_PoDo {
-  umbrella header "Pods-PoDo-umbrella.h"
+framework module Pods_Podo {
+  umbrella header "Pods-Podo-umbrella.h"
 
   export *
   module * { export * }

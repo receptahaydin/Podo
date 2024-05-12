@@ -37,9 +37,7 @@ class ToDoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        removeRedLineFromCells()
         addRedLineBelowCell(indexPath: selectedListIndex)
-        filterItems()
     }
     
     override func viewDidLayoutSubviews() {
@@ -73,9 +71,7 @@ class ToDoViewController: UIViewController {
         
         group.notify(queue: .main) {
             self.hideLoadingIndicator()
-            self.filterItems()
             self.collectionView.reloadData()
-            self.tableView.reloadData()
         }
     }
     
@@ -102,11 +98,14 @@ class ToDoViewController: UIViewController {
     }
     
     private func addRedLineBelowCell(indexPath: Int) {
+        removeRedLineFromCells()
+        
         guard let cell = collectionView.cellForItem(at: IndexPath(item: indexPath, section: 0)) else { return }
         let line = UIView(frame: CGRect(x: 0, y: cell.frame.height - 2, width: cell.frame.width, height: 2))
         line.backgroundColor = .podoRed
         line.tag = 100
         cell.addSubview(line)
+        
         filterItems()
     }
     
@@ -199,7 +198,6 @@ extension ToDoViewController: UICollectionViewDelegate {
             newListVC.delegate = self
             self.present(newListVC, animated: true)
         } else {
-            removeRedLineFromCells()
             selectedListIndex = indexPath.item
             addRedLineBelowCell(indexPath: indexPath.item)
         }
@@ -219,7 +217,6 @@ extension ToDoViewController: UICollectionViewDataSource {
             cell.configure(name: list.title)
         }
 
-        removeRedLineFromCells()
         addRedLineBelowCell(indexPath: selectedListIndex)
         
         return cell
