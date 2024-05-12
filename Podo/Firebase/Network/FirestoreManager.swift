@@ -178,6 +178,34 @@ class FirestoreManager {
         }
     }
     
+    func updateCompletedState(itemID: String, isCompleted: Bool, completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Todos").document(itemID)
+        
+        taskDocumentRef.updateData(["isCompleted": isCompleted]) { error in
+            if let error = error {
+                print("Error updating item state: \(error.localizedDescription)")
+            } else {
+                print("Item state updated successfully.")
+            }
+            
+            completion(error)
+        }
+    }
+    
+    func updateFavouriteState(itemID: String, isFavourite: Bool, completion: @escaping (Error?) -> Void) {
+        let taskDocumentRef = db.collection("Users").document(getCurrentUserID()!).collection("Todos").document(itemID)
+        
+        taskDocumentRef.updateData(["isFavourite": isFavourite]) { error in
+            if let error = error {
+                print("Error updating item favourite: \(error.localizedDescription)")
+            } else {
+                print("Item favourite updated successfully.")
+            }
+            
+            completion(error)
+        }
+    }
+    
     func getUserInfo(completion: @escaping (String?, String?) -> Void) {
         if let currentUser = Auth.auth().currentUser {
             let userDocumentRef = db.collection("Users").document(currentUser.uid)

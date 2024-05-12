@@ -83,7 +83,7 @@ class ToDoViewController: UIViewController {
         
         if selectedListIndex == 0 {
             for item in ItemManager.shared.items {
-                if item.isFavourite == true || item.listId == "-2" {
+                if item.isFavourite == true {
                     filteredItems.append(item)
                 }
             }
@@ -138,11 +138,7 @@ class ToDoViewController: UIViewController {
             }
         }
         
-        if selectedIndex == 0 {
-            return "-2"
-        } else {
-            return ListManager.shared.lists[selectedIndex - 1].id
-        }
+        return ListManager.shared.lists[selectedIndex - 1].id
     }
     
     @objc private func didTapFloatingButton() {
@@ -225,7 +221,7 @@ extension ToDoViewController: UICollectionViewDataSource {
             let list = ListManager.shared.lists[indexPath.item - 1]
             cell.configure(name: list.title)
         }
-
+        
         addRedLineBelowCell(indexPath: selectedListIndex)
         
         return cell
