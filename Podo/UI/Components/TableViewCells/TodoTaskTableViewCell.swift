@@ -16,7 +16,7 @@ class TodoTaskTableViewCell: UITableViewCell {
     var isCompleted = false
     var isFavourite = false
     var itemID: String?
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -29,77 +29,49 @@ class TodoTaskTableViewCell: UITableViewCell {
         itemID = item.id
         taskName.text = item.title
         
-        if item.isFavourite {
-            favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        } else {
-            favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
-        }
+        configureFavouriteState(isFavourite: item.isFavourite)
+        configureCompletedState(isCompleted: item.isCompleted)
+    }
+    
+    private func configureCompletedState(isCompleted: Bool) {
+        self.isCompleted = isCompleted
+        let imageName = isCompleted ? "checkmark.square.fill" : "square"
+        completedButton.setImage(UIImage(systemName: imageName), for: .normal)
         
-        if item.isCompleted {
-            completedButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-            
-            taskName.attributedText = NSAttributedString(
-                string: taskName.text!,
-                attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue]
-            )
-        } else {
-            completedButton.setImage(UIImage(systemName: "square"), for: .normal)
-            
-            taskName.attributedText = NSAttributedString(
-                string: taskName.text!,
-                attributes: [:]
-            )
-        }
+        taskName.attributedText = NSAttributedString(
+            string: taskName.text ?? "",
+            attributes: isCompleted ? [.strikethroughStyle: NSUnderlineStyle.single.rawValue] : [:]
+        )
+    }
+    
+    private func configureFavouriteState(isFavourite: Bool) {
+        self.isFavourite = isFavourite
+        let imageName = isFavourite ? "star.fill" : "star"
+        favouriteButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
     
     @IBAction func completedButtonAction(_ sender: UIButton) {
         isCompleted.toggle()
-        if isCompleted {
-            completedButton.setImage(UIImage(systemName: "square"), for: .normal)
-            
-            taskName.attributedText = NSAttributedString(
-                string: taskName.text!,
-                attributes: [:]
-            )
-            
-            FirestoreManager().updateCompletedState(itemID: itemID!, isCompleted: false) { error in
-                if let error = error {
-                    print("Error updating item state: \(error.localizedDescription)")
-                }
-            }
-        } else {
-            completedButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-            
-            taskName.attributedText = NSAttributedString(
-                string: taskName.text!,
-                attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue]
-            )
-            
-            FirestoreManager().updateCompletedState(itemID: itemID!, isCompleted: true) { error in
-                if let error = error {
-                    print("Error updating item state: \(error.localizedDescription)")
-                }
+        configureCompletedState(isCompleted: isCompleted)
+        
+        guard let itemID = itemID else { return }
+        
+        FirestoreManager().updateCompletedState(itemID: itemID, isCompleted: isCompleted) { error in
+            if let error = error {
+                print("Error updating item state: \(error.localizedDescription)")
             }
         }
     }
     
     @IBAction func favoruiteButtonAction(_ sender: UIButton) {
         isFavourite.toggle()
-        if isFavourite {
-            favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
-            
-            FirestoreManager().updateFavouriteState(itemID: itemID!, isFavourite: false) { error in
-                if let error = error {
-                    print("Error updating item favourite: \(error.localizedDescription)")
-                }
-            }
-        } else {
-            favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-            
-            FirestoreManager().updateFavouriteState(itemID: itemID!, isFavourite: true) { error in
-                if let error = error {
-                    print("Error updating item favourite: \(error.localizedDescription)")
-                }
+        configureFavouriteState(isFavourite: isFavourite)
+        
+        guard let itemID = itemID else { return }
+        
+        FirestoreManager().updateFavouriteState(itemID: itemID, isFavourite: isFavourite) { error in
+            if let error = error {
+                print("Error updating item favourite: \(error.localizedDescription)")
             }
         }
     }
