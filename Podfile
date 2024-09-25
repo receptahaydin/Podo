@@ -1,4 +1,4 @@
-target 'PoDo' do
+target 'Podo' do
   use_frameworks!
   # Pods for PoDo
 	pod 'SRCountdownTimer'
