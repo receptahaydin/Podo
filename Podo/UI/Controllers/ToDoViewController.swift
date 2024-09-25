@@ -13,7 +13,13 @@ class ToDoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let firestoreManager = FirestoreManager()
-    private var selectedListIndex: Int = 0
+    
+    private var selectedListIndex: Int = 0 {
+        didSet {
+            updateFloatingButtonVisibility()
+        }
+    }
+    
     var filteredItems: [ListItem] = []
     
     private let floatingButton: UIButton = {
@@ -35,14 +41,6 @@ class ToDoViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(didTapFloatingButton), for: .touchUpInside)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if selectedListIndex == 0 {
-            addRedLineBelowCell(indexPath: selectedListIndex)
-            floatingButton.isHidden = true
-        }
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -55,6 +53,10 @@ class ToDoViewController: UIViewController {
                                       height: 60)
         
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: floatingButton.frame.size.height + 30, right: 0)
+    }
+    
+    private func updateFloatingButtonVisibility() {
+        floatingButton.isHidden = selectedListIndex == 0
     }
     
     func fetchListsAndItemsFromDatabase() {
@@ -205,12 +207,6 @@ extension ToDoViewController: UICollectionViewDelegate {
         } else {
             selectedListIndex = indexPath.item
             addRedLineBelowCell(indexPath: indexPath.item)
-        }
-        
-        if indexPath.item == 0 || selectedListIndex == 0 {
-            floatingButton.isHidden = true
-        } else {
-            floatingButton.isHidden = false
         }
     }
 }
