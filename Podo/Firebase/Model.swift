@@ -67,13 +67,14 @@ struct List {
 
 struct ListItem {
     var id: String
-    var isCompleted = false
+    var isCompleted: Bool
     var isFavourite: Bool
     var listId: String
     var title: String
     
     init(data: [String: Any]) {
         self.id = ""
+        isCompleted = data["isCompleted"] as? Bool ?? false
         isFavourite = data["isFavourite"] as? Bool ?? false
         listId = data["listId"] as? String ?? ""
         title = data["title"] as? String ?? ""

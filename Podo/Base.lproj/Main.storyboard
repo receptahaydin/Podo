@@ -2381,56 +2381,6 @@
             <point key="canvasLocation" x="711" y="-2"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="9HH-z8-9Vk">
-            <size key="intrinsicContentSize" width="19.333333333333332" height="22.333333333333332"/>
-        </designable>
-        <designable name="BoE-KI-FCw">
-            <size key="intrinsicContentSize" width="17.666666666666668" height="22"/>
-        </designable>
-        <designable name="BrN-E1-7HJ">
-            <size key="intrinsicContentSize" width="76" height="34"/>
-        </designable>
-        <designable name="HpR-D4-Pgr">
-            <size key="intrinsicContentSize" width="19.666666666666668" height="22"/>
-        </designable>
-        <designable name="NTp-K8-Da6">
-            <size key="intrinsicContentSize" width="66" height="34"/>
-        </designable>
-        <designable name="SBP-RE-5nw">
-            <size key="intrinsicContentSize" width="15" height="22"/>
-        </designable>
-        <designable name="WzP-r4-IYr">
-            <size key="intrinsicContentSize" width="69" height="34"/>
-        </designable>
-        <designable name="YQs-e3-YTl">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
-        </designable>
-        <designable name="bsS-Ka-me4">
-            <size key="intrinsicContentSize" width="69" height="34"/>
-        </designable>
-        <designable name="cMZ-7l-ijw">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
-        </designable>
-        <designable name="ehf-QO-IM1">
-            <size key="intrinsicContentSize" width="78" height="34"/>
-        </designable>
-        <designable name="psU-Nu-MFg">
-            <size key="intrinsicContentSize" width="78" height="34"/>
-        </designable>
-        <designable name="s8d-EB-DDs">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
-        </designable>
-        <designable name="tbu-dQ-fYF">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
-        </designable>
-        <designable name="xId-P7-bj3">
-            <size key="intrinsicContentSize" width="76" height="34"/>
-        </designable>
-        <designable name="zdU-GY-vi7">
-            <size key="intrinsicContentSize" width="88" height="34"/>
-        </designable>
-    </designables>
     <color key="tintColor" name="PODORed"/>
     <resources>
         <image name="apple" width="512" height="512"/>
