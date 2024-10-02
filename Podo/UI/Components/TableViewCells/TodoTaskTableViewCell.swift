@@ -25,6 +25,13 @@ class TodoTaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        taskName.attributedText = nil
+        completedButton.setImage(UIImage(systemName: "square"), for: .normal)
+        favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+    }
+    
     public func configureCell(item: ListItem) {
         itemID = item.id
         taskName.text = item.title
