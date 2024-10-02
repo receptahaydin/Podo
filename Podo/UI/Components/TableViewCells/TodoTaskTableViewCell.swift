@@ -49,12 +49,28 @@ class TodoTaskTableViewCell: UITableViewCell {
             string: taskName.text ?? "",
             attributes: isCompleted ? [.strikethroughStyle: NSUnderlineStyle.single.rawValue] : [:]
         )
+        
+        updateItemState(isCompleted: isCompleted)
     }
-    
+
+    private func updateItemState(isCompleted: Bool) {
+        if let index = ItemManager.shared.items.firstIndex(where: { $0.id == self.itemID }) {
+            ItemManager.shared.items[index].isCompleted = isCompleted
+        }
+    }
+
     private func configureFavouriteState(isFavourite: Bool) {
         self.isFavourite = isFavourite
         let imageName = isFavourite ? "star.fill" : "star"
         favouriteButton.setImage(UIImage(systemName: imageName), for: .normal)
+        
+        updateFavouriteState(isFavourite: isFavourite)
+    }
+    
+    private func updateFavouriteState(isFavourite: Bool) {
+        if let index = ItemManager.shared.items.firstIndex(where: { $0.id == self.itemID }) {
+            ItemManager.shared.items[index].isFavourite = isFavourite
+        }
     }
     
     @IBAction func completedButtonAction(_ sender: UIButton) {
